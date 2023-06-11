@@ -1,0 +1,305 @@
+@import url("reset.css");
+
+html {
+    --page-width: 1275px;
+    --primary-color: #E0DA70;
+    --secodary-color: #65BBB1;
+    --black-color: #2B1A1A;
+}
+
+body {
+    background-image: url('../imges/bg_all.png');
+    font-family: Arial, 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #2B1A1A;
+    line-height: 1.6;
+
+}
+
+.all {
+    /* position: relative; */
+    /* display: flex; */
+}
+
+a {
+    color: #584040;
+    text-decoration: none;
+}
+
+/* ----------模組---------- */
+.sub-h3-b {
+    font-size: 24px;
+}
+
+.mean-block {
+    width: 1275px;
+    margin: 0 auto;
+}
+
+/* =====側邊欄選單===== */
+aside {
+    /* outline: 1px solid blue; */
+    width: 18vw;
+    min-width: 205px;
+    height: 967px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+aside div {
+    flex-grow: 1;
+}
+
+.logo img {
+    /* outline: 1px solid blue; */
+    display: block;
+    width: 205px;
+    margin: 0 auto;
+    margin-top: 43px;
+}
+
+/* ---文字選單--- */
+.nav {
+    /* outline: 1px solid; */
+    flex-grow: 7;
+    position: relative;
+}
+
+.nav li {
+    height: 41px;
+}
+
+.nav a {
+    display: block;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 35px;
+}
+
+.box {
+    width: 100%;
+    /* outline: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+.box .box-item {
+    display: block;
+    color: brown;
+}
+
+.box-item {
+    letter-spacing: 0.2em;
+}
+
+.box-item>a {
+    display: block;
+    margin: 0;
+    padding: 10px 10px;
+    color: var(--black-color);
+}
+
+.box-item-content {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding-left: 20px;
+    transition: 0.5s;
+}
+
+.box-item-content li {
+    height: 35px;
+}
+
+.box-item-content a {
+    font-size: 20px;
+    line-height: 35px;
+    color: #123C69;
+}
+
+.box:hover .box-item:hover .box-item-content {
+    height: 100px;
+}
+
+/* ---文字選單結束--- */
+
+.icon {
+    flex-grow: 0;
+    flex-basis: 80px;
+}
+
+.icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+.icon li {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.icon a {
+    /* outline: 1px solid red; */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.icon img {
+    position: absolute;
+    top: -7px;
+}
+
+.icon .map {
+    right: -69px;
+}
+
+.icon .phone {
+    right: -123px;
+}
+
+.icon .heart {
+    right: -11px;
+}
+
+.push_top {
+    /* outline: 1px solid; */
+    margin-bottom: 80px;
+}
+
+/* =====主頁面===== */
+main {
+    display: flex;
+    outline: 1px solid red;
+    width: 82vw;
+    min-width: 933px;
+    height: 4220px;
+    /* top: 0; */
+    /* right: 0; */
+    /* position: absolute; */
+    /* width: calc(100vw - 270px); */
+    /* position: fixed; */
+}
+section::before {
+    background-color: red;
+    content: "";
+    display: block;
+    width: 18vw;
+    min-width: 205px;
+    height: 0px;
+}
+section {
+    height: 100vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.swipe {
+    position: relative;
+    /* width: calc(100vw - 270px); */
+width: 82vw;
+    height: 909px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.swipe input {
+    display: none;
+}
+.swipe ul {
+    /* display: block; */
+    outline: 1px solid green;
+    margin: 0;
+    padding: 0;
+    width: calc(calc(100vw - 270px) * 4);
+    transition: .5s;
+}
+.swipe li {
+    float: left;
+    width: calc(100vw - 270px);
+    height: 909px;
+    /* border: 1px solid red; */
+    line-height: 909px;
+    font-size: 50px;
+}
+.swipe li img {
+    width: 100%;
+}
+
+.swipe li img:nth-child(1) {
+    /* background-image: url('../imges/index/swipe01.jpg');
+    background-size: cover; */
+    /* width: 100%; */
+}
+.swipe li img:nth-child(2) {
+    /* background-image: url('../imges/index/swipe02.jpg'); */
+    /* width: 100%; */
+}
+.swipe li img:nth-child(3) {
+    /* background-image: url('../imges/index/swipe03.jpg'); */
+    /* width: 100%; */
+}
+.swipe li img:nth-child(4) {
+    /* background-image: url('../imges/index/swipe04.jpg'); */
+    /* width: 100%; */
+}
+/* for屬性以coose開頭的label*/
+.swipe label[for^="choose"] {
+    position: absolute;
+    top: 750px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    /* margin: 0 10px; */
+    cursor: pointer;
+    transition: .3s;
+}
+/* for屬性是choose1~4的label*/
+.swipe label[for="choose1"] {
+    left: 50%;
+}
+.swipe label[for="choose2"] {
+    left: 52%;
+}
+.swipe label[for="choose3"] {
+    left: 54%;
+}
+.swipe label[for="choose4"] {
+    left: 56%;
+}
+/* 點到綁定的label位移圖片 */
+#choose1:checked~ul {
+    margin-left: 0;
+}
+#choose2:checked~ul {
+    margin-left: -1635px;
+}
+#choose3:checked~ul {
+    margin-left: -3270px;
+}
+#choose4:checked~ul {
+    margin-left: -4905px;
+}
+/* 點到id是choose1~4且for屬性是coose1~4的label 改色*/
+#choose1:checked~label[for="choose1"] {
+    background-color: #fff;
+}
+#choose2:checked~label[for="choose2"] {
+    background-color: #fff;
+}
+#choose3:checked~label[for="choose3"] {
+    background-color: #fff;
+}
+#choose4:checked~label[for="choose4"] {
+    background-color: #fff;
+}
