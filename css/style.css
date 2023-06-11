@@ -179,8 +179,9 @@ aside div {
 /* =====主頁面===== */
 main {
     display: flex;
-    outline: 1px solid red;
-    width: 82vw;
+    /* background-color: red; */
+    /* outline: 1px solid red; */
+    /* width: 82vw; */
     min-width: 933px;
     height: 4220px;
     /* top: 0; */
@@ -189,8 +190,10 @@ main {
     /* width: calc(100vw - 270px); */
     /* position: fixed; */
 }
+
+/* 第一段 */
 section::before {
-    background-color: red;
+    /* background-color: blue; */
     content: "";
     display: block;
     width: 18vw;
@@ -198,108 +201,129 @@ section::before {
     height: 0px;
 }
 section {
-    height: 100vh;
-    display: inline-flex;
+    /* background-color: white; */
+    height: 909px;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .swipe {
+    /* background-color: green; */
     position: relative;
-    /* width: calc(100vw - 270px); */
-width: 82vw;
+    width: 82vw;
     height: 909px;
+    min-width: 1244px;
     text-align: center;
     color: white;
     overflow: hidden;
+    top: 0;
 }
 .swipe input {
     display: none;
 }
 .swipe ul {
-    /* display: block; */
+    display: block;
+    position: absolute;
+    top: 0;
     outline: 1px solid green;
     margin: 0;
     padding: 0;
-    width: calc(calc(100vw - 270px) * 4);
+    width: calc(82vw * 4);
     transition: .5s;
+    height: 100%;
 }
 .swipe li {
     float: left;
-    width: calc(100vw - 270px);
-    height: 909px;
-    /* border: 1px solid red; */
+    width: 82vw;
+    min-width: 1242px;
+    height: 100%;
+    min-height: 690px;
     line-height: 909px;
     font-size: 50px;
 }
-.swipe li img {
-    width: 100%;
+.swipe li:nth-child(1) {
+    background-image: url('../imges/index/swipe01.jpg');
+    background-size: cover;
+}
+.swipe li:nth-child(2) {
+    background-image: url('../imges/index/swipe02.jpg');
+    background-size: cover;
 }
 
-.swipe li img:nth-child(1) {
-    /* background-image: url('../imges/index/swipe01.jpg');
-    background-size: cover; */
-    /* width: 100%; */
+.swipe li:nth-child(3) {
+    background-image: url('../imges/index/swipe03.jpg');
+    background-size: cover;
 }
-.swipe li img:nth-child(2) {
-    /* background-image: url('../imges/index/swipe02.jpg'); */
-    /* width: 100%; */
+
+.swipe li:nth-child(4) {
+    background-image: url('../imges/index/swipe04.jpg');
+    background-size: cover;
 }
-.swipe li img:nth-child(3) {
-    /* background-image: url('../imges/index/swipe03.jpg'); */
-    /* width: 100%; */
-}
-.swipe li img:nth-child(4) {
-    /* background-image: url('../imges/index/swipe04.jpg'); */
-    /* width: 100%; */
-}
+
 /* for屬性以coose開頭的label*/
 .swipe label[for^="choose"] {
+    z-index: 2;
     position: absolute;
     top: 750px;
     width: 15px;
     height: 15px;
     background-color: rgba(255, 255, 255, .3);
     border-radius: 50%;
-    /* margin: 0 10px; */
     cursor: pointer;
     transition: .3s;
 }
+
 /* for屬性是choose1~4的label*/
 .swipe label[for="choose1"] {
-    left: 50%;
+    left: 45%;
 }
+
 .swipe label[for="choose2"] {
-    left: 52%;
+    left: 48.3%;
 }
+
 .swipe label[for="choose3"] {
-    left: 54%;
+    left: 51.6%;
 }
+
 .swipe label[for="choose4"] {
-    left: 56%;
+    left: 54.9%;
 }
+
 /* 點到綁定的label位移圖片 */
 #choose1:checked~ul {
+    /* margin-top: 0; */
     margin-left: 0;
 }
+
 #choose2:checked~ul {
-    margin-left: -1635px;
+    margin-left: -100%;
+    /* margin-top: -68%; */
 }
+
 #choose3:checked~ul {
-    margin-left: -3270px;
+    margin-left: -200%;
+    /* margin-top: -135%; */
 }
+
 #choose4:checked~ul {
-    margin-left: -4905px;
+    margin-left: -300%;
+    /* margin-top: -200%; */
 }
+
 /* 點到id是choose1~4且for屬性是coose1~4的label 改色*/
 #choose1:checked~label[for="choose1"] {
     background-color: #fff;
 }
+
 #choose2:checked~label[for="choose2"] {
     background-color: #fff;
 }
+
 #choose3:checked~label[for="choose3"] {
     background-color: #fff;
 }
+
 #choose4:checked~label[for="choose4"] {
     background-color: #fff;
 }
