@@ -38,8 +38,8 @@ a {
 
 /* =====側邊欄選單===== */
 aside {
-    /* outline: 1px solid blue; */
-    width: 18vw;
+    /* background-color: #fff; */
+    width: 17vw;
     min-width: 205px;
     height: 967px;
     text-align: center;
@@ -55,7 +55,6 @@ aside div {
 }
 
 .logo img {
-    /* outline: 1px solid blue; */
     display: block;
     width: 205px;
     margin: 0 auto;
@@ -126,7 +125,10 @@ aside div {
 .box:hover .box-item:hover .box-item-content {
     height: 100px;
 }
-
+.box-item a:hover, .box-item-content a:hover{
+    color:var(--secodary-color);
+}
+    
 /* ---文字選單結束--- */
 
 .icon {
@@ -189,6 +191,7 @@ main {
     /* position: absolute; */
     /* width: calc(100vw - 270px); */
     /* position: fixed; */
+    /* font-size: 0; */
 }
 
 /* 第一段 */
@@ -196,7 +199,7 @@ section::before {
     /* background-color: blue; */
     content: "";
     display: block;
-    width: 18vw;
+    width: 17vw;
     min-width: 205px;
     height: 0px;
 }
@@ -208,7 +211,7 @@ section {
     align-items: flex-start;
 }
 .swipe {
-    /* background-color: green; */
+    background-color: green;
     position: relative;
     width: 82vw;
     height: 909px;
@@ -225,7 +228,7 @@ section {
     display: block;
     position: absolute;
     top: 0;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     margin: 0;
     padding: 0;
     width: calc(82vw * 4);
