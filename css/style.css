@@ -16,11 +16,6 @@ body {
 
 }
 
-.all {
-    /* position: relative; */
-    /* display: flex; */
-}
-
 a {
     color: #584040;
     text-decoration: none;
@@ -61,7 +56,7 @@ aside div {
     margin-top: 43px;
 }
 
-/* ---文字選單--- */
+/* ---選單文字部分--- */
 .nav {
     /* outline: 1px solid; */
     flex-grow: 7;
@@ -125,12 +120,13 @@ aside div {
 .box:hover .box-item:hover .box-item-content {
     height: 100px;
 }
-.box-item a:hover, .box-item-content a:hover{
-    color:var(--secodary-color);
-}
-    
-/* ---文字選單結束--- */
 
+.box-item a:hover,
+.box-item-content a:hover {
+    color: var(--secodary-color);
+}
+
+/* ---文字結束--- */
 .icon {
     flex-grow: 0;
     flex-basis: 80px;
@@ -180,36 +176,28 @@ aside div {
 
 /* =====主頁面===== */
 main {
-    display: flex;
     /* background-color: red; */
-    /* outline: 1px solid red; */
-    /* width: 82vw; */
+    display: flex;
+    /* flex-direction: column; */
     min-width: 933px;
     height: 4220px;
-    /* top: 0; */
-    /* right: 0; */
-    /* position: absolute; */
-    /* width: calc(100vw - 270px); */
-    /* position: fixed; */
-    /* font-size: 0; */
 }
 
-/* 第一段 */
-section::before {
-    /* background-color: blue; */
-    content: "";
-    display: block;
+/* 第一段大圖 */
+.none {
+    background-color: yellow;
     width: 17vw;
     min-width: 205px;
     height: 0px;
 }
-section {
+
+.wrapper {
     /* background-color: white; */
-    height: 909px;
-    display: flex;
+    height: 4220px;
     justify-content: center;
     align-items: flex-start;
 }
+
 .swipe {
     background-color: green;
     position: relative;
@@ -221,20 +209,23 @@ section {
     overflow: hidden;
     top: 0;
 }
+
 .swipe input {
     display: none;
 }
+
 .swipe ul {
+    /* outline: 1px solid green; */
     display: block;
     position: absolute;
     top: 0;
-    /* outline: 1px solid green; */
     margin: 0;
     padding: 0;
     width: calc(82vw * 4);
     transition: .5s;
     height: 100%;
 }
+
 .swipe li {
     float: left;
     width: 82vw;
@@ -244,23 +235,25 @@ section {
     line-height: 909px;
     font-size: 50px;
 }
+
 .swipe li:nth-child(1) {
     background-image: url('../imges/index/swipe01.jpg');
-    background-size: cover;
+    background-size: auto auto;
 }
+
 .swipe li:nth-child(2) {
     background-image: url('../imges/index/swipe02.jpg');
-    background-size: cover;
+    background-size: auto auto;
 }
 
 .swipe li:nth-child(3) {
     background-image: url('../imges/index/swipe03.jpg');
-    background-size: cover;
+    background-size: auto auto;
 }
 
 .swipe li:nth-child(4) {
     background-image: url('../imges/index/swipe04.jpg');
-    background-size: cover;
+    background-size: auto auto;
 }
 
 /* for屬性以coose開頭的label*/
@@ -282,36 +275,32 @@ section {
 }
 
 .swipe label[for="choose2"] {
-    left: 48.3%;
+    left: 47.3%;
 }
 
 .swipe label[for="choose3"] {
-    left: 51.6%;
+    left: 49.6%;
 }
 
 .swipe label[for="choose4"] {
-    left: 54.9%;
+    left: 51.9%;
 }
 
 /* 點到綁定的label位移圖片 */
 #choose1:checked~ul {
-    /* margin-top: 0; */
     margin-left: 0;
 }
 
 #choose2:checked~ul {
     margin-left: -100%;
-    /* margin-top: -68%; */
 }
 
 #choose3:checked~ul {
     margin-left: -200%;
-    /* margin-top: -135%; */
 }
 
 #choose4:checked~ul {
     margin-left: -300%;
-    /* margin-top: -200%; */
 }
 
 /* 點到id是choose1~4且for屬性是coose1~4的label 改色*/
@@ -328,5 +317,163 @@ section {
 }
 
 #choose4:checked~label[for="choose4"] {
+    background-color: #fff;
+}
+
+/* 第二段News */
+.news {
+    /* background-color: lightblue; */
+    height: 750px;
+}
+.news>img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+    margin-bottom: 10px;
+}
+.news_box {
+    margin: 0 auto;
+    width: 1275px;
+    height: 505px;
+    /* background-color: darkorange; */
+    display: grid;
+    grid-template-rows: repeat(4, 118px);
+    grid-template-columns: 410px 855px;
+    gap: 10px;
+    overflow: hidden;
+}
+.news_box>input {
+    display: none;
+}
+.news_box .tab {
+    grid-row: 1 / 5;
+    grid-column: 2 / 3;
+    /* background-color: #fff; */
+}
+.tab_s {
+    width: 855px;
+    height: 505px;
+}
+/* 留著如果以後要改bgi可用 */
+/* .tab_s:nth-child(1){
+    background-color: red;
+}
+.tab_s:nth-child(2){
+    background-color: blue;
+}
+.tab_s:nth-child(3){
+    background-color: yellow;
+}
+.tab_s:nth-child(4){
+    background-color: black;
+} */
+#news1 {
+    /* background-color: red; */
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    background-image: url("../imges/index/news_p1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.sp{
+    opacity: .6;
+}
+.sp:hover, .news_box > input:checked +.sp{
+    opacity: 1;
+}
+#news2 {
+    /* background-color: blue; */
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    background-image: url("../imges/index/news_p2.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+#news3 {
+    /* background-color: yellow; */
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background-image: url("../imges/index/news_p3.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+#news4 {
+    /* background-color: black; */
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    background-image: url("../imges/index/news_p4.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+/* 選中指定位移大圖 */
+#p1:checked ~ .tab{
+    transform: translateY(0px);
+}
+#p2:checked ~ .tab{
+    transform: translateY(-505px);
+}
+#p3:checked ~ .tab{
+    transform: translateY(-1010px);
+}
+#p4:checked ~ .tab{
+    transform: translateY(-1515px);
+}
+
+/* 第三段SOP */
+.sop {
+    /* background-color: lightgreen; */
+    height: 750px;
+}
+.sop_color{
+    background-color: var(--primary-color);
+    width: 1591px;
+    height: 750px;
+    border-radius: 20px 0 0 0;
+}
+.sop_color >img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 21px;
+}
+.sop_box{
+    margin: 0 auto;
+    width: 1053px;
+    height: 610px;
+    display: grid;
+    grid-template-rows: repeat(2, 230px);
+    grid-template-columns: repeat(3, 337px);
+    gap: 75px 21px;
+    /* overflow: hidden; */
+}
+.sop_box .sop1{
+    width: 337px;
+    height: 230px;
+    /* background-color: #fff; */
+    background-image: url("../imges/index/step.png");
+    background-size: 337px 230px;
+}
+.sop_box .sop2{
+    width: 337px;
+    height: 230px;
+    background-color: #fff;
+}
+.sop_box .sop3{
+    width: 337px;
+    height: 230px;
+    background-color: #fff;
+}
+.sop_box .sop4{
+    width: 337px;
+    height: 230px;
+    background-color: #fff;
+}
+.sop_box .sop5{
+    width: 337px;
+    height: 230px;
+    background-color: #fff;
+}
+.sop_box .sop6{
+    width: 337px;
+    height: 230px;
     background-color: #fff;
 }
