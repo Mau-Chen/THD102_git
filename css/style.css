@@ -5,6 +5,8 @@ html {
     --primary-color: #E0DA70;
     --secodary-color: #65BBB1;
     --black-color: #2B1A1A;
+    --left-width: 14vw;
+    --right-width: calc(100vw - 1vw - var(--left-width));
 }
 
 body {
@@ -34,8 +36,9 @@ a {
 /* =====側邊欄選單===== */
 aside {
     /* background-color: #fff; */
-    width: 17vw;
-    min-width: 205px;
+    /* width: 17vw; */
+    width: var(--left-width);
+    min-width: 200px;
     height: 967px;
     text-align: center;
     display: inline-flex;
@@ -43,6 +46,7 @@ aside {
     position: fixed;
     left: 0;
     top: 0;
+    opacity: .7;
 }
 
 aside div {
@@ -51,7 +55,8 @@ aside div {
 
 .logo img {
     display: block;
-    width: 205px;
+    /* width: 205px; */
+    width: 150px;
     margin: 0 auto;
     margin-top: 43px;
 }
@@ -186,8 +191,9 @@ main {
 /* 第一段大圖 */
 .none {
     background-color: yellow;
-    width: 17vw;
-    min-width: 205px;
+    /* width: 17vw; */
+    width: var(--left-width);
+    min-width: 200px;
     height: 0px;
 }
 
@@ -199,15 +205,17 @@ main {
 }
 
 .swipe {
-    background-color: green;
+    /* background-color: green; */
     position: relative;
-    width: 82vw;
+    /* width: 82vw; */
+    width: var(--right-width);
     height: 909px;
     min-width: 1244px;
     text-align: center;
     color: white;
     overflow: hidden;
     top: 0;
+    /* margin: 0 auto; */
 }
 
 .swipe input {
@@ -215,45 +223,56 @@ main {
 }
 
 .swipe ul {
-    /* outline: 1px solid green; */
+    /* background-color: green; */
     display: block;
     position: absolute;
     top: 0;
-    margin: 0;
-    padding: 0;
-    width: calc(82vw * 4);
+    /* left: auto; */
+    /* margin: 0; */
+    /* padding: 0; */
+    width: calc(var(--right-width) * 4);
     transition: .5s;
     height: 100%;
 }
 
 .swipe li {
+    /* background-color: blue; */
     float: left;
-    width: 82vw;
+    /* width: 82vw; */
+    width: var(--right-width);
     min-width: 1242px;
     height: 100%;
     min-height: 690px;
     line-height: 909px;
     font-size: 50px;
+    /* background-size: auto auto; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .swipe li:nth-child(1) {
     background-image: url('../imges/index/swipe01.jpg');
-    background-size: auto auto;
+    /* background-size: auto auto; */
+    /* background-repeat: no-repeat; */
 }
 
 .swipe li:nth-child(2) {
     background-image: url('../imges/index/swipe02.jpg');
-    background-size: auto auto;
+    /* background-size: auto auto; */
+    /* background-repeat: no-repeat; */
 }
 
 .swipe li:nth-child(3) {
     background-image: url('../imges/index/swipe03.jpg');
-    background-size: auto auto;
+    /* background-size: auto auto; */
+    /* background-repeat: no-repeat; */
 }
 
 .swipe li:nth-child(4) {
     background-image: url('../imges/index/swipe04.jpg');
-    background-size: auto auto;
+    /* background-size: auto auto; */
+    /* background-repeat: no-repeat; */
 }
 
 /* for屬性以coose開頭的label*/
@@ -423,12 +442,16 @@ main {
 .sop {
     /* background-color: lightgreen; */
     height: 750px;
+    position: relative;
 }
 .sop_color{
     background-color: var(--primary-color);
-    width: 1591px;
+    width: 95%;
     height: 750px;
     border-radius: 20px 0 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .sop_color >img{
     display: block;
@@ -445,35 +468,44 @@ main {
     gap: 75px 21px;
     /* overflow: hidden; */
 }
-.sop_box .sop1{
+.sop_box .step{
     width: 337px;
     height: 230px;
-    /* background-color: #fff; */
     background-image: url("../imges/index/step.png");
-    background-size: 337px 230px;
+    background-size: 337px 305px;
+    background-position: center center;
 }
+.sop_box .sop1{
+    /* width: 337px;
+    height: 230px; */
+    /* background-color: #fff; */
+    /* background-image: url("../imges/index/step.png");
+    background-size: 337px 305px;
+    background-position: center center; */
+}
+
 .sop_box .sop2{
-    width: 337px;
+    /* width: 337px;
     height: 230px;
-    background-color: #fff;
+    background-color: #fff; */
 }
 .sop_box .sop3{
-    width: 337px;
+    /* width: 337px;
     height: 230px;
-    background-color: #fff;
+    background-color: #fff; */
 }
 .sop_box .sop4{
-    width: 337px;
+    /* width: 337px;
     height: 230px;
-    background-color: #fff;
+    background-color: #fff; */
 }
 .sop_box .sop5{
-    width: 337px;
+    /* width: 337px;
     height: 230px;
-    background-color: #fff;
+    background-color: #fff; */
 }
 .sop_box .sop6{
-    width: 337px;
+    /* width: 337px;
     height: 230px;
-    background-color: #fff;
+    background-color: #fff; */
 }
