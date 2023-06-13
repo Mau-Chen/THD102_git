@@ -667,7 +667,6 @@ main {
     background-color: #fff;
     width: 411px;
     height: 356px;
-
     top: 20%;
     border-radius: 70px;
     margin: 0 auto;
@@ -678,15 +677,36 @@ main {
     margin: 0 auto;
     line-height: 447px;
     padding: 40px 0 90px;
-
 }
 
 .sponsors >a h3 {
-
 color:#123C69;
-
 }
 
 .sponsors >a p {
     color:#123C69;
 }
+
+/* 頁尾 */
+footer{
+    width: var(--right-width);
+    height: 250px;
+    background-color: rgba(101, 187, 177, 0.65);
+    border-radius: 80px 80px 0 0;
+    /* text-align: match-parent; */
+    display: flex;
+    flex-direction: column;
+}
+footer .text_a{
+    background-color: #fff;
+    width: 380px;
+margin-left: 80px;
+
+}
+footer a{
+    font-size: 18px;
+    letter-spacing: .2em;
+    padding: 30px 10px;
+    line-height: 20px;
+}
+
