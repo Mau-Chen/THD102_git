@@ -1,0 +1,171 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* ==========右邊頁面========== */
+main {}
+
+.wrapper {}
+
+/* ==========右邊頁首========= */
+.wrapper .nav {
+    /* background-color: chartreuse; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--right-width);
+    height: 248px;
+    padding: 65px 100px;
+    /* margin: 65px 100px; */
+    box-sizing: border-box;
+    background-image: url('../imges/bg_all.png');
+}
+
+.nav h1 {
+    /* background-color: #fff; */
+    margin-bottom: 43px;
+}
+
+.nav>a {
+    /* background-color: #E0DA70; */
+    display: inline-block;
+    width: 100px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border-bottom: 3px solid transparent;
+    font-weight: 300;
+}
+
+.nav>a:nth-child(2) {
+    border: 3px solid #E0DA70;
+    background-color: #E0DA70;
+    font-weight: 700;
+}
+
+.nav>a:hover {
+    /* background-color: #E0DA70; */
+    border-bottom: 3px dotted var(--primary-color);
+    transition: .2s;
+}
+
+.line {
+    margin-top: 20px;
+    width: 70%;
+    background-color: #ccc;
+    height: 1px;
+}
+
+/* ==========右邊內容========= */
+
+.news_list {
+    width: 70%;
+    margin-top: 248px;
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+.news_list .news {
+    /* background-color: #fff; */
+    height: 286px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.news a {
+    /* background-color: coral; */
+    display: block;
+    width: 306px;
+    height: 206px;
+    overflow: hidden;
+    padding: 40px 0;
+    /* box-sizing: border-box; */
+}
+
+.news a>img {
+    display: block;
+}
+
+.text_block {
+    box-sizing: border-box;
+    display: block;
+    margin: 57px 35px;
+    /* width: calc(100% - 310px); */
+
+    /* margin-left: 35px; */
+    /* padding: 10px;   */
+}
+
+.text_block h3 {
+    /* display: block; */
+    /* background-color: aqua; */
+    text-align: left;
+    line-height: 36px;
+    color: #27887C;
+    letter-spacing: .1em;
+    /* padding-bottom: 50px; */
+}
+
+.text_block p {
+    display: block;
+    width: 530px;
+    margin-top: 28px;
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: .1em;
+}
+
+
+/* ==========右邊頁碼========= */
+
+.page_block {
+    /* background-color: #fff; */
+    margin: 20px auto;
+    width: 300px;
+}
+
+.page_block .page {
+    /* background-color: #27887C; */
+    padding: 0;
+    font-size: 0;
+}
+
+.page_block .page>li {
+    /* background-color: #E0DA70; */
+    display: inline-block;
+    position: relative;
+    /* width: 30px; */
+}
+
+.page>li:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: var(--black-color);
+    position: absolute;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+}
+.page>li:nth-child(1)::after{
+    right: auto;
+    left: 0;
+}
+.page>li:nth-child(6)::after{
+display: none;
+}
+
+.page_block .page>li>a {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    color: var(--black-color);
+    width: 20px;
+}
+.page_block .page>li>a:hover,
+.page_block .page>li>a.-on {
+    /* background-color: #e9ecef; */
+    color: var(--secodary-color);
+    font-weight: 900;
+    /* border-bottom: 3px dotted var(--primary-color); */
+}

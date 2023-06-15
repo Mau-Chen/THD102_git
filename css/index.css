@@ -2,42 +2,22 @@
 @import url("all.css");
 
 /* =====主頁面===== */
-main {
-    /* background-color: red; */
-    display: flex;
-    /* flex-direction: column; */
-    min-width: 933px;
-    height: 4220px;
-}
-
 /* 第一段大圖 */
-.none {
-    background-color: yellow;
-    /* width: 17vw; */
-    width: var(--left-width);
-    min-width: 200px;
-    height: 0px;
-}
 
 .wrapper {
-    /* background-color: white; */
-    height: 4220px;
-    justify-content: center;
-    align-items: flex-start;
+    /* width: 100%; */
 }
 
 .swipe {
     /* background-color: green; */
     position: relative;
-    /* width: 82vw; */
     width: var(--right-width);
     height: 909px;
-    min-width: 1244px;
+    min-width: 500px;
     text-align: center;
     color: white;
     overflow: hidden;
     top: 0;
-    /* margin: 0 auto; */
 }
 
 .swipe input {
@@ -49,9 +29,6 @@ main {
     display: block;
     position: absolute;
     top: 0;
-    /* left: auto; */
-    /* margin: 0; */
-    /* padding: 0; */
     width: calc(var(--right-width) * 4);
     transition: .5s;
     height: 100%;
@@ -60,14 +37,12 @@ main {
 .swipe li {
     /* background-color: blue; */
     float: left;
-    /* width: 82vw; */
     width: var(--right-width);
-    min-width: 1242px;
+    min-width: 500px;
     height: 100%;
     min-height: 690px;
     line-height: 909px;
     font-size: 50px;
-    /* background-size: auto auto; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -364,10 +339,11 @@ main {
     width: var(--right-width);
     height: 750px;
     /* background-color: #fff; */
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-width: 933px;
+    /* margin: 0 auto; */
 
 }
 
@@ -376,7 +352,6 @@ main {
     display: grid;
     grid-template-rows: repeat(3, 185px);
     grid-template-columns: repeat(4, 215px);
-    margin-left: 15%;
 }
 
 .story_box img {
@@ -394,7 +369,7 @@ main {
 
 .story_text {
     /* background-color: yellow; */
-    width: 30%;
+    /* width: 30%; */
     height: 555px;
     padding-left: 40px;
 
@@ -416,20 +391,19 @@ main {
     height: 750px;
     position: relative;
     /* background-color: #fff; */
+    min-width: 600px;
 }
 
 .sponsor .cat02 {
     position: absolute;
     top: -60px;
     left: 30px;
-    /* z-index: 2; */
 }
 
 .sponsor .title {
     display: block;
     margin: 0 auto;
     padding-top: 35px;
-    /* z-index: 1; */
 }
 
 .sponsor .sponsor_color {

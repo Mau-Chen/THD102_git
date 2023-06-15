@@ -6,7 +6,8 @@ html {
     --secodary-color: #65BBB1;
     --black-color: #2B1A1A;
     --left-width: 14vw;
-    --right-width: calc(100vw - 1vw - var(--left-width));
+    --right-width: calc(100vw - var(--left-width));
+    --title-color: #304D62;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 a {
     color: #584040;
     text-decoration: none;
+    text-align: center;
 }
 
 /* ----------模組---------- */
@@ -33,9 +35,27 @@ a {
     margin: 0 auto;
 }
 
-h1 {}
+.choosetext{
+    font-weight: 700;
+}
 
-h2 {}
+
+h1 {
+    /* 分頁大標 */
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: .1em;
+    color: #994E55;
+    font-weight: 700;
+}
+
+h2 {
+    /* 分頁小標 */
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: .2em;
+    color: #304D62;
+}
 
 h3 {
     /* 首頁贊助大字 */
@@ -60,13 +80,14 @@ h5 {
     font-size: 16px;
     letter-spacing: .2em;
     line-height: 32px;
-    color: #304D62;
+    color: var(--title-color);
     font-weight: 600;
 }
 
 h6 {
+    /* 首頁story小字 */
     font-size: 20px;
-    color: #40688E;
+    color: var(--title-color);
     letter-spacing: .1em;
 }
 
@@ -172,6 +193,7 @@ aside div {
 .box-item-content a:hover {
     color: var(--secodary-color);
 }
+
 /* --文字結束-- */
 
 .icon {
@@ -221,6 +243,16 @@ aside div {
     margin-bottom: 80px;
 }
 
+/* ==========主區塊規格========== */
+main {
+    display: flex;
+}
+.none {
+    background-color: yellow;
+    width: var(--left-width);
+    min-width: 200px;
+    height: 0px;
+}
 
 
 
@@ -238,32 +270,47 @@ footer {
 
 .text_a {
     /* background-color: #fff; */
-    display: flex;
+    /* display: flex;
     margin: 0 auto;
-    width: 30%;
     height: 100%;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
-    padding: 20px 150px;
-    flex-grow: 0;
-    flex-basis: 500px;
+    padding: 15px 0 0 200px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    box-sizing: border-box; */
+    /* width: 600px; */
+    flex-grow: 1.5;
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(2,50px);
+    /* text-align: center; */
+    margin-left: 150px;
+    margin-top: 100px;
 }
 
 
 footer .text_a li {
-    display: block;
+    /* display: block; */
     box-sizing: border-box;
-    padding: 15px 5px 10px;
-    width: 90px;
-    text-align: center;
+    /* padding: 15px 5px 10px; */
+    /* width: 100px; */
+    /* text-align: center; */
+    margin: 0 auto;
+    
+    /* justify-content: center; */
+    /* align-content: center; */
 }
 
 footer a {
-    width: 64px;
+    display: block;
+    width: 80px;
     font-size: 16px;
     letter-spacing: .2em;
-    line-height: 24px;
+    line-height: 30px;
+    border-bottom: 5px solid transparent;
+    /* text-align: center; */
 }
 
 footer a:hover {
@@ -273,8 +320,9 @@ footer a:hover {
 
 footer .text_b {
     /* width: 40px; */
-    padding: 80px 20px 80px 200px;
+    /* padding: 80px 20px 80px 200px; */
     flex-grow: 0;
+    margin-top: 80px;
 }
 
 .text_b div {
@@ -295,8 +343,10 @@ footer .text_b {
 }
 
 .text_c {
+    
     padding: 80px 0;
     flex-grow: 1;
+    margin-left: 10px;
 }
 
 .text_c h5 {
