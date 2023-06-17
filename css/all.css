@@ -20,9 +20,9 @@ body {
 }
 
 a {
-    color: #584040;
     text-decoration: none;
     text-align: center;
+    letter-spacing: .2em;
 }
 
 /* ----------模組---------- */
@@ -57,6 +57,7 @@ h2 {
 
 h3 {
     /* 首頁贊助大字 */
+    /* 成功案例文標 */
     font-size: 24px;
     font-weight: bold;
     letter-spacing: .2em;
@@ -78,7 +79,7 @@ h5 {
     font-size: 16px;
     letter-spacing: .2em;
     line-height: 32px;
-    color: var(--title-color);
+
     font-weight: 600;
 }
 
@@ -92,16 +93,19 @@ h6 {
 p {
     /* 首頁SOP小字 */
     /* 首頁贊助小字 */
+    /* 成功案例小字 */
     letter-spacing: .1em;
     font-size: 16px;
     text-align: center;
 
 }
-a:hover{
+
+a:hover {
     cursor: grab;
 
 }
-a:active{
+
+a:active {
     cursor: grabbing;
 }
 
@@ -152,9 +156,9 @@ aside {
 }
 
 .box .box-item {
-    display: block;
-    color: brown;
-    letter-spacing: 0.2em;
+    /* display: block; */
+    /* color: brown; */
+    /* letter-spacing: 0.2em; */
 }
 
 .box-item>a {
@@ -179,7 +183,8 @@ aside {
 .box-item-content a {
     font-size: 20px;
     line-height: 35px;
-    color: #123C69;
+    /* color: #123C69; */
+    color: var(--title-color);
 }
 
 .box:hover .box-item:hover .box-item-content {
@@ -307,11 +312,77 @@ main {
 
 .rightline {
     margin-top: 20px;
-    width: 90%;
+    width: 85%;
     min-width: 600px;
     background-color: #ccc;
     height: 1px;
 }
+
+
+
+
+/* ==========右邊頁碼========= */
+
+.page_block {
+    /* background-color: #fff; */
+    margin: 20px auto;
+    width: 300px;
+    /* position: absolute; */
+    /* bottom: -15%; */
+}
+
+.page_block .page {
+    /* background-color: #27887C; */
+    padding: 0;
+    font-size: 0;
+}
+
+.page_block .page>li {
+    /* background-color: #E0DA70; */
+    display: inline-block;
+    position: relative;
+    /* width: 30px; */
+}
+
+.page>li:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: var(--black-color);
+    position: absolute;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+}
+
+.page>li:nth-child(1)::after {
+    right: auto;
+    left: 0;
+}
+
+.page>li:nth-child(6)::after {
+    display: none;
+}
+
+.page_block .page>li>a {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    color: var(--black-color);
+    width: 20px;
+}
+
+.page_block .page>li>a:hover,
+.page_block .page>li>a.-on {
+    /* background-color: #e9ecef; */
+    color: var(--secodary-color);
+    font-weight: 900;
+    /* border-bottom: 3px dotted var(--primary-color); */
+}
+
+
 
 /* ==========右邊頁尾========== */
 footer {
@@ -329,7 +400,7 @@ footer {
     /* background-color: #fff; */
     flex-grow: 1.5;
     display: grid;
-    grid-template-columns: repeat(5, 100px);
+    grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(2, 50px);
     margin-left: 8vw;
     margin-top: 100px;
@@ -345,9 +416,10 @@ footer a {
     display: block;
     width: 80px;
     font-size: 16px;
-    letter-spacing: .2em;
     line-height: 30px;
     border-bottom: 5px solid transparent;
+    font-weight: 500;
+    color: var(--title-color);
 }
 
 footer a:hover {
@@ -378,7 +450,6 @@ footer .text_b {
 }
 
 .text_c {
-
     padding: 80px 0;
     flex-grow: 1;
     margin-left: 10px;
@@ -386,4 +457,28 @@ footer .text_b {
 
 .text_c h5 {
     padding: 15px 0;
+    color: var(--title-color);
+}
+
+
+/* ==========右下動物臉TOP========== */
+.top_button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #fff;
+    width: 90px;
+    height: 90px;
+    border-radius: 20%;
+    opacity: .5;
+}
+
+.top_button img {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+    transform: translateY(20%);
+}
+.top_button:hover{
+    opacity: 1;
 }

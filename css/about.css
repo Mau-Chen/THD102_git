@@ -1,0 +1,146 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* ==========右邊頁面========== */
+main {}
+
+/* ==========右邊頁首========= */
+.navtop ul li:nth-child(1)>a {
+    border-bottom: 3px dotted #E0DA70;
+    background-color: #E0DA70;
+    font-weight: 700;
+}
+
+/* ==========右邊內容========= */
+.about_box {
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    width: 74.5%;
+    margin-top: 248px;
+    min-width: 600px;
+    margin-left: 100px;
+    /* height: 1200px; */
+    /* overflow: hidden; */
+}
+
+/* ==========開場白========= */
+.slogan {
+    /* background-color: crimson; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    /* height: 443px; */
+    flex-wrap: wrap;
+}
+
+.slogan img {
+    display: block;
+    /* background-color: #fff; */
+    width: 40%;
+    flex-basis: 400px;
+}
+
+.slogan .text {
+    /* background-color: burlywood; */
+    width: 50%;
+    flex-grow: 1;
+    padding: 20px;
+    flex-basis: 500px;
+}
+
+.slogan .text p {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+    color: var(--black-color);
+}
+
+/* ==========介紹詞========= */
+.understand {
+    height: 697px;
+    /* height: 500px; */
+    width: 100%;
+    position: relative;
+    /* background-color: darkcyan; */
+}
+
+.understand .about_color {
+    width: 150%;
+    height: 547px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: -80px;
+    top: 150px;
+    border-radius: 20px 0 0 0;
+
+}
+
+.understand>img {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+
+}
+
+.understand .inner {
+    position: absolute;
+    top: 248px;
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.understand .inner>.text {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    flex-basis: 500px;
+    flex-grow: 1;
+
+}
+
+.understand .inner p {
+    /* background-color: #fff; */
+    font-size: 20px;
+    text-align: left;
+    color: var(--black-color);
+    margin-bottom: 15px;
+}
+
+.understand .inner>img {
+    /* background-color: aqua; */
+    width: 50%;
+    flex-basis: 500px;
+
+}
+
+/* ==========時間線========= */
+.timelinebox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    height: 500px;
+    height: 800px;
+}
+
+.timelinebox .title_timeline {
+    display: block;
+    /* margin-top: 47px; */
+    margin: 47px auto;
+}
+
+.timelinebox .time_pic {
+    display: block;
+    width: 100%;
+    background-color: #FDF7EC;
+    border-radius: 40px;
+    object-position: center center;
+    padding: 20px;
+
+}
