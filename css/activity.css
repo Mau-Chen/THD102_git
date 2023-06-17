@@ -4,61 +4,87 @@
 /* ==========右邊頁面========== */
 main {}
 
-.wrapper {}
-
 /* ==========右邊頁首========= */
-.nav>a:nth-child(3) {
-    border: 3px solid #E0DA70;
+.navtop ul li:nth-child(2)>a {
+    border-bottom: 3px dotted #E0DA70;
     background-color: #E0DA70;
     font-weight: 700;
 }
+
 /* ==========右邊內容========= */
-.party_card{
+.partycard_box {
+    /* background-color: aqua; */
     box-sizing: border-box;
+    width: 70%;
     margin-top: 248px;
+    min-width: 600px;
+    margin-left: 100px;
+    /* overflow: hidden; */
+
+    /* width: 60%; */
+    /* margin-top: 248px; */
+    /* padding: 0 100px; */
+    /* align-content: center; */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    /* height: 1200px; */
+    flex-wrap: wrap;
+    /* z-index: 0; */
+
+}
+
+.party_card {
+    box-sizing: border-box;
     width: 500px;
     height: 336px;
     background-color: #fff;
     padding: 24px;
     position: relative;
+    /* margin-left: 100px; */
+    margin: 15px 30px;
 
 }
-.party_block img{
+
+.party_block img {
     display: block;
     width: 450px;
     height: 162px;
     margin: 0 auto;
 }
-.party_block .date{
+
+.party_block .date {
     background-color: #fff;
     position: absolute;
-    right: 24px;
-    top: 160px;
+    right: 20px;
+    top: 158px;
     border-radius: 20px 0 0;
 
 }
-.party_text{
+
+.party_text {
     margin-left: 5px;
 }
-.party_text h3{
+
+.party_text h3 {
     text-align: left;
     color: var(--secodary-color);
     line-height: 1.5em;
     margin: 10px 0;
 }
-.party_text p{
+
+.party_text p {
     display: block;
     width: 414px;
     text-align: left;
-    /* margin-left: 5px; */
 }
-.party_block .date p{
+
+.party_block .date p {
     font-size: 16px;
     line-height: 20px;
     padding: 10px;
     font-weight: 600;
     font-family: 'Noto Sans TC';
-    /* text-align: left; */
 }
 
 
@@ -68,7 +94,8 @@ main {}
 .page_block {
     /* background-color: #fff; */
     margin: 20px auto;
-    width: 300px;
+    width: 250px;
+    height: 230px;
 }
 
 .page_block .page {
@@ -81,7 +108,6 @@ main {}
     /* background-color: #E0DA70; */
     display: inline-block;
     position: relative;
-    /* width: 30px; */
 }
 
 .page>li:after {
@@ -95,13 +121,17 @@ main {}
     right: 0;
     bottom: 0;
 }
-.page>li:nth-child(1)::after{
+
+.page>li:nth-child(1)::after {
     right: auto;
     left: 0;
 }
-.page>li:nth-child(6)::after{
-display: none;
+
+.page>li:nth-child(5)::after {
+    right: -40px;
+    /* background-color: #E0DA70; */
 }
+
 
 .page_block .page>li>a {
     font-size: 20px;
@@ -111,10 +141,16 @@ display: none;
     color: var(--black-color);
     width: 20px;
 }
+
 .page_block .page>li>a:hover,
 .page_block .page>li>a.-on {
-    /* background-color: #e9ecef; */
+
     color: var(--secodary-color);
     font-weight: 900;
-    /* border-bottom: 3px dotted var(--primary-color); */
+}
+
+.activityfox {
+    position: absolute;
+    left: 80%;
+    transform: translateY(-95%);
 }
