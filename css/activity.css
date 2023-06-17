@@ -21,14 +21,9 @@ main {}
     margin-left: 100px;
     /* overflow: hidden; */
 
-    /* width: 60%; */
-    /* margin-top: 248px; */
-    /* padding: 0 100px; */
-    /* align-content: center; */
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    /* height: 1200px; */
     flex-wrap: wrap;
     /* z-index: 0; */
 

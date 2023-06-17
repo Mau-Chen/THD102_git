@@ -1,0 +1,76 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* ==========右邊頁面========== */
+main {}
+
+/* ==========右邊頁首========= */
+.navtop ul li:nth-child(3)>a {
+    border-bottom: 3px dotted #E0DA70;
+    background-color: #E0DA70;
+    font-weight: 700;
+}
+
+/* ==========右邊內容========= */
+.story_box {
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    width: 70%;
+    margin-top: 248px;
+    min-width: 600px;
+    margin-left: 100px;
+    /* overflow: hidden; */
+
+    overflow: hidden;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    /* z-index: 0; */
+
+}
+.story_item{
+    /* background-color: #fff; */
+    margin-bottom: 110px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    /* justify-content: space-between; */
+}
+.story_item:nth-child(2n) img{
+    order:2
+}
+
+.story_item img{
+    display: block;
+    border-radius: 20px;
+    width: 50%;
+
+}
+
+.story_item .story_text{
+/* width: 450px; */
+width: 50%;
+margin: 0 22px;
+/* text-align: left; */
+} 
+.story_text h3{
+    text-align: left;
+}
+.story_text p{
+    display: block;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.story_text >a{
+    background-color:var(--secodary-color);
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    border-radius: 10px;
+    line-height: 34px;
+    color: #fff;
+    /* text-align: right; */
+
+}
+
