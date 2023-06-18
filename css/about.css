@@ -10,6 +10,10 @@ main {}
     background-color: #E0DA70;
     font-weight: 700;
 } */
+.navtop ul li>a:hover {
+    background-color: #E0DA70;
+    font-weight: 700;
+}
 
 /* ==========右邊內容========= */
 .about_box {

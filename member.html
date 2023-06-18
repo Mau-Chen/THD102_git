@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imges/logo_s.png" />
+    <link rel="bookmark" href="imges/logo_s.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>毛遇-毛遇社區</title>
+    <link rel="stylesheet" href="css/member.css">
+</head>
+
+<body>
+    <!-- =====側邊欄選單===== -->
+    <aside>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./imges/logo.png" alt="">
+            </a>
+        </div>
+        <!-- ---文字選單--- -->
+        <div class="nav">
+            <div class="box">
+                <div class="box-item"><a href="post.html">公告事項</a>
+                    <ul class="box-item-content">
+                        <li><a href="post.html">要事新聞</a></li>
+                        <li><a href="activity.html">相關活動</a></li>
+                        <li><a href="story.html">成功案例</a></li>
+                    </ul>
+                </div>
+                <div class="box-item"><a href="index.html#sopkey">領養流程</a></div>
+                <div class="box-item"><a href="petlist.html">毛怪列表</a></div>
+                <div class="box-item"><a href="about.html">關於毛遇</a></div>
+                <div class="box-item"><a href="sponsor.html">贊助毛遇</a></div>
+                <div class="box-item"><a href="member.html">毛遇會員</a></div>
+            </div>
+        </div>
+        <!-- ---文字選單結束--- -->
+        <div class="icon">
+            <ul>
+                <li><a href="about.html#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="map"></a></li>
+                <li><a href="about.html#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="phone"></a></li>
+                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="heart"></a></li>
+            </ul>
+        </div>
+        <!-- <a href="" class="push_top"><img src="imges/TOP.png" alt=""></a> -->
+    </aside>
+    <!-- =====主頁面===== -->
+    <main id="sponsor_topkey">
+        <!-- =====右側表頭===== -->
+        <div class="navtop">
+            <h1>毛遇社區</h1>
+            <div class="nonetext"></div>
+            <div class="rightline"></div>
+        </div>
+        <!-- ==========右邊內容========= -->
+        <div class="member_box">
+            <!-- 分頁列表 -->
+            <div class="tablist_box">
+                <ul class="tab_item">
+                    <li><a href="#" data-target="tab1" class="tab -on">社員資料</a></li>
+                    <li><a href="#" data-target="tab2" class="tab">贊助紀錄</a></li>
+                    <li><a href="#" data-target="tab3" class="tab">分享故事</a></li>
+                    <li><a href="#" data-target="tab3" class="tab">分享紀錄</a></li>
+                </ul>
+            </div>
+
+            <!-- 頁籤內容 -->
+            <div class="detail_box">
+                <div class="tab tab1 -on">
+                    <div class="human_item">
+                        <ul class="item_left">
+                            <li>
+                                <label for="">姓名：</label>
+                                <input type="text" style="display: none;">
+                                <p class="para">孫小美</p>
+                            </li>
+                            <li>
+                                <label for="">密碼：</label>
+                                <input type="password" style="display: none;">
+                                <p class="para">**********</p>
+                            </li>
+                            <li>
+                                <label for="">電話：</label>
+                                <input type="text" style="display: none;">
+                                <p class="para">0912-345-678</p>
+                            </li>
+                            <li>
+                                <label for="">地址：</label>
+                                <input type="text" style="display: none;">
+                                <p class="para">新北市淡水區花生米村20巷20號</p>
+                            </li>
+                        </ul>
+                        <div class="item_right">
+                            <button type="submit" class="btn_update">修改資料</button>
+                            <label for="">性別：</label>
+                            <input type="text" style="display: none;">
+                            <p class="para">生理女</p>
+                        </div>
+
+                    </div>
+                    <div class="pet_item">
+                        <div class="amount">
+                            <p>第一位毛怪</p>
+                        </div>
+                        <div class="pet_data">
+                            <ul class="item_left">
+                                <li>
+                                    <label for="">毛怪姓名：</label>
+                                    <input type="text" placeholder="旺財" disabled>
+                                </li>
+                                <li>
+                                    <label for="">登記日期：</label>
+                                    <input type="date" value="2023-12-25" min="2000-01-01" max="2040-12-31" disabled>
+                                </li>
+                                <li>
+                                    <label for="">疫苗施打：</label>
+                                    <input type="date" value="2023-12-25" min="2000-01-01" max="2040-12-31" disabled>
+
+                                </li>
+                                <li>
+                                    <label for="">毛怪性別：</label>
+                                    <input type="text" placeholder="生理公" disabled>
+                                </li>
+                            </ul>
+                            <div class="item_right">
+                                <p>毛怪物種</p>
+                                <div><img src="" alt=""></div>
+                                <!-- <label for=""></label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pet_item">
+                        <div class="amount">
+                            <p>第二位毛怪</p>
+                        </div>
+                        <div class="pet_data">
+                            <ul class="item_left">
+                                <li>
+                                    <label for="">毛怪姓名：</label>
+                                    <input type="text" placeholder="來富" disabled>
+                                </li>
+                                <li>
+                                    <label for="">登記日期：</label>
+                                    <input type="date" value="2023-12-25" min="2000-01-01" max="2040-12-31" disabled>
+                                </li>
+                                <li>
+                                    <label for="">疫苗施打：</label>
+                                    <input type="date" value="2023-12-25" min="2000-01-01" max="2040-12-31" disabled>
+
+                                </li>
+                                <li>
+                                    <label for="">毛怪性別：</label>
+                                    <input type="text" placeholder="生理母" disabled>
+                                </li>
+                            </ul>
+                            <div class="item_right">
+                                <p>毛怪物種</p>
+                                <div><img src="" alt=""></div>
+                                <!-- <label for=""></label> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab tab2">
+                    頁籤二的內容
+                </div>
+                <div class="tab tab3">
+                    頁籤三的內容
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==========右邊頁尾========= -->
+        <footer>
+            <ul class="text_a">
+                <li><a href="post.html">公告事項</a></li>
+                <li><a href="post.html">要事新聞</a></li>
+                <li><a href="activity.html">相關活動</a></li>
+                <li><a href="story.html">成功案例</a></li>
+                <li><a href="">領養流程</a></li>
+                <li><a href="">毛怪列表</a></li>
+                <li><a href="about.html">關於毛遇</a></li>
+                <li><a href="">毛遇會員</a></li>
+                <li> </li>
+            </ul>
+            <div class="text_b">
+                <div class="phone">
+                    <img src="imges/footer_sprites.png" alt="">
+                </div>
+                <div class="add">
+                    <img src="imges/footer_sprites.png" alt="">
+                </div>
+            </div>
+            <div class="text_c">
+                <h5>(06) 234 - 5678</h5>
+                <h5>708 台南市安平區漁光路22號</h5>
+            </div>
+        </footer>
+        <div class="top_button">
+            <a href="#sponsor_topkey"><img src="imges/top_btn.png" alt=""></a>
+        </div>
+    </main>
+</body>
+
+</html>

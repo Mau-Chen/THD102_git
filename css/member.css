@@ -1,0 +1,78 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* ==========右邊頁面========== */
+main {}
+
+/* ==========右邊頁首========= */
+/* .navtop ul li:nth-child(1)>a {
+    border-bottom: 3px dotted #E0DA70;
+    background-color: #E0DA70;
+    font-weight: 700;
+} */
+.navtop .nonetext{
+    /* background-color: #fff; */
+    height: 47px;
+
+}
+
+/* ==========右邊內容========= */
+.member_box {
+    background-color: aqua;
+    box-sizing: border-box;
+    width: calc(var(--right-width) * .75);
+    min-width: 600px;
+    margin: 248px auto 0;
+}
+
+/* ==========開場白========= */
+* {
+    box-sizing: border-box;
+  }
+
+  .member_box{
+    /* border: 1px solid red; */
+  }
+
+  .member_box .tablist_box{
+    padding-left: 20px;
+  }
+  .member_box .tablist_box .tab_item{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+  }
+  .member_box .tablist_box .tab_item > li{
+    display: inline-block;
+  }
+  .member_box .tablist_box .tab_item > li > a{
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding: 4px 20px;
+    border-radius: 10px 10px 0 0;
+  }
+  .member_box .tablist_box .tab_item > li > a.-on{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-bottom: 0;
+  }
+
+  .member_box .detail_box{
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .member_box .detail_box div.tab{
+    padding: 10px;
+    display: none;
+  }
+  .member_box .detail_box div.tab.-on{
+    display: block;
+  }

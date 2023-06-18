@@ -54,7 +54,6 @@ main {}
 .party_block .pic img {
     display: block;
     width: 100%;
-    background-position: center center;
 }
 
 .party_block .date {

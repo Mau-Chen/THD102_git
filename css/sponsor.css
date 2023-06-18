@@ -1,0 +1,206 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* ==========右邊頁面========== */
+main {}
+
+/* ==========右邊頁首========= */
+/* .navtop ul li:nth-child(1)>a {
+    border-bottom: 3px dotted #E0DA70;
+    background-color: #E0DA70;
+    font-weight: 700;
+} */
+
+/* ==========右邊內容========= */
+.sponsor_box {
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    width: calc(var(--right-width) * .75);
+    min-width: 600px;
+    margin: 248px auto 0;
+    /* padding: 0 100px; */
+}
+
+/* ==========開場白========= */
+.sponsor_box .slogan {
+    /* background-color: crimson; */
+    margin: 20px 0 50px;
+}
+
+.sponsor_box .slogan p {
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.sponsor_box .slogan span {
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+/* ==========大明星介紹========= */
+.star_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.star_list .star_item {
+    /* background-color: white; */
+    box-sizing: border-box;
+    width: 376px;
+    margin-bottom: 20px;
+    height: 500px;
+    position: relative;
+}
+
+.star_item .the_star {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    -webkit-filter: drop-shadow(8px 5px 0px #999);
+    object-fit: scale-down;
+}
+
+.star_item .bg {
+    display: block;
+
+}
+
+.star_item .pet_namebox {
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pet_namebox .name {
+    background-color: #484565;
+    width: 65%;
+    font-size: 28px;
+    line-height: 65px;
+    color: #fff;
+    letter-spacing: .1em;
+    font-weight: 500;
+}
+
+.pet_namebox .age {
+    background-color: #fff;
+    width: 35%;
+    line-height: 65px;
+    letter-spacing: .1em;
+}
+
+.star_item .donate {
+    /* background-color: aquamarine; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star_item .donate p {
+    font-size: 16px;
+    flex-basis: 100px;
+}
+
+.star_item .donate a {
+    display: block;
+    width: 90px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--black-color);
+    color: #fff;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 8px;
+}
+
+/* ==========捐款給毛遇=========  */
+.donateus {
+    /* background-color: #fff; */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+    /* padding-bottom: 150px; */
+}
+
+.donateus .mousepic {
+    /* background-color: aqua; */
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.donateus .textbox {
+    /* background-color: burlywood; */
+    box-sizing: border-box;
+    /* height: 600px; */
+    flex-basis: 300px;
+    flex-grow: 1.5;
+    padding: 50px;
+}
+
+.donateus .textbox h1 {
+    color: var(--title-color);
+    padding: 30px;
+}
+
+.donateus .textbox .t32 {
+    color: var(--title-color);
+    padding: 30px;
+    text-align: left;
+}
+
+.donateus .textbox a {
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--black-color);
+    font-weight: 500;
+}
+/* ==========異業合作========= */
+.nobody{
+    height: 250px;
+    /* width: 1px; */
+}
+.alliance{
+    box-sizing: border-box;
+    /* background-color: #fff; */
+    margin: 0 auto 50px;
+}
+.alliance p{
+    /* background-color:aqua; */
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: .2em;
+    color: var(--title-color);
+margin-bottom: 30px;
+}
+.alliance span{
+    font-weight: 700;
+
+}
+.alliance img{
+    /* background-color: burlywood; */
+    display: block;
+    margin: 0 auto;
+    /* padding-bottom: 50px; */
+    /* margin-bottom: 50px; */
+}
