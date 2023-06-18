@@ -5,7 +5,7 @@ html {
     --primary-color: #E0DA70;
     --secodary-color: #65BBB1;
     --black-color: #2B1A1A;
-    --left-width: 14vw;
+    --left-width: 15vw;
     --right-width: 85vw;
     --title-color: #304D62;
 }
@@ -265,14 +265,18 @@ main {
 /* ==========右邊頁首========= */
 .navtop {
     /* background-color: chartreuse; */
+    /* width: calc( var(--right-width) * .75); */
     width: var(--right-width);
     height: 248px;
     position: fixed;
+    left: 50%;
+    transform: translateX(-39%);
     box-sizing: border-box;
-    padding: 65px 100px;
+    padding: 65px 257px;
     background-image: url('../imges/bg_all.png');
-    min-width: 600px;
+    min-width: 900px;
     z-index: 80;
+    /* margin: 0 auto; */
 }
 
 .navtop h1 {
@@ -386,24 +390,26 @@ main {
 
 /* ==========右邊頁尾========== */
 footer {
-    width: var(--right-width);
-    height: 250px;
+    width: calc( var(--right-width) * .75);
+    height: 200px;
     background-color: rgba(101, 187, 177, 0.65);
     border-radius: 80px 80px 0 0;
     /* text-align: match-parent; */
     display: flex;
     min-width: 933px;
+    /* margin-left: 100px; */
+    margin: 0 auto;
     /* flex-direction: column; */
 }
 
-.text_a {
+footer .text_a {
     /* background-color: #fff; */
     flex-grow: 1.5;
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(2, 50px);
     margin-left: 8vw;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 
@@ -429,7 +435,7 @@ footer a:hover {
 
 footer .text_b {
     flex-grow: 0;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .text_b div {
@@ -450,7 +456,7 @@ footer .text_b {
 }
 
 .text_c {
-    padding: 80px 0;
+    padding: 60px 0;
     flex-grow: 1;
     margin-left: 10px;
 }

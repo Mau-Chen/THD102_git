@@ -5,22 +5,21 @@
 main {}
 
 /* ==========右邊頁首========= */
-.navtop ul li:nth-child(1)>a {
+/* .navtop ul li:nth-child(1)>a {
     border-bottom: 3px dotted #E0DA70;
     background-color: #E0DA70;
     font-weight: 700;
-}
+} */
 
 /* ==========右邊內容========= */
 .about_box {
     /* background-color: aqua; */
     box-sizing: border-box;
-    width: 74.5%;
-    margin-top: 248px;
+    /* width: 70%; */
+    width: calc(var(--right-width) * .75);
     min-width: 600px;
-    margin-left: 100px;
-    /* height: 1200px; */
-    /* overflow: hidden; */
+    margin: 248px auto 0;
+    padding: 0 100px;
 }
 
 /* ==========開場白========= */
@@ -59,7 +58,6 @@ main {}
 /* ==========介紹詞========= */
 .understand {
     height: 697px;
-    /* height: 500px; */
     width: 100%;
     position: relative;
     /* background-color: darkcyan; */
@@ -70,7 +68,7 @@ main {}
     height: 547px;
     background-color: var(--primary-color);
     position: absolute;
-    left: -80px;
+    left: -250px;
     top: 150px;
     border-radius: 20px 0 0 0;
 
@@ -124,7 +122,7 @@ main {}
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     height: 500px;
     height: 800px;
 }
@@ -132,15 +130,52 @@ main {}
 .timelinebox .title_timeline {
     display: block;
     /* margin-top: 47px; */
-    margin: 47px auto;
+    margin: 60px auto;
 }
 
 .timelinebox .time_pic {
     display: block;
     width: 100%;
-    background-color: #FDF7EC;
+    /* background-color: #FDF7EC; */
     border-radius: 40px;
     object-position: center center;
     padding: 20px;
+}
 
+/* ==========地址電話交通資訊=========  */
+.find_us {
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 100px;
+}
+
+.find_us .text {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.find_us .text .text_a {
+    /* background-color: aqua; */
+}
+
+.find_us .text .text_b {
+    /* background-color: blue; */
+}
+
+.find_us .text h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.find_us .text h6 {}
+
+
+
+.find_us .map {
+    flex-basis: 300px;
+    flex-grow: 0;
 }

@@ -24,11 +24,11 @@ main {}
 .news_list {
     /* background-color: #fff; */
     box-sizing: border-box;
-    width: 70%;
-    margin-top: 248px;
+    /* width: 70%; */
+    width: calc( var(--right-width) * .75);
     min-width: 600px;
-    /* overflow: hidden; */
-    margin-left: 100px;
+    margin: 248px auto 0;
+    padding: 0 100px;
 }
 
 .news_list .news {
@@ -77,6 +77,7 @@ main {}
 
 .text_block p {
     /* display: block; */
+    color: var(--black-color);
     width: 80%;
     margin-top: 28px;
     font-size: 1rem;

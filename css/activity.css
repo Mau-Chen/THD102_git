@@ -15,11 +15,14 @@ main {}
 .partycard_box {
     /* background-color: aqua; */
     box-sizing: border-box;
-    width: 70%;
-    margin-top: 248px;
+    /* width: 70%; */
+    width: calc(var(--right-width) * .75);
+    /* margin-top: 248px; */
     min-width: 600px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     /* overflow: hidden; */
+    margin: 248px auto 0;
+    padding: 0 100px;
 
     overflow: hidden;
     display: flex;
@@ -32,20 +35,26 @@ main {}
 .party_card {
     box-sizing: border-box;
     width: 500px;
-    height: 336px;
+    height: 320px;
     background-color: #fff;
-    padding: 24px;
+    padding: 20px;
     position: relative;
     /* margin-left: 100px; */
-    margin: 15px 30px;
+    /* margin: 15px 30px; */
+    margin: 20px 0;
 
 }
-
-.party_block img {
-    display: block;
-    width: 450px;
-    height: 162px;
+.party_block .pic{
+    box-sizing: border-box;
+    width: 460px;
+    height: 140px;
     margin: 0 auto;
+}
+
+.party_block .pic img {
+    display: block;
+    width: 100%;
+    background-position: center center;
 }
 
 .party_block .date {
@@ -58,19 +67,20 @@ main {}
 }
 
 .party_text {
-    margin-left: 5px;
+    /* background-color: #E0DA70; */
+    margin-top: 40px;
 }
 
 .party_text h3 {
     text-align: left;
     color: var(--secodary-color);
     line-height: 1.5em;
-    margin: 10px 0;
+    margin-bottom: 5px;
 }
 
 .party_text p {
     display: block;
-    width: 414px;
+    width: 400px;
     text-align: left;
 }
 

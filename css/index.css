@@ -162,6 +162,7 @@
     width: 855px;
     height: 505px;
 }
+
 #news1 {
     /* background-color: red; */
     grid-row: 1 / 2;
@@ -242,7 +243,7 @@
     top: 0;
 }
 
-.sop >img {
+.sop>img {
     display: block;
     position: absolute;
     top: 42px;
@@ -295,8 +296,14 @@
     margin: 20px 0 12px;
 }
 
+.sop_box .sop1 a:hover {
+    color: var(--secodary-color);
+    font-weight: 600;
+}
+
 .sop_box .downs p {
     padding-top: 40px;
+    color: var(--black-color);
 
 }
 
@@ -360,7 +367,9 @@
 
 .story_text h6 {
     margin-bottom: 30px;
+    color: var(--black-color);
 }
+
 
 /* 第五段Sponsor */
 .sponsor {
@@ -381,6 +390,7 @@
     display: block;
     margin: 0 auto;
     padding-top: 35px;
+    transform: translateX(-20%);
 }
 
 .sponsor .sponsor_color {
@@ -399,6 +409,7 @@
     height: 447px;
     margin: 85px auto;
     display: flex;
+    /* margin: 0 auto; */
 }
 
 .sponsor .sponsors {
@@ -408,6 +419,7 @@
     top: 20%;
     border-radius: 70px;
     margin: 0 auto;
+    transform: translateX(-10%);
 
 }
 
@@ -419,9 +431,9 @@
 }
 
 .sponsors>a h3 {
-    color: #123C69;
+    color: var(--title-color);
 }
 
 .sponsors>a p {
-    color: #123C69;
+    color: var(--title-color);
 }

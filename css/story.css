@@ -14,21 +14,16 @@ main {}
 /* ==========右邊內容========= */
 .story_box {
     /* background-color: aqua; */
-    box-sizing: border-box;
-    width: 70%;
-    margin-top: 248px;
+    width: calc(var(--right-width) * .75);
     min-width: 600px;
-    margin-left: 100px;
-    /* overflow: hidden; */
-
+    box-sizing: border-box;
+    margin: 248px auto 0;
+    padding: 0 100px;
     overflow: hidden;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap; */
-    /* z-index: 0; */
-
 }
-.story_item{
+
+
+.story_item {
     /* background-color: #fff; */
     margin-bottom: 110px;
     display: flex;
@@ -36,44 +31,50 @@ main {}
     justify-items: center;
     /* justify-content: space-between; */
 }
-.story_item:nth-child(2n) img{
-    order:2
+.story_item:last-child{
+    margin-bottom: 50px;
 }
 
-.story_item img{
+
+.story_item:nth-child(2n) img {
+    order: 2
+}
+
+.story_item img {
     display: block;
     border-radius: 20px;
     width: 50%;
 
 }
 
-.story_item .story_text{
-/* width: 450px; */
-width: 50%;
-margin: 0 22px;
-/* text-align: left; */
-} 
-.story_text h3{
+.story_item .story_text {
+    /* width: 450px; */
+    width: 50%;
+    margin: 0 22px;
+
+}
+
+.story_text h3 {
     text-align: left;
     margin-bottom: 20px;
     color: var(--black_color);
 }
-.story_text p{
+
+.story_text p {
     display: block;
     width: 80%;
     text-align: left;
     margin-bottom: 50px;
 }
-.story_text >a{
-    background-color:var(--secodary-color);
+
+.story_text>a {
+    background-color: var(--secodary-color);
     display: block;
     width: 100px;
     margin-left: auto;
     border-radius: 10px;
     line-height: 34px;
     color: #fff;
-    font-size: 18px;
-    /* text-align: right; */
+    font-size: 16px;
 
 }
-
