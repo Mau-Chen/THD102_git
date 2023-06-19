@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imges/logo_s.png" />
+    <link rel="bookmark" href="imges/logo_s.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>毛遇-毛怪列表</title>
+    <link rel="stylesheet" href="css/petlist.css">
+</head>
+
+<body>
+    <!-- =====側邊欄選單===== -->
+    <aside>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./imges/logo.png" alt="">
+            </a>
+        </div>
+        <!-- ---文字選單--- -->
+        <div class="nav">
+            <div class="box">
+                <div class="box-item"><a href="post.html">公告事項</a>
+                    <ul class="box-item-content">
+                        <li><a href="post.html">要事新聞</a></li>
+                        <li><a href="activity.html">相關活動</a></li>
+                        <li><a href="story.html">成功案例</a></li>
+                    </ul>
+                </div>
+                <div class="box-item"><a href="index.html#sopkey">領養流程</a></div>
+                <div class="box-item"><a href="petlist.html">毛怪列表</a></div>
+                <div class="box-item"><a href="about.html">關於毛遇</a></div>
+                <div class="box-item"><a href="sponsor.html">贊助毛遇</a></div>
+                <div class="box-item"><a href="member.html">毛遇會員</a></div>
+            </div>
+        </div>
+        <!-- ---文字選單結束--- -->
+        <div class="icon">
+            <ul>
+                <li><a href="about.html#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="map"></a></li>
+                <li><a href="about.html#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="phone"></a></li>
+                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="heart"></a></li>
+            </ul>
+        </div>
+        <!-- <a href="" class="push_top"><img src="imges/TOP.png" alt=""></a> -->
+    </aside>
+    <!-- =====主頁面===== -->
+    <main id="petlist_topkey">
+        <!-- =====右側表頭===== -->
+        <div class="navtop">
+            <h1>毛怪列表</h1>
+            <!-- 搜尋列 -->
+            <div class="petbox">
+                <div class="none_top"></div>
+                <div class="choosebox_bg">
+                    <ul>
+                        <li class="class-item">
+                            <a href="#">
+                                <span class="peticon">
+                                    <img src="imges/petlist/choose01_d.png" alt="">
+                                    <!-- <ion-icon name="cloudy-outline"></ion-icon> -->
+                                </span>
+                                <span class="text">犬</span>
+                            </a>
+                        </li>
+                        <li class="class-item">
+                            <a href="#">
+                                <span class="peticon">
+                                    <img src="imges/petlist/choose02_c.png" alt="">
+                                    <!-- <ion-icon name="cloudy-outline"></ion-icon> -->
+                                </span>
+                                <span class="text">貓</span>
+                            </a>
+                        </li>
+                        <li class="class-item">
+                            <a href="#">
+                                <span class="peticon">
+                                    <img src="imges/petlist/choose03_r.png" alt="">
+                                    <!-- <ion-icon name="cloudy-outline"></ion-icon> -->
+                                </span>
+                                <span class="text">兔</span>
+                            </a>
+                        </li>
+                        <li class="class-item">
+                            <a href="#">
+                                <span class="peticon">
+                                    <img src="imges/petlist/choose04_b.png" alt="">
+                                    <!-- <ion-icon name="cloudy-outline"></ion-icon> -->
+                                </span>
+                                <span class="text">鳥</span>
+                            </a>
+                        </li>
+                        <li class="class-item">
+                            <a href="#">
+                                <span class="peticon">
+                                    <img src="imges/petlist/choose05_m.png" alt="">
+                                    <!-- <ion-icon name="cloudy-outline"></ion-icon> -->
+                                </span>
+                                <span class="text">鼠</span>
+                            </a>
+                        </li>
+                        <div class="indicator"></div>
+                    </ul>
+                </div>
+            </div>
+            <!-- 搜尋文字列 -->
+            <div class="choose_select">
+                <div class="select_item">
+                    <label for="" class="t20">年齡：</label>
+                    <select class="custom_select">
+                        <option value="none" selected disabled hidden>年齡範圍</option>
+                        <option>未滿一歲</option>
+                        <option>一~三歲</option>
+                        <option>三歲~六歲</option>
+                        <option>六歲以上</option>
+                    </select>
+                </div>
+                <div class="select_item">
+                    <label for="" class="t20">性別：</label>
+                    <select class="custom_select">
+                        <option value="none" selected disabled hidden>生理性別</option>
+                        <option>公</option>
+                        <option>母</option>
+                    </select>
+                </div>
+                <div class="select_item">
+                    <label for="" class="t20">所在地：</label>
+                    <select class="custom_select">
+                        <option value="none" selected disabled hidden>概略地區</option>
+                        <option>北北基宜</option>
+                        <option>桃竹苗</option>
+                        <option>中彰投</option>
+                        <option>雲嘉南</option>
+                        <option>高屏</option>
+                        <option>花東</option>
+                        <option>澎金馬</option>
+                    </select>
+                </div>
+                <button type="submit" class="t16">搜尋</button>
+                <a href="#">
+                    <p class="t16">進階搜尋 >></p>
+                </a>
+            </div>
+            <div class="rightline"></div>
+        </div>
+        <!-- ==========右邊內容========= -->
+        <div class="pet_content">
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="pet_card">
+                    <a href="#" class="pet_block">
+                        <div class="pic">
+                            <img src="imges/petlist/pet01.jpg">
+                        </div>
+                        <div class="pet_text">
+                            <div class="theup">
+                                <h3 class="t32">小黑</h3>
+                                <img src="imges/petlist/boy.svg" alt="">
+                            </div>
+                            <div class="thedown">
+                                <p class="t20">新北市</p>
+                                <p class="t20">5歲</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>刊登時間：</p>
+                            <p>17時20分</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==========右邊頁碼========= -->
+        <div class="page_block">
+            <ul class="page">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#" class="-on">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- ==========右邊頁尾========= -->
+        <footer>
+            <ul class="text_a">
+                <li><a href="post.html">公告事項</a></li>
+                <li><a href="post.html">要事新聞</a></li>
+                <li><a href="activity.html">相關活動</a></li>
+                <li><a href="story.html">成功案例</a></li>
+                <li><a href="">領養流程</a></li>
+                <li><a href="">毛怪列表</a></li>
+                <li><a href="about.html">關於毛遇</a></li>
+                <li><a href="">毛遇會員</a></li>
+                <li> </li>
+            </ul>
+            <div class="text_b">
+                <div class="phone">
+                    <img src="imges/footer_sprites.png" alt="">
+                </div>
+                <div class="add">
+                    <img src="imges/footer_sprites.png" alt="">
+                </div>
+            </div>
+            <div class="text_c">
+                <h5>(06) 234 - 5678</h5>
+                <h5>708 台南市安平區漁光路22號</h5>
+            </div>
+        </footer>
+        <div class="top_button">
+            <a href="#petlist_topkey"><img src="imges/top_btn.png" alt=""></a>
+        </div>
+
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

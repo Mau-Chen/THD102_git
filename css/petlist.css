@@ -1,0 +1,385 @@
+@import url("reset.css");
+@import url("all.css");
+
+
+
+/* ==========右邊頁首========= */
+.rightline {
+    width: 100%;
+}
+
+.navtop {
+    height: 380px;
+    margin: 0 auto;
+}
+
+.navtop h1 {
+    margin: 0;
+}
+
+/* ==========動物選單========= */
+.petbox {
+
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    min-width: 630px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-items: center; */
+}
+
+.petbox .none_top {
+    /* background-color: #fff; */
+    height: 30px;
+    min-width: 630px;
+}
+
+.choosebox_bg {
+    width: 100%;
+    /* width: calc(var(--right-width) * .75); */
+    background: var(--secodary-color);
+    /* background-color: #fff; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 47px 47px 0 0;
+}
+
+.choosebox_bg ul {
+    /* background-color: purple; */
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+
+}
+
+.choosebox_bg .class-item {
+    /* background-color: cyan; */
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+
+.choosebox_bg .class-item a {
+    /* background-color: chocolate; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 75px; */
+    height: 75px;
+    border: none;
+}
+
+.choosebox_bg .class-item:hover a {
+    border: none;
+}
+
+.choosebox_bg .class-item .peticon {
+    /* background-color: blue; */
+    position: relative;
+    display: block;
+    height: 40 px;
+    transition: .5s;
+
+}
+
+.choosebox_bg .class-item:hover a .peticon {
+    transform: translateY(-45px);
+    border: none;
+}
+
+.choosebox_bg .class-item .peticon>img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.choosebox_bg .class-item:nth-child(1):hover~.indicator {
+    display: block;
+    left: 17.25%;
+}
+
+.choosebox_bg .class-item:nth-child(2):hover~.indicator {
+    display: block;
+    left: 33.5%;
+}
+
+.choosebox_bg .class-item:nth-child(3):hover~.indicator {
+    display: block;
+    left: 50%;
+}
+
+.choosebox_bg .class-item:nth-child(4):hover~.indicator {
+    display: block;
+    left: 66.5%;
+}
+
+.choosebox_bg .class-item:nth-child(5):hover~.indicator {
+    display: block;
+    left: 83%;
+}
+
+.choosebox_bg .class-item a .text {
+    position: absolute;
+    color: white;
+    font-size: 0.75rem;
+    transform: translateY(20px);
+    transition: .7s;
+    top: 34.5px;
+    opacity: 0;
+}
+
+.choosebox_bg .class-item:hover a .text {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+.indicator {
+    box-sizing: border-box;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #E27D60;
+    border-radius: 50%;
+
+    border: 6px solid #F2E4C5;
+    /* border: 6px solid gray; */
+    top: -50%;
+    display: none;
+    /* opacity: 0; */
+    left: 0;
+    transform: translateX(-50%);
+    /* transition: opacity .2s ,left .5s; */
+    transition: .5s;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /* background: red; */
+    background: transparent;
+    top: 50%;
+    left: -22px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 #F2E4C5;
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    top: 50%;
+    right: -22px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 -10px 0 0 #F2E4C5;
+}
+
+.chooseinput {
+    margin: 0 auto;
+    width: 80%;
+    height: 100px;
+    background: var(--secodary-color);
+    border-radius: 0 0 47px 47px;
+}
+
+/* ==========文字選單========= */
+.choose_select {
+    box-sizing: border-box;
+    padding: 10px 100px;
+    width: 100%;
+    background-color: var(--secodary-color);
+    /* background-color: #fff; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 630px;
+}
+
+.select_item {
+    /* background-color: #E27D60; */
+    margin: 10px;
+}
+
+.choose_select a {
+    color: var(--title-color);
+}
+
+.choose_select .custom_select {
+    /* 清除 select 預設外觀 */
+    appearance: none;
+    outline: none;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    /* 箭頭 */
+    background-image: url("../imges/petlist/down.svg");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: right 8px center;
+}
+
+.choose_select label {
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+.choose_select button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+    transition: .3s;
+}
+
+.choose_select button:active {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+
+
+
+
+/* ==========右邊內容========= */
+.pet_content {
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    /* width: var(--right-width); */
+    width: calc( var(--right-width) * .65);
+    min-width: 850px;
+    margin: 380px auto 0;
+    /* padding: 0 67px; */
+    /* flex-basis: 850px; */
+    /* margin: 0 auto; */
+    display: flex;
+    /* align-content: flex-start; */
+    justify-content: flex-start;
+    /* justify-items: flex-start; */
+    /* justify-content: stretch; */
+    flex-wrap: wrap;
+    /* flex-grow: 1; */
+    /* z-index: 0; */
+
+}
+
+.pet_content .itembox {
+    /* background-color: #E27D60; */
+    display: flex;
+    justify-content: center;
+    /* flex-grow: 1; */
+}
+
+.pet_content .itembox:nth-child(2n-1),
+.pet_content .itembox:last-child {
+    /* flex-grow: 1; */
+}
+
+.pet_card {
+    box-sizing: border-box;
+    width: 304px;
+    height: 330px;
+    background-color: #fff;
+    padding: 30px 25px;
+    position: relative;
+    border-radius: 10px;
+    /* margin-left: 100px; */
+    /* margin: 15px 30px; */
+    margin: 20px 10px;
+    /* flex-grow: 1; */
+    /* flex-basis: 304px; */
+    /* flex-grow: 1; */
+
+
+}
+
+.pet_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet_block .pic {
+    box-sizing: border-box;
+    /* background-color: #E27D60; */
+    width: 249px;
+    overflow: hidden;
+    height: 181px;
+}
+
+.pet_block .pic img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.pet_block .pet_text {
+    display: flex;
+    flex-direction: column;
+    /* align-content: space-between; */
+
+}
+
+.pet_text .theup {
+    display: flex;
+    /* justify-items:flex-start; */
+    justify-content: space-between;
+
+}
+
+.theup h3 {
+    font-weight: 500;
+    color: var(--secodary-color);
+}
+
+.theup img {
+    display: block;
+    width: 25px;
+
+}
+
+.pet_text .thedown {
+    display: flex;
+    margin: 5px 0;
+    /* justify-content: left; */
+
+}
+
+.pet_text .thedown .t20 {
+    margin-right: 28px;
+    color: #999;
+}
+
+.pet_card .date {
+    /* background-color: pink; */
+    display: flex;
+}
+
+.pet_card .date p {
+    /* background-color: #E27D60; */
+    text-align: start;
+    padding-right: 10px;
+    color: #ccc;
+    letter-spacing: .1em;
+}

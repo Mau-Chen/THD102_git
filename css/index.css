@@ -27,6 +27,29 @@
     width: calc(var(--right-width) * 4);
     transition: .5s;
     height: 100%;
+
+    animation: run 1.5s steps(1) backwards;
+}
+
+@keyframes run{
+    0%{
+        margin-left: 0;
+    }
+    25%{
+        margin-left: -100%;
+    }
+    
+    50%{
+        margin-left: -200%;
+    }
+    
+    75%{
+        margin-left: -300%;
+    
+    }
+    100%{
+        margin-left: 0%;
+    }
 }
 
 .swipe li {
@@ -105,6 +128,8 @@
 #choose4:checked~ul {
     margin-left: -300%;
 }
+
+
 
 /* 點到id是choose1~4且for屬性是coose1~4的label 改色*/
 #choose1:checked~label[for="choose1"] {

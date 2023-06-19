@@ -19,34 +19,35 @@ main {}
     width: calc(var(--right-width) * .75);
     /* margin-top: 248px; */
     min-width: 600px;
-    /* margin-left: 100px; */
-    /* overflow: hidden; */
     margin: 248px auto 0;
-    padding: 0 100px;
+    padding: 0 67px;
 
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* z-index: 0; */
 
 }
 
 .party_card {
     box-sizing: border-box;
-    width: 500px;
+    width: 470px;
     height: 320px;
     background-color: #fff;
     padding: 20px;
     position: relative;
-    /* margin-left: 100px; */
-    /* margin: 15px 30px; */
     margin: 20px 0;
+}
+
+.party_card>a:active,
+.party_card>a:visited {
+    color: var(--black-color);
 
 }
-.party_block .pic{
+
+.party_block .pic {
     box-sizing: border-box;
-    width: 460px;
+    width: 420px;
     height: 140px;
     margin: 0 auto;
 }
@@ -89,72 +90,4 @@ main {}
     padding: 10px;
     font-weight: 600;
     font-family: 'Noto Sans TC';
-}
-
-
-
-/* ==========右邊頁碼========= */
-
-.page_block {
-    /* background-color: #fff; */
-    margin: 20px auto;
-    width: 250px;
-    height: 230px;
-}
-
-.page_block .page {
-    /* background-color: #27887C; */
-    padding: 0;
-    font-size: 0;
-}
-
-.page_block .page>li {
-    /* background-color: #E0DA70; */
-    display: inline-block;
-    position: relative;
-}
-
-.page>li:after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 15px;
-    background-color: var(--black-color);
-    position: absolute;
-    top: 13px;
-    right: 0;
-    bottom: 0;
-}
-
-.page>li:nth-child(1)::after {
-    right: auto;
-    left: 0;
-}
-
-.page>li:nth-child(5)::after {
-    right: -40px;
-    /* background-color: #E0DA70; */
-}
-
-
-.page_block .page>li>a {
-    font-size: 20px;
-    display: inline-block;
-    padding: 5px 10px;
-    text-align: center;
-    color: var(--black-color);
-    width: 20px;
-}
-
-.page_block .page>li>a:hover,
-.page_block .page>li>a.-on {
-
-    color: var(--secodary-color);
-    font-weight: 900;
-}
-
-.activityfox {
-    position: absolute;
-    left: 80%;
-    transform: translateY(-95%);
 }

@@ -26,6 +26,12 @@ a {
 }
 
 /* ----------模組---------- */
+.t16{
+    font-size: 16px;
+    letter-spacing: .2em;
+    /* color: #994E55; */
+    /* font-weight: 500; */
+}
 .t20 {
     /* 贊助公司按鈕 */
     /* 個人贊助按鈕 */
@@ -40,9 +46,13 @@ a {
 
 .t32 {
     /* 贊助公司中字 */
+    /* 毛怪列表卡片名 */
     font-size: 32px;
     font-weight: 500;
     line-height: 40px;
+}
+.t36{
+font-size: 36px;
 }
 
 .t40 {
@@ -269,26 +279,27 @@ aside {
 
 /* ==========主區塊規格========== */
 main {
+    box-sizing: border-box;
     float: right;
     /* background-color: #584040; */
     width: var(--right-width);
-    min-width: 500px;
+    min-width: 900px;
     z-index: 0;
+    padding: auto 257px;
 
 }
 
 /* ==========右邊頁首========= */
 .navtop {
     /* background-color: chartreuse; */
-    /* width: calc( var(--right-width) * .75); */
+    background-image: url('../imges/bg_all.png');
     width: var(--right-width);
     height: 248px;
     position: fixed;
-    left: 50%;
-    transform: translateX(-39%);
+    /* left: 50%; */
+    /* transform: translateX(-42%); */
     box-sizing: border-box;
     padding: 65px 257px;
-    background-image: url('../imges/bg_all.png');
     min-width: 900px;
     z-index: 80;
     /* margin: 0 auto; */
@@ -320,6 +331,7 @@ main {
     line-height: 1.5;
     text-align: center;
     letter-spacing: .2em;
+    color: var(--black-color);
 }
 
 
@@ -345,15 +357,14 @@ main {
 .page_block {
     /* background-color: #fff; */
     margin: 20px auto;
-    width: 300px;
-    /* position: absolute; */
-    /* bottom: -15%; */
+    width: 240px;
 }
 
 .page_block .page {
     /* background-color: #27887C; */
     padding: 0;
     font-size: 0;
+    /* margin: 0 auto; */
 }
 
 .page_block .page>li {
@@ -380,8 +391,9 @@ main {
     left: 0;
 }
 
-.page>li:nth-child(6)::after {
-    display: none;
+.page>li:nth-child(5)::after {
+    right: -40px;
+    /* background-color: #E0DA70; */
 }
 
 .page_block .page>li>a {
@@ -407,7 +419,8 @@ main {
 footer {
     width: calc(var(--right-width) * .75);
     height: 200px;
-    background-color: rgba(101, 187, 177, 0.65);
+    background-color: var(--secodary-color);
+    /* background-color: rgba(101, 187, 177, 0.65); */
     border-radius: 80px 80px 0 0;
     /* text-align: match-parent; */
     display: flex;
