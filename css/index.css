@@ -205,6 +205,7 @@
 .news_box>input:checked+.sp {
     opacity: 1;
     transform: scale(1.05);
+    transition: .3s;
 }
 
 #news2 {
@@ -374,6 +375,7 @@
     opacity: 1;
     transform: scale(.9);
     z-index: 3;
+    transition: .5s;
 }
 
 .story_text {
