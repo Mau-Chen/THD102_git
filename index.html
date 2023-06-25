@@ -17,120 +17,157 @@
 </head>
 
 <body>
-    <!-- =====側邊欄選單===== -->
-    <aside>
-        <div class="logo">
+    <!-- =====側邊欄改上方選單===== -->
+    <nav>
+        <div class="nav_logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
         <!-- ---文字選單--- -->
-        <div class="nav">
-            <div class="box">
-                <div class="box-item"><a href="post.html">公告事項</a>
+        <div class="nav_text">
+            <ol class="box">
+                <li class="box-item t20"><a href="post.html">公告事項</a>
                     <ul class="box-item-content">
                         <li><a href="post.html">要事新聞</a></li>
                         <li><a href="activity.html">相關活動</a></li>
                         <li><a href="story.html">成功案例</a></li>
                     </ul>
-                </div>
-                <div class="box-item"><a href="#sopkey">領養流程</a></div>
-                <div class="box-item"><a href="petlist.html">毛怪列表</a></div>
-                <div class="box-item"><a href="about.html">關於毛遇</a></div>
-                <div class="box-item"><a href="sponsor.html">贊助毛遇</a></div>
-                <div class="box-item"><a href="member.html">毛遇會員</a></div>
-            </div>
-        </div>
-        <!-- ---文字選單結束--- -->
-        <div class="icon">
-            <ul>
-                <!-- =====================================要改連結===================================== -->
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="map"></a></li>
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="phone"></a></li>
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="heart"></a></li>
-            </ul>
-        </div>
+                </li>
+                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
+                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
+                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
+                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
+                <li class="box-item t20"><a href="member.html"><i class="fa-solid fa-house-user"></i></a></li>
+                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
 
-    </aside>
-    <!-- =====主頁面===== -->
+                <!-- <li class="box-item t20"><a href="member.html">毛遇會員</a></li> -->
+        </div>
+    </nav>
     <main id="index_topkey">
-        <div class="swipe">
-            <input type="radio" name="indicator" id="choose1" checked>
-            <label for="choose1"></label>
-            <input type="radio" name="indicator" id="choose2">
-            <label for="choose2"></label>
-            <input type="radio" name="indicator" id="choose3">
-            <label for="choose3"></label>
-            <input type="radio" name="indicator" id="choose4">
-            <label for="choose4"></label>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+
+        <!-- 輪播圖 -->
+        <div class="container">
+            <div id="slide">
+                <div class="item" style="background-image: url(imges/index/swipe02.jpg);">
+                    <div class="content">
+                        <div class="name">AAAAAA</div>
+                        <div class="des"></div>
+                        <button> READ MORE</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(imges/index/swipe01.jpg);">
+                    <div class="content">
+                        <div class="name">都是為與你相遇</div>
+                        <div class="des">開啟您與毛怪的新篇章<br>一起尋找幸福<br>歡迎來到毛遇</div>
+
+                        <!-- <button> READ MORE</button> -->
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(imges/index/swipe03.jpg);">
+                    <div class="content">
+                        <div class="name">CCCC</div>
+                        <div class="des">ccccccccccccccccc</div>
+                        <button> READ MORE</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(imges/index/swipe04.jpg);">
+                    <div class="content">
+                        <div class="name">DDDD</div>
+                        <div class="des">dddddddddddddddddddddddd</div>
+                        <button> READ MORE</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(imges/index/swipe01.jpg);">
+                    <div class="content">
+                        <div class="name">DDDD</div>
+                        <div class="des">dddddddddddddddddddddddd</div>
+                        <button> READ MORE</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(imges/index/swipe02.jpg);">
+                    <div class="content">
+                        <div class="name">DDDD</div>
+                        <div class="des">dddddddddddddddddddddddd</div>
+                        <button> READ MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="s_button">&lt;</div>
+                <div class="s_button">&gt;</div>
+            </div>
+
         </div>
         <!-- ==========消息區========== -->
         <div class="news">
-            <img src="imges/index/title_news.png" alt="">
-            <div class="news_box">
-                <input type="radio" name="newspic" id="p1">
-                <label for="p1" id="news1" class="sp"></label>
-                <input type="radio" name="newspic" id="p2">
-                <label for="p2" id="news2" class="sp"></label>
-                <input type="radio" name="newspic" id="p3">
-                <label for="p3" id="news3" class="sp"></label>
-                <input type="radio" name="newspic" id="p4">
-                <label for="p4" id="news4" class="sp"></label>
-                <div class="tab">
-                    <!-- =====================================要改連結===================================== -->
-                    <div class="tab_s"><a href=""><img src="imges/index/news_p1.jpg" alt="" title="社區合作拯救流浪貓狗"></a>
-                    </div>
-                    <div class="tab_s"><a href=""><img src="imges/index/news_p2.jpg" alt="" title="流浪貓咪獲救"></a>
-                    </div>
-                    <div class="tab_s"><a href=""><img src="imges/index/news_p3.jpg" alt="" title="愛心餐廳開設寵物供餐區"></a>
-                    </div>
-                    <div class="tab_s"><a href=""><img src="imges/index/news_p4.jpg" alt="" title="鼠鼠也能出頭天"></a>
-                    </div>
+            <img src="imges/index/news_titleicon.png" alt="">
+            <h1>最新消息</h1>
+            <div class="news_container">
+                <div class="news_boxb"></div>
+                <div class="news_boxs">
+                    <div class="pics"><img src="imges/index/news_p1.jpg" alt=""></div>
+                    <div class="pics"><img src="imges/index/news_p2.jpg" alt=""></div>
+                    <div class="pics"><img src="imges/index/news_p3.jpg" alt=""></div>
+                    <div class="pics"><img src="imges/index/news_p4.jpg" alt=""></div>
+                    <div class="pics"><img src="imges/index/news_p4.jpg" alt=""></div>
                 </div>
             </div>
         </div>
+
         <!-- ==========領養流程區=========== -->
-        <div class="sop" id="sopkey">
+        <div class="sop">
             <div class="sop_color"></div>
-            <img src="imges/index/title_sop.png" alt="">
+            <div class="sop_titlebox">
+                <img src="imges/index/sop_titleicon.png" alt="" class="sop_title">
+                <h1>領養流程</h1>
+            </div>
             <div class="sop_box">
-                <img src="imges/index/sop_line.png" alt="">
-                <div class="step tops sop1">
-                    <!-- =====================================要改連結===================================== -->
-                    <a href="">
-                        <h4>填寫線上問卷</h4>
-                    </a>
+                <!-- <img src="imges/index/sop_line.png" alt=""> -->
+                <div class="step">
+                    <h4>填寫線上問卷
+                        <a href="">這裡</a>
+                    </h4>
+
                     <p>自我評估是成功的第一步</p>
                 </div>
-                <div class="step tops sop2">
+                <div class="sopline">
+                    <img src="imges/index/sopline.png" alt="">
+                </div>
+                <div class="step">
                     <h4>確認法律上<br>是否具備認養資格</h4>
                     <p>年滿18歲，且無動物保護法<br>禁止認養寵物之禁令。</p>
                 </div>
-                <div class="step tops sop3">
+                <div class="sopline">
+                    <img src="imges/index/sopline.png" alt="">
+                </div>
+                <div class="step">
                     <h4>選定毛怪並<br>填寫紙本申請書</h4>
                     <p>我們現場備有制式申請書，<br>不用自備歐！</p>
                 </div>
-                <div class="step downs sop4">
+                <div class="step">
                     <h4>完成免費宣導<br>飼主責任課程</h4>
+                    <p></p>
                 </div>
-                <div class="step downs sop5">
+                <div class="sopline">
+                    <img src="imges/index/sopline.png" alt="">
+                </div>
+                <div class="step">
                     <h4>替毛怪植入晶片<br>並登記飼主資料、<br>施打狂犬疫苗</h4>
-                    <p>經由毛遇配對領養，<<br>以上通通免費欸！</p>
+                    <p>經由毛遇配對領養，<br>以上通通免費欸！</p>
                 </div>
-                <div class="step downs sop6">
+                <div class="sopline">
+                    <img src="imges/index/sopline.png" alt="">
+                </div>
+                <div class="step">
                     <h4>手續完成<br>帶毛怪<br>一起回家囉!</h4>
+                    <p></p>
                 </div>
             </div>
-            <img src="imges/index/floatcat01.png" alt="" class="cat01">
         </div>
         <!-- =======故事區========== -->
         <div class="story">
+            <img src="imges/index/floatcat01.png" alt="" class="cat01">
             <div class="story_box">
                 <!-- =====================================要改連結===================================== -->
                 <a href="" class="storyp1"><img src="imges/story/story01.jpg" alt=""></a>
@@ -148,42 +185,61 @@
             </div>
 
             <div class="story_text">
-                <img src="imges/index/title_story.png" alt="">
+                <div class="story_titlebox">
+                    <img src="imges/index/story_titleicon.png" alt="" class="story_title">
+                    <h1>童話後續</h1>
+                </div>
+                <!-- <img src="imges/index/title_story.png" alt=""> -->
                 <h6>毛遇社區裡的毛怪都有屬於他們的故事</h6>
                 <h6>成功領養不是最後一步，<br>而是一段新幸福的開始！</h6>
             </div>
         </div>
         <!-- ==============贊助區=========== -->
         <div class="sponsor">
-            <div class="sponsor_color">
-                <img src="imges/index/floatcat02.png" alt="" class="cat02">
-                <img src="imges/index/title_sponsor.png" alt="" class="title">
+            <div class="sponsor_color"> </div>
+            <img src="imges/index/floatcat02.png" alt="" class="cat02">
+            <div class="sponsor_container">
+                <div class="sponsor_titlebox">
+                    <img src="imges/index/sponsor_titleicon.png" alt="" class="sponsor_title">
+                    <h1>贊助毛遇</h1>
+                </div>
                 <div class="sponsor_box">
                     <div class="sponsors case1">
                         <a href="sponsor.html">
-                            <img src="imges/index/sponsor01.png" alt="">
-                            <h3>小額贊助</h3>
-                            <p>長期配對失敗的毛怪</p>
+                            <div class="pic">
+                                <img src="imges/index/sponsor01.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>小額贊助</h3>
+                                <p>長期配對失敗的毛怪</p>
+                            </div>
                         </a>
                     </div>
                     <div class="sponsors case2">
-                        <!-- =====================================要改連結===================================== -->
                         <a href="">
-                            <img src="imges/index/sponsor02.png" alt="">
-                            <h3>贊助毛遇</h3>
-                            <p>替減少流浪毛怪出一份力</p>
+                            <div class="pic">
+                                <img src="imges/index/sponsor02.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>贊助毛遇</h3>
+                                <p>替減少流浪毛怪出一份力</p>
+                            </div>
                         </a>
                     </div>
                     <div class="sponsors case3">
-                        <!-- =====================================要改連結===================================== -->
                         <a href="">
-                            <img src="imges/index/sponsor03.png" alt="">
-                            <h3>廠商合作</h3>
-                            <p>讓收益也能做公益</p>
+                            <div class="pic">
+                                <img src="imges/index/sponsor03.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>廠商合作</h3>
+                                <p>讓收益也能做公益</p>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
+            <!-- <img src="imges/index/title_sponsor.png" alt="" class="title"> -->
         </div>
         <footer>
             <ul class="text_a">
@@ -209,12 +265,19 @@
                 <h5>(06) 234 - 5678</h5>
                 <h5>708 台南市安平區漁光路22號</h5>
             </div>
-
         </footer>
-        <div class="top_button">
-            <a href="#index_topkey"><img src="imges/top_btn.png" alt=""></a>
-        </div>
     </main>
+
+    
+    <div class="top_button">
+        <a href="#index_topkey"><img src="imges/top_btn.png" alt=""></a>
+    </div>
+
+
+    <script src="js/index.js" charset="utf-8"></script>
+    <script src="js/all.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/90420daab1.js" crossorigin="anonymous"></script> -->
+
 
 </body>
 

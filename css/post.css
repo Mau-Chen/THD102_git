@@ -1,49 +1,63 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========右邊頁面========== */
-main {}
-
-
-/* ==========右邊頁首========= */
-.navtop ul li:nth-child(1)>a {
-    border-bottom: 3px dotted #E0DA70;
-    background-color: #E0DA70;
-    font-weight: 700;
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
+}
+/* ==========小標題========= */
+#post_topkey .main_top >ul li:nth-child(1)>a{
+    background-color: var(--primary-color);
+    font-weight: bold;
 }
 
 
-/* ==========右邊內容========= */
+
+/* ==========頁尾========= */
+footer{
+    position: static;
+}
+
+
+/* 浮動兔子 */
 .newsrabbit {
     /* background-color: darkblue; */
     position: absolute;
     left: 75%;
-    top: 400px;
+    /* bottom: -200px; */
+    bottom: -60vh;
+    /* top: -400px; */
 }
 
-.news_list {
+/* ==========右邊內容========= */
+.main_top .news_list {
     /* background-color: #fff; */
     box-sizing: border-box;
     /* width: 70%; */
-    width: calc( var(--right-width) * .75);
+    /* width: calc( var(--right-width) * .75); */
+    /* width: var(--main-width); */
+    width: 93%;
     min-width: 600px;
-    margin: 248px auto 0;
-    padding: 0 67px;
+    /* margin: 248px auto 0; */
+    /* padding: 0 65px; */
+    /* padding: 0 5%; */
+    margin-top: 20px;
 }
 
-.news_list .news {
+.main_top .news_list .news {
     /* background-color: #fff; */
     height: 286px;
     border-bottom: 1px solid #ccc;
 }
-.news>a {
+
+.main_top .news_list .news>a {
     /* background-color: coral; */
     display: block;
     padding: 40px 0;
     height: 100%;
 }
 
-.news a img {
+.news_list .news a img {
     display: block;
     float: left;
     width: 25%;
@@ -52,13 +66,14 @@ main {}
     object-position: center center;
 
 }
-.news a:hover >img{
+
+.news_list .news a:hover>img {
     box-sizing: border-box;
-    /* transform: scale(.9, .9); */
-    border: 8px dotted var(--secodary-color)
+    transform: scale(.9, .9);
+    /* border: 8px dotted var(--secodary-color) */
 }
 
-.text_block {
+.news_list .news .text_block {
     float: right;
     width: 75%;
     /* background-color: aquamarine; */
@@ -67,7 +82,7 @@ main {}
     padding-left: 35px;
 }
 
-.text_block h3 {
+.news_list .news .text_block h3 {
     text-align: left;
     line-height: 36px;
     color: #27887C;
@@ -75,7 +90,7 @@ main {}
     /* padding-bottom: 50px; */
 }
 
-.text_block p {
+.news_list .news .text_block p {
     /* display: block; */
     color: var(--black-color);
     width: 80%;
@@ -88,4 +103,3 @@ main {}
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
-

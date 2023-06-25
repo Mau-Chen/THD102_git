@@ -1,35 +1,57 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========右邊頁面========== */
-main {}
-
-/* ==========右邊頁首========= */
-/* .navtop ul li:nth-child(1)>a {
-    border-bottom: 3px dotted #E0DA70;
-    background-color: #E0DA70;
-    font-weight: 700;
-} */
-
-/* ==========右邊內容========= */
-.sponsor_box {
-    /* background-color: aqua; */
-    box-sizing: border-box;
-    width: calc(var(--right-width) * .75);
-    min-width: 600px;
-    margin: 248px auto 0;
-    /* padding: 0 100px; */
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
 }
 
-/* ==========開場白========= */
+/* ==========小標題========= */
+#sponsor_topkey .main_top>ul li:nth-child(1)>a {
+    /* background-color: var(--primary-color); */
+    /* font-weight: bold; */
+}
+
+main .main_top {
+    position: relative;
+    /* background-color: #E27D60; */
+}
+
+/* 頁碼 */
+.sponsor_box .page_box {
+    padding-bottom: 50px;
+    height: 3vh;
+}
+
+
+
+/* ==========頁尾========= */
+footer {
+    position: static;
+}
+
+
+
+
+
+/* ==========內容========= */
+.sponsor_box {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
 .sponsor_box .slogan {
     /* background-color: crimson; */
-    margin: 20px 0 50px;
+    width: 100%;
+    margin: 40px 0 50px;
 }
 
 .sponsor_box .slogan p {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--black-color);
+    line-height: 1.5;
 }
 
 .sponsor_box .slogan span {
@@ -37,9 +59,11 @@ main {}
     margin: 0 10px;
 }
 
+
 /* ==========大明星介紹========= */
 .star_list {
     width: 100%;
+    min-width: 900px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -49,31 +73,49 @@ main {}
 .star_list .star_item {
     /* background-color: white; */
     box-sizing: border-box;
-    width: 376px;
+    /* width: 376px; */
+    width: 30%;
+    height: 60vh;
     margin-bottom: 20px;
-    height: 500px;
+    /* height: 500px; */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 .star_item .the_star {
+    /* box-sizing: border-box; */
+    /* background-color: blue; */
     display: block;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
+    /* height: 100%; */
+    /* position: absolute; */
+    /* top: 0px; */
     -webkit-filter: drop-shadow(8px 5px 0px #999);
-    object-fit: scale-down;
+    /* object-fit: scale-down; */
+    object-position: 50% 50%;
 }
 
 .star_item .bg {
+    /* background-color: aqua; */
     display: block;
+    position: absolute;
+    /* display: flex; */
+    /* align-items: center; */
+    width: 100%;
+    /* margin-top: 50%; */
+    /* transform: translateY(20%); */
+    /* margin: auto 0; */
 
 }
 
 .star_item .pet_namebox {
     /* background-color: blueviolet; */
     position: absolute;
-    top: 360px;
+    /* top: 360px; */
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
@@ -103,6 +145,7 @@ main {}
 
 .star_item .donate {
     /* background-color: aquamarine; */
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -128,57 +171,63 @@ main {}
     border-radius: 8px;
 }
 
+
 /* ==========捐款給毛遇=========  */
 .donateus {
     /* background-color: #fff; */
-    width: 100%;
-    height: 600px;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 160px;
+    margin-top: 130px;
     /* padding-bottom: 150px; */
+    padding: 3%;
 }
 
 .donateus .mousepic {
     /* background-color: aqua; */
-    flex-basis: 300px;
-    flex-grow: 1;
+    width: 50%;
+    padding: 5%;
+}
+
+.donateus .mousepic>img {
+    display: block;
+    width: 100%;
 }
 
 .donateus .textbox {
+    width: 50%;
     /* background-color: burlywood; */
     box-sizing: border-box;
-    /* height: 600px; */
-    flex-basis: 300px;
-    flex-grow: 1.5;
-    padding: 50px;
+    padding-left: 5%;
 }
 
 .donateus .textbox h1 {
     color: var(--title-color);
-    padding: 30px;
+    /* padding: 30px; */
 }
 
-.donateus .textbox .t32 {
-    color: var(--title-color);
-    padding: 30px;
+.donateus .textbox p {
+    /* color: var(--title-color); */
+    padding-top: 20px;
     text-align: left;
+    line-height: 1.5;
+
 }
 
 .donateus .textbox a {
     background-color: var(--primary-color);
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 10px 10px;
+    margin: 20px 10px 0 0;
     border-radius: 10px;
     color: var(--black-color);
     font-weight: 500;
 }
+
 /* ==========異業合作========= */
 .nobody{
-    height: 250px;
-    /* width: 1px; */
+    height: 150px;
 }
 .alliance{
     box-sizing: border-box;
@@ -201,6 +250,5 @@ margin-bottom: 30px;
     /* background-color: burlywood; */
     display: block;
     margin: 0 auto;
-    /* padding-bottom: 50px; */
-    /* margin-bottom: 50px; */
+
 }

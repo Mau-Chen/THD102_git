@@ -1,42 +1,81 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========右邊頁面========== */
-main {}
-
-/* ==========右邊頁首========= */
-.navtop ul li:nth-child(2)>a {
-    border-bottom: 3px dotted #E0DA70;
-    background-color: #E0DA70;
-    font-weight: 700;
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
 }
+/* ==========小標題========= */
+#activity_topkey .main_top >ul li:nth-child(2)>a{
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ==========右邊頁尾========= */
+.footer_box {
+    margin: 0 auto;
+    /* height: 30vh; */
+}
+.footer_box footer{
+    position: static;
+}
+
+.footer_box .page_box{
+    /* background-color: aquamarine; */
+    height: 25vh;
+    margin-top: 1%;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    position: relative;
+}
+
+.footer_box .activityfox {
+    /* background-color: darkblue; */
+    position: absolute;
+    left: 75%;
+    bottom: -5%;
+}
+
+
 
 /* ==========右邊內容========= */
 .partycard_box {
     /* background-color: aqua; */
     box-sizing: border-box;
-    /* width: 70%; */
-    width: calc(var(--right-width) * .75);
-    /* margin-top: 248px; */
+    width: var(--main-width);
     min-width: 600px;
-    margin: 248px auto 0;
-    padding: 0 67px;
+    margin: 0 auto;
+    /* padding: 0 5%; */
 
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: space-between;
+    align-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 20px;
 
 }
 
-.party_card {
+.partycard_box .party_card {
+    margin: 3% 0;
     box-sizing: border-box;
-    width: 470px;
-    height: 320px;
+    width: 45%;
+    height: 35vh;
     background-color: #fff;
-    padding: 20px;
-    position: relative;
-    margin: 20px 0;
+    /* padding: 2%; */
+
+
+}
+
+.partycard_box .party_card .party_block {
+    /* background-color: aquamarine; */
+    padding: 5%;
+
+    /* margin: 0 auto; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .party_card>a:active,
@@ -46,32 +85,46 @@ main {}
 }
 
 .party_block .pic {
+    /* background-color: pink; */
     box-sizing: border-box;
-    width: 420px;
-    height: 140px;
-    margin: 0 auto;
+    width: 100%;
+    flex-basis: 60%;
+    flex-grow: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
 }
 
 .party_block .pic img {
     display: block;
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    z-index: 3;
 }
 
-.party_block .date {
+.party_block .pic .date {
     background-color: #fff;
     position: absolute;
-    right: 20px;
-    top: 158px;
+    right: 0;
+    top: 80%;
     border-radius: 20px 0 0;
+    z-index: 3;
 
 }
 
 .party_text {
+    padding-top: 5px;
+    width: 100%;
+    flex-grow: 1;
     /* background-color: #E0DA70; */
-    margin-top: 40px;
+
 }
 
 .party_text h3 {
+    display: block;
+    width: 95%;
     text-align: left;
     color: var(--secodary-color);
     line-height: 1.5em;
@@ -80,8 +133,10 @@ main {}
 
 .party_text p {
     display: block;
-    width: 400px;
+    /* width: 400px; */
+    width: 95%;
     text-align: left;
+    line-height: 1.3;
 }
 
 .party_block .date p {

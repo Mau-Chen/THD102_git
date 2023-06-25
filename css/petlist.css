@@ -3,33 +3,64 @@
 
 
 
-/* ==========右邊頁首========= */
-.rightline {
-    width: 100%;
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
 }
 
-.navtop {
-    height: 380px;
-    margin: 0 auto;
+main .main_top {
+    position: relative;
+    /* background-color: #E27D60; */
 }
 
-.navtop h1 {
-    margin: 0;
+main .main_top>h1 {
+    /* display: block; */
+    margin-bottom: 10px;
 }
+
+main .main_top .petbox::after {
+    content: "";
+    display: block;
+    width: var(--main-width);
+    min-width: 900px;
+    height: 18px;
+    background-color: #FCF8EC;
+    border-bottom: 2px solid #ccc;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+/* ==========右邊頁尾========= */
+.footer_box {
+    position: relative;
+    height: 350px;
+}
+
+.footer_box footer {
+    min-width: 900px;
+}
+
+.footer_box .page_box {
+    margin-top: 1%;
+    align-items: flex-start;
+}
+
+
 
 /* ==========動物選單========= */
 .petbox {
-
-    /* background-color: aqua; */
+    background-color: #FCF8EC;
     box-sizing: border-box;
     min-width: 630px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    /* justify-items: center; */
+    position: sticky;
+    top: 80px;
+    z-index: 30;
 }
+
 
 .petbox .none_top {
     /* background-color: #fff; */
@@ -39,7 +70,6 @@
 
 .choosebox_bg {
     width: 100%;
-    /* width: calc(var(--right-width) * .75); */
     background: var(--secodary-color);
     /* background-color: #fff; */
     position: relative;
@@ -92,7 +122,7 @@
 }
 
 .choosebox_bg .class-item:hover a .peticon {
-    transform: translateY(-45px);
+    transform: translateY(-38px);
     border: none;
 }
 
@@ -104,12 +134,14 @@
 
 .choosebox_bg .class-item:nth-child(1):hover~.indicator {
     display: block;
-    left: 17.25%;
+    /* left: 17.25%; */
+    left: 18%;
 }
 
 .choosebox_bg .class-item:nth-child(2):hover~.indicator {
     display: block;
-    left: 33.5%;
+    /* left: 33.5%; */
+    left: 34%;
 }
 
 .choosebox_bg .class-item:nth-child(3):hover~.indicator {
@@ -119,12 +151,14 @@
 
 .choosebox_bg .class-item:nth-child(4):hover~.indicator {
     display: block;
-    left: 66.5%;
+    /* left: 66.5%; */
+    left: 66%;
 }
 
 .choosebox_bg .class-item:nth-child(5):hover~.indicator {
     display: block;
-    left: 83%;
+    /* left: 83%; */
+    left: 82%;
 }
 
 .choosebox_bg .class-item a .text {
@@ -150,7 +184,7 @@
     background: #E27D60;
     border-radius: 50%;
 
-    border: 6px solid #F2E4C5;
+    border: 6px solid #FBF7EC;
     /* border: 6px solid gray; */
     top: -50%;
     display: none;
@@ -171,7 +205,7 @@
     top: 50%;
     left: -22px;
     border-top-right-radius: 20px;
-    box-shadow: 0 -10px 0 0 #F2E4C5;
+    box-shadow: 0 -10px 0 0 #FBF7EC
 }
 
 .indicator::after {
@@ -183,7 +217,7 @@
     top: 50%;
     right: -22px;
     border-top-left-radius: 20px;
-    box-shadow: 0 -10px 0 0 #F2E4C5;
+    box-shadow: 0 -10px 0 0 #FBF7EC;
 }
 
 .chooseinput {
@@ -197,16 +231,18 @@
 /* ==========文字選單========= */
 .choose_select {
     box-sizing: border-box;
-    padding: 10px 100px;
+    padding: 10px 20px;
     width: 100%;
     background-color: var(--secodary-color);
     /* background-color: #fff; */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     min-width: 630px;
+    border-radius: 0 0 20px 20px;
 }
 
 .select_item {
@@ -225,7 +261,7 @@
 
     border: 1px solid gray;
     border-radius: 5px;
-    width: 120px;
+    width: 110px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 1rem;
@@ -266,52 +302,22 @@
 .pet_content {
     /* background-color: aqua; */
     box-sizing: border-box;
-    /* width: var(--right-width); */
-    width: calc(var(--right-width) * .65);
-    min-width: 850px;
-    margin: 380px auto 0;
-    /* padding: 0 67px; */
-    /* flex-basis: 850px; */
-    /* margin: 0 auto; */
+    min-width: 600px;
+    margin: 0 auto;
     display: flex;
-    /* align-content: flex-start; */
-    justify-content: flex-start;
-    /* justify-items: flex-start; */
-    /* justify-content: stretch; */
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* flex-grow: 1; */
-    /* z-index: 0; */
 
-}
-
-.pet_content .itembox {
-    /* background-color: #E27D60; */
-    display: flex;
-    justify-content: center;
-    /* flex-grow: 1; */
-}
-
-.pet_content .itembox:nth-child(2n-1),
-.pet_content .itembox:last-child {
-    /* flex-grow: 1; */
 }
 
 .pet_card {
     box-sizing: border-box;
-    width: 304px;
-    height: 330px;
+    width: 30%;
+    min-width: 280px;
     background-color: #fff;
-    padding: 30px 25px;
-    position: relative;
+    padding: 3% 3%;
+    margin: 1% 0;
     border-radius: 10px;
-    /* margin-left: 100px; */
-    /* margin: 15px 30px; */
-    margin: 20px 10px;
-    /* flex-grow: 1; */
-    /* flex-basis: 304px; */
-    /* flex-grow: 1; */
-
-
 }
 
 .pet_block {
@@ -321,8 +327,7 @@
 
 .pet_block .pic {
     box-sizing: border-box;
-    /* background-color: #E27D60; */
-    width: 249px;
+    width: 100%;
     overflow: hidden;
     height: 181px;
 }
@@ -353,15 +358,14 @@
     color: var(--secodary-color);
 }
 
-.theup img {
-    display: block;
-    width: 25px;
-
+.theup i {
+    font-size: 24px;
+    color: var(--black-color);
 }
 
 .pet_text .thedown {
     display: flex;
-    margin: 5px 0;
+    margin: 2% 0;
     /* justify-content: left; */
 
 }
@@ -374,6 +378,7 @@
 .pet_card .date {
     /* background-color: pink; */
     display: flex;
+    margin: 2% 0;
 }
 
 .pet_card .date p {
@@ -384,28 +389,23 @@
     letter-spacing: .1em;
 }
 
-.page_block{
-    margin-bottom: 80px;
-}
 
 .cute_pet {
     /* background-color: #fff; */
+    position: absolute;
+    bottom: 0;
     display: flex;
+    width: 100%;
     justify-content: space-around;
-    transform: translateY(-350px);
-    /* bottom: 120px; */
+    transform: translateY(-180px);
 }
-.cute_pet .leftdog{
-    /* box-sizing: border-box; */
+
+.cute_pet .leftdog {
     display: block;
     width: 180px;
-    /* width: 200px; */
-    /* margin: 50px; */
 }
 
 .cute_pet .rightcat {
     display: block;
-    /* width: 200px; */
     width: 180px;
-    /* right: 35%; */
 }

@@ -1,33 +1,60 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========右邊頁面========== */
-main {}
-
-/* ==========右邊頁首========= */
-/* .navtop ul li:nth-child(1)>a {
-    border-bottom: 3px dotted #E0DA70;
-    background-color: #E0DA70;
-    font-weight: 700;
-} */
-.navtop ul li>a:hover {
-    background-color: #E0DA70;
-    font-weight: 700;
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
 }
 
-/* ==========右邊內容========= */
+/* ==========小標題========= */
+#about_topkey .main_top>ul li:nth-child(1)>a {
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+main .main_top {
+    position: relative;
+    /* background-color: #E27D60; */
+    /* width: 150%; */
+}
+
+.main_top>ul:before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    width: 100vw;
+    height: 80px;
+    bottom: -18px;
+    transform: translateX(-19%);
+    /* background-color: #E27D60; */
+    background-color: #FCF8EC;
+    z-index: -1;
+}
+
+
+
+/* ==========頁尾========= */
+footer {
+    position: static;
+}
+
+
+
+
+
+
+/* ==========內容========= */
 .about_box {
     /* background-color: aqua; */
     box-sizing: border-box;
-    /* width: 70%; */
-    width: calc(var(--right-width) * .75);
+    width: 100%;
     min-width: 600px;
-    margin: 248px auto 0;
-    padding: 0 67px;
+    margin: 0 auto;
 }
 
 /* ==========開場白========= */
-.slogan {
+.about_box .slogan {
     /* background-color: crimson; */
     width: 100%;
     display: flex;
@@ -35,73 +62,117 @@ main {}
     justify-items: center;
     /* height: 443px; */
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.slogan img {
+.about_box .slogan img {
     display: block;
     /* background-color: #fff; */
     width: 40%;
-    flex-basis: 400px;
+    /* flex-basis: 400px; */
 }
 
-.slogan .text {
+.about_box .slogan .text {
     /* background-color: burlywood; */
-    width: 50%;
+    box-sizing: border-box;
+    width: 60%;
     flex-grow: 1;
-    padding: 20px;
-    flex-basis: 500px;
+    /* padding: 20px; */
+    padding: 3% 0;
+    /* flex-basis: 500px; */
 }
 
 .slogan .text p {
     font-size: 20px;
     text-align: left;
-    margin-bottom: 15px;
+    letter-spacing: .15em;
+    line-height: 1.5;
+    /* margin-bottom: 15px; */
     color: var(--black-color);
 }
 
 /* ==========介紹詞========= */
 .understand {
-    height: 697px;
+    /* height: 697px; */
+    height: 60vh;
     width: 100%;
     position: relative;
     /* background-color: darkcyan; */
 }
 
 .understand .about_color {
-    width: 150%;
-    height: 547px;
+    /* width: 170%; */
+    width: 88vw;
+    /* width: 140%; */
+    /* height: 547px; */
+    height: 60vh;
     background-color: var(--primary-color);
     position: absolute;
-    left: -250px;
-    top: 150px;
+    /* left: -250px; */
+    /* right: -15%; */
+    left: -5%;
+    /* top: 150px; */
+    top: 18%;
+    transform: translateX(-5%);
     border-radius: 20px 0 0 0;
+    z-index: -1;
 
 }
 
-.understand>img {
-    display: block;
+main .understand .titlebox {
+    /* background-color: blueviolet; */
+    /* width: 30%; */
+    width: 190px;
     position: absolute;
-    top: 70px;
-    left: 0px;
+    left: 0;
+    bottom: 0;
+    bottom: 43vh;
 
 }
+
+main .understand .titlebox>img {
+    display: block;
+    /* background-color:cadetblue; */
+    margin: 0 auto;
+
+}
+
+main .understand .titlebox>h1 {
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: 0px 4px 1px var(--secodary-color);
+    white-space: nowrap;
+}
+
+main .understand .titlebox>h1::after {
+    content: "";
+    display: block;
+    background-color: var(--secodary-color);
+    width: 42px;
+    height: 6px;
+    margin: 15px auto;
+}
+
+
+
 
 .understand .inner {
     position: absolute;
-    top: 248px;
+    /* top: 248px; */
+    top: 40%;
 
     display: flex;
     width: 100%;
     align-items: center;
     justify-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .understand .inner>.text {
     width: 50%;
     box-sizing: border-box;
-    padding: 20px;
-    flex-basis: 500px;
+    /* padding: 20px; */
+    /* flex-basis: 500px; */
     flex-grow: 1;
 
 }
@@ -111,47 +182,80 @@ main {}
     font-size: 20px;
     text-align: left;
     color: var(--black-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .understand .inner>img {
     /* background-color: aqua; */
+    box-sizing: border-box;
     width: 50%;
-    flex-basis: 500px;
+    padding: 2%;
+    /* flex-basis: 500px; */
 
 }
 
 /* ==========時間線========= */
 .timelinebox {
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     width: 100%;
     /* background-color: black; */
-    height: 500px;
-    height: 800px;
+    /* height: 500px; */
+    /* height: 800px; */
 }
 
-.timelinebox .title_timeline {
-    display: block;
-    /* margin-top: 47px; */
-    margin: 60px auto;
+.timelinebox .titlebox2 {
+    /* background-color: darkkhaki; */
+
 }
+
+.timelinebox .titlebox2>img {
+    /* background-color: #E27D60; */
+    /* display: inline-block; */
+    display: block;
+    margin: 0 auto;
+}
+
+.timelinebox .titlebox2>h1 {
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: 0px 4px 1px var(--primary-color);
+    white-space: nowrap;
+}
+
+.timelinebox .titlebox2>h1::after {
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    width: 42px;
+    height: 6px;
+    margin: 15px auto;
+}
+
+
 
 .timelinebox .time_pic {
     display: block;
     width: 100%;
     /* background-color: #FDF7EC; */
-    border-radius: 40px;
+    /* border-radius: 40px; */
     object-position: center center;
-    padding: 20px;
+    /* padding: 30px; */
+    padding: 40px 0;
 }
 
 /* ==========地址電話交通資訊=========  */
 .find_us {
     /* background-color: #fff; */
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-    margin: 50px 0 100px;
+    /* margin: 50px 0 100px; */
+    padding: 50px 0 100px;
 }
 
 .find_us .text {
@@ -173,9 +277,13 @@ main {}
 .find_us .text h3 {
     text-align: left;
     margin-bottom: 10px;
+    color: var(--title-color);
 }
 
-.find_us .text h6 {}
+.find_us .text h6 {
+    /* margin-bottom: 4px; */
+    line-height: 1.5;
+}
 
 
 

@@ -16,45 +16,41 @@
 </head>
 
 <body>
-    <!-- =====側邊欄選單===== -->
-    <aside>
-        <div class="logo">
+    <!-- =====側邊欄改上方選單===== -->
+    <nav>
+        <div class="nav_logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
         <!-- ---文字選單--- -->
-        <div class="nav">
-            <div class="box">
-                <div class="box-item"><a href="post.html">公告事項</a>
+        <div class="nav_text">
+            <ol class="box">
+                <li class="box-item t20"><a href="post.html">公告事項</a>
                     <ul class="box-item-content">
                         <li><a href="post.html">要事新聞</a></li>
                         <li><a href="activity.html">相關活動</a></li>
                         <li><a href="story.html">成功案例</a></li>
                     </ul>
-                </div>
-                <div class="box-item"><a href="index.html#sopkey">領養流程</a></div>
-                <div class="box-item"><a href="petlist.html">毛怪列表</a></div>
-                <div class="box-item"><a href="about.html">關於毛遇</a></div>
-                <div class="box-item"><a href="sponsor.html">贊助毛遇</a></div>
-                <div class="box-item"><a href="member.html">毛遇會員</a></div>
-            </div>
+                </li>
+                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
+                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
+                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
+                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
+                <li class="box-item t20"><a href="member.html"><i class="fa-solid fa-house-user"></i></a></li>
+                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
+                <!-- <li class="box-item t20"><a href="member.html">毛遇會員</a></li> -->
         </div>
         <!-- ---文字選單結束--- -->
-        <div class="icon">
-            <ul>
-                <!-- =====================================要改連結===================================== -->
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="map"></a></li>
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="phone"></a></li>
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="heart"></a></li>
-            </ul>
-        </div>
-        <!-- <a href="" class="push_top"><img src="imges/TOP.png" alt=""></a> -->
-    </aside>
+
+        <img src="imges/post/floatrabbit01.png" alt="" class="newsrabbit">
+    </nav>
     <!-- =====主頁面===== -->
     <main id="post_topkey">
         <!-- =====右側表頭===== -->
-        <div class="navtop">
+
+        <div class="main_top">
             <h1>公告事項</h1>
             <ul>
                 <li>
@@ -73,86 +69,123 @@
                     </a>
                 </li>
             </ul>
-            <div class="rightline"></div>
-            <img src="imges/post/floatrabbit01.png" alt="" class="newsrabbit">
-        </div>
-        <!-- ==========右邊內容========= -->
-        <div class="news_list">
-            <div class="news no01">
-                <!-- =====================================要改連結===================================== -->
-                <a href="#">
-                    <img src="imges/post/news01.jpg">
-                    <div class="text_block">
-                        <h3>社區合作拯救流浪貓狗：志願者們聯手進行大規模絕育計劃</h3>
-                        <p>一個社區團體與當地動物組織合作，展開一項大型絕育計劃，旨在控制流浪貓狗數量，提高動物福利。</p>
-                    </div>
-                </a>
 
-            </div>
-            <div class="news no02">
-                <!-- =====================================要改連結===================================== -->
-                <a href="#">
-                    <img src="imges/post/news02.jpg">
-                    <div class="text_block">
-                        <h3>流浪貓咪獲救：熱心市民發起募款活動建立貓咪庇護所</h3>
-                        <p>一位熱心市民發起募款活動，籌集資金以建立一個貓咪庇護所，為流浪貓咪提供臨時收容和醫療照顧。</p>
-                    </div>
-                </a>
-            </div>
-            <div class="news no03">
-                <!-- =====================================要改連結===================================== -->
-                <a href="#">
-                    <img src="imges/post/news03.jpg">
-                    <div class="text_block">
-                        <h3>愛心餐廳開設寵物供餐區：為街頭流浪犬提供溫暖和食物</h3>
-                        <p>一家餐廳在其室外區域設置寵物供餐區，為街頭流浪犬提供食物、水和遮蔽，讓他們感受到關愛和溫暖。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ==========右邊頁碼========= -->
-        <div class="page_block">
-            <ul class="page">
-                <!-- =====================================要改連結===================================== -->
-                <li><a href="#">&lt;</a></li>
-                <li><a href="#" class="-on">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">&gt;</a></li>
-            </ul>
-        </div>
+            <!-- ==========右邊內容========= -->
+            <div class="news_list">
+                <div class="news no01">
+                    <a href="#">
+                        <img src="imges/post/news01.jpg">
+                        <div class="text_block">
+                            <h3>社區合作拯救流浪貓狗：志願者們聯手進行大規模絕育計劃</h3>
+                            <p>一個社區團體與當地動物組織合作，展開一項大型絕育計劃，旨在控制流浪貓狗數量，提高動物福利。</p>
+                        </div>
+                    </a>
 
-        <!-- ==========右邊頁尾========= -->
-        <footer>
-            <ul class="text_a">
-                <li><a href="post.html">公告事項</a></li>
-                <li><a href="post.html">要事新聞</a></li>
-                <li><a href="activity.html">相關活動</a></li>
-                <li><a href="story.html">成功案例</a></li>
-                <li><a href="index.html#sopkey">領養流程</a></li>
-                <li><a href="petlist.html">毛怪列表</a></li>
-                <li><a href="about.html">關於毛遇</a></li>
-                <li><a href="member.html">毛遇會員</a></li>
-                <li> </li>
-            </ul>
-            <div class="text_b">
-                <div class="phone">
-                    <img src="imges/footer_sprites.png" alt="">
                 </div>
-                <div class="add">
-                    <img src="imges/footer_sprites.png" alt="">
+                <div class="news no02">
+                    <a href="#">
+                        <img src="imges/post/news02.jpg">
+                        <div class="text_block">
+                            <h3>流浪貓咪獲救：熱心市民發起募款活動建立貓咪庇護所</h3>
+                            <p>一位熱心市民發起募款活動，籌集資金以建立一個貓咪庇護所，為流浪貓咪提供臨時收容和醫療照顧。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news no03">
+                    <a href="#">
+                        <img src="imges/post/news03.jpg">
+                        <div class="text_block">
+                            <h3>愛心餐廳開設寵物供餐區：為街頭流浪犬提供溫暖和食物</h3>
+                            <p>一家餐廳在其室外區域設置寵物供餐區，為街頭流浪犬提供食物、水和遮蔽，讓他們感受到關愛和溫暖。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news no03">
+                    <a href="#">
+                        <img src="imges/post/news03.jpg">
+                        <div class="text_block">
+                            <h3>愛心餐廳開設寵物供餐區：為街頭流浪犬提供溫暖和食物</h3>
+                            <p>一家餐廳在其室外區域設置寵物供餐區，為街頭流浪犬提供食物、水和遮蔽，讓他們感受到關愛和溫暖。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news no03">
+                    <a href="#">
+                        <img src="imges/post/news03.jpg">
+                        <div class="text_block">
+                            <h3>愛心餐廳開設寵物供餐區：為街頭流浪犬提供溫暖和食物</h3>
+                            <p>一家餐廳在其室外區域設置寵物供餐區，為街頭流浪犬提供食物、水和遮蔽，讓他們感受到關愛和溫暖。</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="text_c">
-                <h5>(06) 234 - 5678</h5>
-                <h5>708 台南市安平區漁光路22號</h5>
+            <!-- ==========右邊頁碼========= -->
+            <div class="page_box">
+                <div id="pagination">
+                    <a href="">&#9668;</a>
+                    <span>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <!-- <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a> -->
+                        <a href="">...</a>
+                        <a href="">10</a>
+                    </span>
+                    <a href="">&#9658;</a>
+                </div>
+        
             </div>
-        </footer>
-        <div class="top_button">
-            <a href="#post_topkey"><img src="imges/top_btn.png" alt=""></a>
+
+
+
+            <!-- ==========右邊頁尾========= -->
+            <footer>
+                <ul class="text_a">
+                    <li><a href="post.html">公告事項</a></li>
+                    <li><a href="post.html">要事新聞</a></li>
+                    <li><a href="activity.html">相關活動</a></li>
+                    <li><a href="story.html">成功案例</a></li>
+                    <li><a href="index.html#sopkey">領養流程</a></li>
+                    <li><a href="petlist.html">毛怪列表</a></li>
+                    <li><a href="about.html">關於毛遇</a></li>
+                    <li><a href="member.html">毛遇會員</a></li>
+                    <li> </li>
+                </ul>
+                <div class="text_b">
+                    <div class="phone">
+                        <img src="imges/footer_sprites.png" alt="">
+                    </div>
+                    <div class="add">
+                        <img src="imges/footer_sprites.png" alt="">
+                    </div>
+                </div>
+                <div class="text_c">
+                    <h5>(06) 234 - 5678</h5>
+                    <h5>708 台南市安平區漁光路22號</h5>
+                </div>
+            </footer>
+            <div class="top_button">
+                <a href="#post_topkey"><img src="imges/top_btn.png" alt=""></a>
+            </div>
+
+
+
+
+
         </div>
+
     </main>
+
+
+
+
+
+    <script src="js/all.js"></script>
 </body>
 
 </html>

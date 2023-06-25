@@ -16,44 +16,37 @@
 </head>
 
 <body>
-    <!-- =====側邊欄選單===== -->
-    <aside>
-        <div class="logo">
+    <!-- =====側邊欄改上方選單===== -->
+    <nav>
+        <div class="nav_logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
         <!-- ---文字選單--- -->
-        <div class="nav">
-            <div class="box">
-                <div class="box-item"><a href="post.html">公告事項</a>
+        <div class="nav_text">
+            <ol class="box">
+                <li class="box-item t20"><a href="post.html">公告事項</a>
                     <ul class="box-item-content">
                         <li><a href="post.html">要事新聞</a></li>
                         <li><a href="activity.html">相關活動</a></li>
                         <li><a href="story.html">成功案例</a></li>
                     </ul>
-                </div>
-                <div class="box-item"><a href="index.html#sopkey">領養流程</a></div>
-                <div class="box-item"><a href="petlist.html">毛怪列表</a></div>
-                <div class="box-item"><a href="about.html">關於毛遇</a></div>
-                <div class="box-item"><a href="sponsor.html">贊助毛遇</a></div>
-                <div class="box-item"><a href="member.html">毛遇會員</a></div>
-            </div>
+                </li>
+                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
+                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
+                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
+                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
+                <li class="box-item t20"><a href="member.html"><i class="fa-solid fa-house-user"></i></a></li>
+                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
         </div>
         <!-- ---文字選單結束--- -->
-        <div class="icon">
-            <ul>
-                <li><a href="#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="map"></a></li>
-                <li><a href="#findus_topkey"><img src="imges/nav_sprites.png" alt="" class="phone"></a></li>
-                <li><a href=""><img src="imges/nav_sprites.png" alt="" class="heart"></a></li>
-            </ul>
-        </div>
-        <!-- <a href="" class="push_top"><img src="imges/TOP.png" alt=""></a> -->
-    </aside>
+    </nav>
     <!-- =====主頁面===== -->
     <main id="about_topkey">
         <!-- =====右側表頭===== -->
-        <div class="navtop">
+        <div class="main_top">
             <h1>關於毛遇</h1>
             <ul>
                 <li>
@@ -72,57 +65,98 @@
                     </a>
                 </li>
             </ul>
-            <div class="rightline"></div>
-        </div>
-        <!-- ==========右邊內容========= -->
-        <div class="about_box">
-            <!-- ==========開場白========= -->
-            <div class="slogan">
-                <img src="imges/about/about01.png" alt="">
-                <div class="text">
-                    <p>歡迎來到「毛遇」，您尋找寵愛的完美起點！<br>我們是一個致力於連結有愛心的人和可愛毛怪的認養平台。</p>
-                    <p>在「毛遇」，我們相信每個毛小孩都應該有一個溫暖的家，因此我們為您提供了一個方便、可靠的平台，幫助您尋找到合適的寵物夥伴。我們的目標是促進認養而非購買，減少流浪動物的數量，並提倡動物權益。</p>
-                    <p id="understand_topkey">
-                        無論您是在尋找一隻狗狗、貓咪還是其他小動物，「毛遇」都有廣泛的寵物資料庫，滿足您的需求。您可以在我們的網站上瀏覽不同品種、年齡和性別的寵物檔案，並了解每隻毛怪的健康狀況和需求。</p>
-                </div>
-            </div>
-            <!-- ==========介紹詞========= -->
-            <div class="understand">
-                <div class="about_color"></div>
-                <img src="imges/about/title_about.png" alt="">
-                <div class="inner">
+            <div class="about_box">
+                <!-- ==========開場白========= -->
+                <div class="slogan">
+                    <img src="imges/about/about01.png" alt="">
                     <div class="text">
-                        <P>我們重視動物福利，所有在「毛遇」上列出的寵物都經過嚴格的篩選和健康檢查，確保它們適合認養並能夠帶來無盡的愛和快樂。</P>
-                        <P>在「毛遇」，我們也建立了一個充滿愛心和支持的社群。您可以與其他寵物主人交流經驗、分享故事，並獲得專家建議和支持，讓您的寵物養育旅程更加愉快和無憂。</P>
-                        <P id="timeline_topkey">無論您是寵物新手還是有多年的養寵經驗，「毛遇」都是您尋找完美毛小孩的最佳選擇。加入我們，讓「毛遇」成為您與寵物邂逅的最美好起點！</P>
+                        <p>歡迎來到「毛遇」，您尋找寵愛的完美起點！<br>我們是一個致力於連結有愛心的人和可愛毛怪的認養平台。</p>
+                        <p>在「毛遇」，我們相信每個毛小孩都應該有一個溫暖的家，因此我們為您提供了一個方便、可靠的平台，幫助您尋找到合適的寵物夥伴。我們的目標是促進認養而非購買，減少流浪動物的數量，並提倡動物權益。
+                        </p>
+                        <p id="understand_topkey">
+                            無論您是在尋找一隻狗狗、貓咪還是其他小動物，「毛遇」都有廣泛的寵物資料庫，滿足您的需求。您可以在我們的網站上瀏覽不同品種、年齡和性別的寵物檔案，並了解每隻毛怪的健康狀況和需求。</p>
                     </div>
-                    <img src="imges/about/about02.png" alt="">
                 </div>
-            </div>
-            <!-- ==========時間線=========  -->
-            <div class="timelinebox">
-                <img src="imges/about/title_timeline.png" alt="" class="title_timeline">
-                <img src="imges/about/timeline.png" alt="" class="time_pic">
-            </div>
-            <!-- ==========地址電話交通資訊=========  -->
-            <div class="find_us" id="findus_topkey">
-                <div class="text">
-                    <div class="text_a">
-                        <h3>找到毛遇</h3>
-                        <h6>地址：708 台南市安平區漁光路22號<br>電話：(06) 234-5678</h6>
+                <!-- ==========介紹詞========= -->
+                <div class="understand">
+                    <div class="about_color"></div>
+                    <div class="titlebox">
+                        <img src="imges/about/about_titleicon.png" alt="">
+                        <h1>了解毛遇</h1>
+                        <!-- <img src="imges/about/title_about.png" alt=""> -->
                     </div>
+                    <div class="inner">
+                        <div class="text">
+                            <P>我們重視動物福利，所有在「毛遇」上列出的寵物都經過嚴格的篩選和健康檢查，確保它們適合認養並能夠帶來無盡的愛和快樂。</P>
+                            <P>在「毛遇」，我們也建立了一個充滿愛心和支持的社群。您可以與其他寵物主人交流經驗、分享故事，並獲得專家建議和支持，讓您的寵物養育旅程更加愉快和無憂。</P>
+                            <P id="timeline_topkey">無論您是寵物新手還是有多年的養寵經驗，「毛遇」都是您尋找完美毛小孩的最佳選擇。加入我們，讓「毛遇」成為您與寵物邂逅的最美好起點！</P>
+                        </div>
+                        <img src="imges/about/about02.png" alt="">
+                    </div>
+                </div>
+                <!-- ==========時間線=========  -->
+                <div class="timelinebox">
+                    <div class="titlebox2">
+                        <img src="imges/about/timeline_titleicon.png" alt="">
+                        <h1>毛遇事件</h1>
+                    </div>
+                    <img src="imges/about/timeline.png" alt="" class="time_pic">
+                </div>
+                <!-- ==========地址電話交通資訊=========  -->
+                <div class="find_us" id="findus_topkey">
+                    <div class="text">
+                        <div class="text_a">
+                            <h3>找到毛遇</h3>
+                            <h6>地址：708 台南市安平區漁光路22號<br>電話：(06) 234-5678</h6>
+                        </div>
+                        <div class="text_b">
+                            <h3>交通資訊</h3>
+                            <h6>國道1號往仁德系統下交流道<br>→台86往台南→台17線，朝安平<br>→健康路三段往安平區漁光路<br>→抵達漁光路22號！！</h6>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3068913215498!2d120.16003889999999!3d22.9757397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75f7cc15e8c9%3A0xa31b58862a060619!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5ryB5YWJ6LevMjLomZ8!5e0!3m2!1szh-TW!2stw!4v1687062834953!5m2!1szh-TW!2stw"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+
+                <footer>
+                    <ul class="text_a">
+                        <li><a href="post.html">公告事項</a></li>
+                        <li><a href="post.html">要事新聞</a></li>
+                        <li><a href="activity.html">相關活動</a></li>
+                        <li><a href="story.html">成功案例</a></li>
+                        <li><a href="#sopkey">領養流程</a></li>
+                        <li><a href="petlist.html">毛怪列表</a></li>
+                        <li><a href="about.html">關於毛遇</a></li>
+                        <li><a href="member.html">毛遇會員</a></li>
+                        <li> </li>
+                    </ul>
                     <div class="text_b">
-                        <h3>交通資訊</h3>
-                        <h6>國道1號往仁德系統下交流道<br>→台86往台南→台17線，朝安平<br>→健康路三段往安平區漁光路<br>→抵達漁光路22號！！</h6>
+                        <div class="phone">
+                            <img src="imges/footer_sprites.png" alt="">
+                        </div>
+                        <div class="add">
+                            <img src="imges/footer_sprites.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3068913215498!2d120.16003889999999!3d22.9757397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75f7cc15e8c9%3A0xa31b58862a060619!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5ryB5YWJ6LevMjLomZ8!5e0!3m2!1szh-TW!2stw!4v1687062834953!5m2!1szh-TW!2stw"
-                        width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                    <div class="text_c">
+                        <h5>(06) 234 - 5678</h5>
+                        <h5>708 台南市安平區漁光路22號</h5>
+                    </div>
+                </footer>
 
+
+
+
+            </div>
+
+
+            <div class="top_button">
+                <a href="#about_topkey"><img src="imges/top_btn.png" alt=""></a>
             </div>
 
 
@@ -131,36 +165,11 @@
 
         </div>
 
-        <!-- ==========右邊頁尾========= -->
-        <footer>
-            <ul class="text_a">
-                <li><a href="post.html">公告事項</a></li>
-                <li><a href="post.html">要事新聞</a></li>
-                <li><a href="activity.html">相關活動</a></li>
-                <li><a href="story.html">成功案例</a></li>
-                <li><a href="">領養流程</a></li>
-                <li><a href="">毛怪列表</a></li>
-                <li><a href="about.html">關於毛遇</a></li>
-                <li><a href="">毛遇會員</a></li>
-                <li> </li>
-            </ul>
-            <div class="text_b">
-                <div class="phone">
-                    <img src="imges/footer_sprites.png" alt="">
-                </div>
-                <div class="add">
-                    <img src="imges/footer_sprites.png" alt="">
-                </div>
-            </div>
-            <div class="text_c">
-                <h5>(06) 234 - 5678</h5>
-                <h5>708 台南市安平區漁光路22號</h5>
-            </div>
-        </footer>
-        <div class="top_button">
-            <a href="#about_topkey"><img src="imges/top_btn.png" alt=""></a>
-        </div>
+
+
+
     </main>
+    <script src="js/all.js"></script>
 </body>
 
 </html>

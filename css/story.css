@@ -1,30 +1,78 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========右邊頁面========== */
-main {}
+/* ==========總表頭========== */
+nav {
+    background-color: #FCF8EC;
+}
+
+/* ==========小標題========= */
+#story_topkey .main_top ul li:nth-child(3)>a{
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+
 
 /* ==========右邊頁首========= */
-.navtop ul li:nth-child(3)>a {
-    border-bottom: 3px dotted #E0DA70;
-    background-color: #E0DA70;
-    font-weight: 700;
-}
-.floatbird{
+
+.main_top .floatbird{
+    background-color: #FCF8EC;
+    /* border-radius: 0 0 0 40%; */
+    border-radius: 0 0 0 50px;
     position: absolute;
-    left: 70%;
-    bottom: 30px;
+    left: 90%;
+    top: 0;
+    z-index: 80;
 }
+.main_top>ul::after {
+    width: 90%;
+}
+
+/* ==========右邊頁尾========= */
+.footer_box {
+    margin: 0 auto;
+    /* height: 30vh; */
+}
+.footer_box footer{
+    position: static;
+}
+
+.footer_box .page_box{
+    /* background-color: aquamarine; */
+    /* height: 25vh; */
+    margin-top: 1%;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    position: relative;
+}
+
+.footer_box .activityfox {
+    /* background-color: darkblue; */
+    position: absolute;
+    left: 75%;
+    bottom: -5%;
+}
+
+
+
+
+
+
 
 /* ==========右邊內容========= */
 .story_box {
     /* background-color: aqua; */
-    width: calc(var(--right-width) * .75);
+    /* width: calc(var(--right-width) * .75); */
+    box-sizing: border-box;
+    width: var(--main-width);
     min-width: 600px;
     box-sizing: border-box;
-    margin: 248px auto 0;
-    padding: 0 67px;
+    /* margin: 248px auto 0; */
+    /* padding: 0 67px; */
     overflow: hidden;
+    /* padding: 0 5%; */
+    margin-top: 40px;
 }
 
 
