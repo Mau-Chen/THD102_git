@@ -106,6 +106,7 @@ nav {
 
 .party_block .pic .date {
     background-color: #fff;
+    height: 20vh;
     position: absolute;
     right: 0;
     top: 80%;
@@ -137,12 +138,14 @@ nav {
     width: 95%;
     text-align: left;
     line-height: 1.3;
+    color: var(--black-color);
 }
 
 .party_block .date p {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 10%;
     padding: 10px;
     font-weight: 600;
     font-family: 'Noto Sans TC';
+    color: var(--black-color);
 }

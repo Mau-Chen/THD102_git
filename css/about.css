@@ -26,7 +26,10 @@ main .main_top {
     width: 100vw;
     height: 80px;
     bottom: -18px;
-    transform: translateX(-19%);
+    /* left: 0; */
+    /* right: 0; */
+    /* transform: translateX(-19%); */
+    transform: translateX(-19.2%);
     /* background-color: #E27D60; */
     background-color: #FCF8EC;
     z-index: -1;
@@ -60,16 +63,14 @@ footer {
     display: flex;
     align-items: center;
     justify-items: center;
-    /* height: 443px; */
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .about_box .slogan img {
     display: block;
     /* background-color: #fff; */
     width: 40%;
-    /* flex-basis: 400px; */
 }
 
 .about_box .slogan .text {
@@ -77,9 +78,7 @@ footer {
     box-sizing: border-box;
     width: 60%;
     flex-grow: 1;
-    /* padding: 20px; */
     padding: 3% 0;
-    /* flex-basis: 500px; */
 }
 
 .slogan .text p {
@@ -87,54 +86,43 @@ footer {
     text-align: left;
     letter-spacing: .15em;
     line-height: 1.5;
-    /* margin-bottom: 15px; */
     color: var(--black-color);
 }
 
 /* ==========介紹詞========= */
+
+/* 色塊 */
+.about_color {
+    width: 86vw;
+    /* height: 60vh; */
+    height: 20%;
+    background-color: var(--primary-color);
+    border-radius: 20px 0 0 0;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    z-index: -1;
+}
+
 .understand {
-    /* height: 697px; */
-    height: 60vh;
-    width: 100%;
-    position: relative;
+    margin-top: 31vh;
     /* background-color: darkcyan; */
 }
 
-.understand .about_color {
-    /* width: 170%; */
-    width: 88vw;
-    /* width: 140%; */
-    /* height: 547px; */
-    height: 60vh;
-    background-color: var(--primary-color);
-    position: absolute;
-    /* left: -250px; */
-    /* right: -15%; */
-    left: -5%;
-    /* top: 150px; */
-    top: 18%;
-    transform: translateX(-5%);
-    border-radius: 20px 0 0 0;
-    z-index: -1;
 
-}
-
+/* 了解標題 */
 main .understand .titlebox {
     /* background-color: blueviolet; */
-    /* width: 30%; */
     width: 190px;
     position: absolute;
     left: 0;
-    bottom: 0;
-    bottom: 43vh;
-
+    top: 30%;
+    transform: translateY(-60%);
 }
 
 main .understand .titlebox>img {
     display: block;
-    /* background-color:cadetblue; */
     margin: 0 auto;
-
 }
 
 main .understand .titlebox>h1 {
@@ -155,17 +143,13 @@ main .understand .titlebox>h1::after {
 
 
 
-
+/* 了解內文 */
 .understand .inner {
-    position: absolute;
-    /* top: 248px; */
-    top: 40%;
-
+    /* background-color: bisque; */
     display: flex;
     width: 100%;
     align-items: center;
     justify-items: center;
-    /* flex-wrap: wrap; */
 }
 
 .understand .inner>.text {

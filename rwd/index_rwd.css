@@ -1,0 +1,26 @@
+/*---------- 螢幕小於 800 時 ----------*/
+@media screen and (max-width: 800px) {
+    .nav_text .box .box-item>a {
+        color: aqua;
+        font-size: 20px;
+
+    }
+
+}
+
+/*---------- 螢幕小於 600 時 ----------*/
+@media screen and (max-width: 600px) {
+    .story .story_text .story_titlebox>h1{
+        font-size: 10px;
+
+    }
+
+}
+
+
+/*---------- 螢幕小於 428 時 ----------*/
+@media screen and (max-width: 428px) {}
+
+
+/*---------- 螢幕小於 375 時 ----------*/
+@media screen and (max-width: 375px) {}
