@@ -9,14 +9,15 @@ html {
     /* --right-width: 88vw; */
     --title-color: #304D62;
     --main-width: 62.5vw;
-    --min-width: 400px;
+    --mini-width: 350px;
     --bg-color: #FCF8EC;
 }
 
 body {
 
     background-color: #FCF8EC;
-    min-width: 400px;
+    /* min-width: 350px; */
+    min-width: var(--mini-width);
 
     font-family: Arial, 'Noto Sans TC', sans-serif;
     position: relative;
