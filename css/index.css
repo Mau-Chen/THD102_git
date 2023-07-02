@@ -6,12 +6,15 @@
 .container #slide .item:first-child {}
 
 main {
-    /* background-color: pink; */
+    background-color: pink;
     /* overflow: hidden; */
     /* height: 100%; */
     /* height: 4000px; */
     /* position: relative; */
     /* min-width: var(--mini-width); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 第一段輪播 */
@@ -482,7 +485,7 @@ main .sop .sop_titlebox>h1::after {
     height: calc(25vw + 200px);
     position: relative;
     /* background-color: purple; */
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 
@@ -570,13 +573,10 @@ main .sop .sop_titlebox>h1::after {
 .sop_color {
     background-color: var(--primary-color);
     border-radius: 20px 0 0 0;
-    /* height: 20%; */
-    height: calc(380px + 6%);
+    height: 630px;
     width: 95%;
     position: absolute;
-    /* top: 1329px; */
-    /* top: 42.5%; */
-    top: calc(80vh + 800px);
+    top: calc(90vh + 800px);
     right: 0;
     z-index: -1;
 }
@@ -601,7 +601,7 @@ main .sop .sop_titlebox>h1::after {
     width: 95%;
     /* height: 10%; */
     height: 30vh;
-    top: calc(1055px + 46.5%);
+    top: calc(1255px + 160vh);
     /* top: 80%; */
     right: 0;
     z-index: -1;
@@ -619,7 +619,11 @@ main .sop .sop_titlebox>h1::after {
 
 
 /* ===============RWD======================= */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1201px) {
+    .sop_color {
+        height: 580px;
+        top: 1400px;
+    }
 
     /* 輪播 */
     .container {
@@ -643,7 +647,7 @@ main .sop .sop_titlebox>h1::after {
     }
 
     .container .item:nth-child(n+6) {
-        left: calc(50% + 10px);
+        left: calc(50% + 2px);
         opacity: 0;
     }
 
@@ -672,6 +676,19 @@ main .sop .sop_titlebox>h1::after {
 
 /*---------- 螢幕小於 900 時 ----------*/
 @media screen and (max-width: 900px) {
+    .sop_color {
+        top: 1220px;
+        height: 570px;
+    }
+
+    .cat01 {
+        top: 103%;
+        transform: translateY(-60%);
+    }
+    .sponsor_color {
+        height: 300px;
+        top: 2150px;
+    }
 
     /* 選單 */
     .nav_text .box .box-item>a {
@@ -720,18 +737,22 @@ main .sop .sop_titlebox>h1::after {
 
     .sop_box .step h4 {
         font-size: 16px;
+        line-height: 16px;
     }
-
-    /* 贊助 */
-
-
-
-
 
 }
 
 /*---------- 螢幕小於 800 時 ----------*/
 @media screen and (max-width: 800px) {
+    .sop_color {
+        top: 1100px;
+        height: 530px;
+    }
+    .sponsor_color {
+        height: 260px;
+        top: 2040px;
+    }
+
 
     /* 選單 */
     .nav_text .box .box-item>a {
@@ -868,27 +889,25 @@ main .sop .sop_titlebox>h1::after {
         font-size: 20px;
     }
 
+    .sop_color {
+        top: 1020px;
+        height: 520px;
+    }
+    .sponsor_color {
+        top: 1960px;
+    }
+
+    /* 輪播 */
     .container {
         height: 45vh;
     }
 
     .container .item {
-        width: 100px;
-        height: 80px;
         top: 75%;
     }
 
-    .container .item:nth-child(4) {
-        left: calc(50% + 120px);
-    }
-
     .container .item:nth-child(5) {
-        left: calc(50% + 5px);
-        opacity: 0;
-    }
-
-    .container .item:nth-child(n+6) {
-        left: calc(50% + 5px);
+        left: calc(50% + 2px);
         opacity: 0;
     }
 
@@ -905,6 +924,7 @@ main .sop .sop_titlebox>h1::after {
     /* SOP */
     .sop_box .step h4 {
         font-size: 14px;
+        line-height: 14px;
     }
 
     /* 贊助 */
@@ -919,8 +939,6 @@ main .sop .sop_titlebox>h1::after {
         width: 70%;
     }
 
-
-
 }
 
 
@@ -930,11 +948,30 @@ main .sop .sop_titlebox>h1::after {
 
 /*---------- 螢幕小於 600 時 ----------*/
 @media screen and (max-width: 600px) {
+    .sop_color {
+        top: 1120px;
+        height: 530px;
+    }
+
+    .sponsor_color {
+        top: 2170px;
+        height: 200px;
+    }
+
+    .cat01 {
+        top: 103%;
+        transform: translateY(-60%);
+    }
 
     /* 輪播 */
+    .container .item {
+        box-shadow: 0 10px 20px #505050;
+    }
+
     .container .item .content {
         left: 10px;
     }
+
 
     .item .content .name {
         font-size: 30px;
@@ -944,9 +981,9 @@ main .sop .sop_titlebox>h1::after {
         font-size: 14px;
     }
 
-    /* 小圖1 */
-    .item:nth-child(n + 4) {
-        left: calc(50% + 5px);
+    /* 小圖2 */
+    .container .item:nth-child(4) {
+        left: calc(50% + 2px);
         opacity: 0;
     }
 
@@ -959,6 +996,21 @@ main .sop .sop_titlebox>h1::after {
         font-size: 12px;
         line-height: 1;
         letter-spacing: .2;
+    }
+
+    @keyframes show-text {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+            filter: blur(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+
+        }
     }
 
     /* 消息 */
@@ -987,11 +1039,13 @@ main .sop .sop_titlebox>h1::after {
     }
 
     /* SOP */
-    .sop .sop_box .step:first-child h4{
+    .sop .sop_box .step:first-child h4 {
         /* background-color: aqua; */
         padding: 5% 23%;
+        line-height: 1;
 
     }
+
     .sop .sop_box .step p {
         width: 70%;
         font-size: 10px;
@@ -1019,13 +1073,23 @@ main .sop .sop_titlebox>h1::after {
     /* 贊助 */
     .sponsor {
         margin-top: 100px;
+        height: auto;
+    }
+
+    .sponsor .sponsor_container .sponsor_box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sponsor .sponsor_container .sponsor_box .sponsors {
+        width: 60%;
+        margin-bottom: 20px;
     }
 
     .sponsors>a p {
         font-size: 12px;
-
-        /* width: 65%; */
     }
+
 
 
 }
@@ -1039,8 +1103,14 @@ main .sop .sop_titlebox>h1::after {
         left: 5px;
     }
 
+    /* 圖(大+小) */
+    .container .item {
+        box-shadow: 0 5px 10px #505050;
+        transition: .3s cubic-bezier(.28, .38, .36, .27);
+
+    }
+
     .item .content .name {
-        /* font-size: 12px; */
         display: none;
     }
 
@@ -1049,17 +1119,25 @@ main .sop .sop_titlebox>h1::after {
     }
 
     /* 消息 */
-    .news .news_container .news_boxs {
+    .news .news_container .news_boxb {
+        width: 100%;
+    }
+
+    .sponsor .news .news_container .news_boxs {
         display: none;
     }
 
     main .news .news_container {
-        height: 300px;
+        height: auto;
+        width: 100%;
     }
+
+    /* 贊助 */
+
 
     .sponsors>a p {
         font-size: 10px;
-        background-color: #dbdbdb;
+        /* background-color: #dbdbdb; */
     }
 }
 

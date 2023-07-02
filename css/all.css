@@ -117,9 +117,9 @@ h5 {
     text-align: start;
     font-size: 16px;
     letter-spacing: .2em;
-    line-height: 32px;
+    line-height: 16px;
 
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 h6 {
@@ -398,45 +398,45 @@ main {
 /* ==========頁尾========== */
 footer {
     width: var(--main-width);
-    margin: 0 auto;
-    max-height: 200px;
     background-color: var(--secodary-color);
     border-radius: 80px 80px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: var(--min-width);
-    padding: 40px 50px 10px;
-    box-sizing: border-box;
+    min-width: var(--mini-width);
+    padding: 50px 0 20px;
+    /* position: absolute; */
+    /* bottom: 0; */
 }
 
-/* 文字選單 */
-footer .text_a {
+/* 選單 */
+footer .footerbox {
     /* background-color: #fff; */
-    width: 50%;
+    /* width: 100%; */
+    width: 70%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 12%) 45%;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
+    justify-content: center;
+    gap: 20px 10px;
+    margin-bottom: 20px;
 }
 
-footer .text_a>li {
+footer .footerbox>li {
     /* background-color: pink; */
-    box-sizing: border-box;
-    margin: 10% auto 8%;
-    display: flex;
-    align-items: center;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 
-footer .text_a>li a {
+footer .footerbox>li a {
     display: block;
-    /* width: 80px; */
     font-size: 16px;
-    line-height: 1em;
+    line-height: 17px;
     border-bottom: 5px solid transparent;
-    font-weight: 500;
     color: var(--title-color);
+    letter-spacing: .1em;
+    white-space: nowrap;
 
 }
 
@@ -445,56 +445,60 @@ footer a:hover {
     transition: .2s;
 }
 
-/* icon */
-footer .text_b {
-    /* background-color: red; */
-    width: 40%;
-}
-
-footer .text_b .up,
-footer .text_b .down {
-    display: flex;
-}
-
-footer .text_b .icon {
+footer .footerbox .text_b {
     /* background-color: #E0DA70; */
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
 }
 
-.text_b img {
+footer .footerbox .text_b h5 {
+    /* background-color: aqua; */
+    letter-spacing: 0em;
+    padding-left: 5px;
+}
+
+footer .footerbox .icon {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    /* background-color: #304D62; */
+}
+
+footer .footerbox .icon>img {
     display: block;
-    /* width: 90%; */
     height: 100%;
 }
 
-.text_b .up img {
+footer .footerbox .phone h5 {
+    /* background-color: cadetblue; */
+    letter-spacing: .3em;
+}
+
+footer .footerbox .phone .icon>img {
     transform: translateX(-50%);
 }
 
-/* 地址電話 */
-.text_b h5 {
-    font-size: 14px;
-    text-align: start;
-    margin-bottom: 4%;
-    color: var(--title-color);
+footer>p {
+    color: var(--black-color);
+    padding: 0 5%;
 }
 
 
 
-/* ==========右下動物臉TOP========== */
+
+
+/* ==========右下大白熊狗TOP========== */
 .top_button {
     position: fixed;
     right: 30px;
     bottom: 30px;
     background-color: #fff;
-    /* width: 90px; */
     width: 5vw;
     height: 5vw;
-    /* height: 90px; */
     border-radius: 20%;
     opacity: .5;
     box-shadow: 0px 0px 10px gray;
@@ -510,3 +514,52 @@ footer .text_b .icon {
 .top_button:hover {
     opacity: 1;
 }
+
+/* ===============RWD======================= */
+@media screen and (max-width: 1200px) {
+    footer {
+        /* width: 100vw; */
+        margin: 0 auto;
+    }
+
+    footer .text_a>li a {
+        letter-spacing: 0;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        width: 100%;
+    }
+
+    .top_button {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    footer .footerbox {
+        grid-template-columns: repeat(4, 19%) 12%;
+        gap: 10px 5px;
+    }
+
+    footer .footerbox .text_b h5 {
+        display: none;
+    }
+
+    footer .footerbox .icon {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    footer .footerbox {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px) {}
