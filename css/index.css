@@ -19,10 +19,9 @@ main {
     margin: 0 auto;
     background-color: #555;
     width: var(--main-width);
-    /* height: 600px; */
     height: 80vh;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 30px 50px #dbdbdb;
@@ -46,6 +45,7 @@ main {
     top: 70%;
     border-radius: 20px;
     box-shadow: 0 30px 50px #505050;
+    /* transition-property:left, top; */
     transition: .5s cubic-bezier(.3, 1, .5, 1.2);
     /* transition: .5s cubic-bezier(.38,.58,.56,.37); */
 
@@ -214,15 +214,11 @@ main .news .news_container {
 }
 
 .news .news_container .news_boxb {
-    /* width: 400px; */
     width: 70%;
     height: 500px;
-    /* height: 80vh; */
     background-size: cover;
     background-position: center center;
     transition: .4s;
-    /* flex-grow: 1; */
-    /* outline: 1px solid green; */
 }
 
 .news .news_container .news_boxs {
@@ -269,16 +265,13 @@ main .news .news_container {
 main .sop {
     /* box-sizing: border-box; */
     /* background-color: aqua; */
-    /* min-width: 400px; */
     min-width: var(--mini-width);
 }
 
-/*  */
 /* 標題 */
 main .sop .sop_titlebox {
     /* background-color: antiquewhite; */
     padding: 4% 0 20px;
-    /* margin: 20px; */
 }
 
 .title_colorpic {
@@ -303,9 +296,6 @@ main .sop .sop_titlebox>h1::after {
     margin: 10px auto;
 }
 
-
-
-
 /* 步驟內文 */
 .sop_box {
     /* background-color: chartreuse; */
@@ -324,7 +314,7 @@ main .sop .sop_titlebox>h1::after {
 
 .sop_box .sopline {
     /* background-color: antiquewhite; */
-    height: 100%;
+    height: 110%;
     z-index: 0;
     display: flex;
     justify-content: center;
@@ -393,23 +383,17 @@ main .sop .sop_titlebox>h1::after {
     /* flex-wrap:nowrap; */
 }
 
-
 .sop_box .sop1 a:hover {
     color: var(--secodary-color);
     font-weight: 600;
 }
 
-
-
 /* 第四段Story */
-
-
 .story {
-    /* width: var(--right-width); */
-    /* margin-top: 40vh; */
+    /* background-color: #a6937c; */
+    margin: 20px 0;
     width: 100%;
     height: 60vh;
-    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,16 +446,16 @@ main .sop .sop_titlebox>h1::after {
 }
 
 /* 標題 */
-.story .story_text .story_titlebox .story_title {
+.story_text .story_titlebox .title_colorpic {
     /* background-color: chocolate; */
     display: block;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .story .story_text .story_titlebox>h1 {
     text-align: center;
     text-shadow: 0px 4px 1px var(--primary-color);
-    margin-top: 20px;
     white-space: nowrap;
 }
 
@@ -480,8 +464,8 @@ main .sop .sop_titlebox>h1::after {
     display: block;
     background-color: var(--primary-color);
     width: 42px;
-    height: 6px;
-    margin: 15px auto;
+    height: 4px;
+    margin: 10px auto;
 
 }
 
@@ -494,6 +478,7 @@ main .sop .sop_titlebox>h1::after {
 /* 第五段Sponsor */
 .sponsor {
     width: var(--main-width);
+    min-width: var(--mini-width);
     height: calc(25vw + 200px);
     position: relative;
     /* background-color: purple; */
@@ -503,49 +488,45 @@ main .sop .sop_titlebox>h1::after {
 
 
 .sponsor .sponsor_container {
-    /* position: absolute; */
     /* background-color: #555; */
-    width: 100%;
     display: flex;
     flex-direction: column;
-    /* z-index: 10; */
 
 }
 
 /* 標題 */
 .sponsor .sponsor_container .sponsor_titlebox {
     margin: 10px 0;
-    /* z-index: 10; */
 }
 
-.sponsor .sponsor_container .sponsor_titlebox .sponsor_title {
+.sponsor .sponsor_container .sponsor_titlebox .title_colorpic {
     /* background-color: chocolate; */
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
-.sponsor .sponsor_container .sponsor_titlebox>h1 {
+.sponsor .sponsor_container .sponsor_titlebox h1 {
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 4px 1px var(--secodary-color);
     white-space: nowrap;
 }
 
-.sponsor .sponsor_container .sponsor_titlebox>h1::after {
+.sponsor .sponsor_container .sponsor_titlebox h1::after {
     content: "";
     display: block;
     background-color: var(--secodary-color);
     width: 42px;
     height: 4px;
-    margin: 20px auto;
+    margin: 10px auto;
 
 }
 
 /* 內容 */
 .sponsor .sponsor_container .sponsor_box {
     /* background-color: #40688E; */
-    height: 30%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -553,8 +534,7 @@ main .sop .sop_titlebox>h1::after {
 
 .sponsor .sponsor_container .sponsor_box .sponsors {
     /* background-color: aqua; */
-    flex-grow: 0;
-    flex-basis: 32%;
+    width: 32%;
 }
 
 .sponsor .sponsor_container .sponsor_box .sponsors a {
@@ -566,21 +546,14 @@ main .sop .sop_titlebox>h1::after {
 .sponsor_container .sponsor_box .sponsors .pic {
     background-color: #fff;
     border-radius: 20%;
-    height: 20vh;
-    padding: 5%;
     margin-bottom: 20px;
 
-}
-
-.sponsor_container .sponsor_box .case1 .pic {
-    /* padding: 20%; */
 }
 
 
 .sponsor .sponsors img {
     display: block;
-    /* width: 100%; */
-    height: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -590,7 +563,6 @@ main .sop .sop_titlebox>h1::after {
 
 .sponsors>a p {
     color: var(--title-color);
-    /* text-overflow: ellipsis; */
 }
 
 
@@ -689,8 +661,10 @@ main .sop .sop_titlebox>h1::after {
         margin-bottom: 20px;
     }
 
-    /* SOP */
-
+    /* 贊助 */
+    .sponsor {
+        width: 80vw;
+    }
 
 }
 
@@ -712,13 +686,16 @@ main .sop .sop_titlebox>h1::after {
         width: 80vw;
         height: 55vh;
     }
+
     .container .item .content {
         left: 8%;
     }
-    .container .item .content .name{
+
+    .container .item .content .name {
         font-size: 26px;
     }
-    .container .item .content .des{
+
+    .container .item .content .des {
         font-size: 18px;
         text-shadow: white .5px 0;
     }
@@ -726,7 +703,6 @@ main .sop .sop_titlebox>h1::after {
     /* 消息 */
     main .news {
         margin-top: 70vh;
-        /* padding-top: calc(45vh + 120px); */
     }
 
     .news .news_container .news_boxb {
@@ -746,6 +722,9 @@ main .sop .sop_titlebox>h1::after {
         font-size: 16px;
     }
 
+    /* 贊助 */
+
+
 
 
 
@@ -763,11 +742,13 @@ main .sop .sop_titlebox>h1::after {
     .container {
         height: 50vh;
     }
+
     .container .item .content {
         left: 6%;
         top: 70%;
     }
-    .container .item .content .des{
+
+    .container .item .content .des {
         margin: 10px 0;
     }
 
@@ -801,6 +782,31 @@ main .sop .sop_titlebox>h1::after {
         font-size: 14px;
     }
 
+    /* Story */
+    .story .story_text .story_titlebox .title_colorpic {
+        margin-bottom: 10px;
+    }
+
+    .story .story_text h6 {
+        font-size: 16px;
+    }
+
+    /* 贊助 */
+    .sponsor .sponsor_container .sponsor_titlebox .title_colorpic {
+        margin-bottom: 10px;
+    }
+
+    .sponsors>a h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .sponsors>a p {
+        font-size: 14px;
+    }
+
+
+
 }
 
 
@@ -820,7 +826,7 @@ main .sop .sop_titlebox>h1::after {
         display: block;
         float: right;
         margin-top: 30px;
-        margin-right: 5%;
+        margin-right: 10%;
         color: var(--black-color);
         font-size: 30px;
     }
@@ -885,6 +891,7 @@ main .sop .sop_titlebox>h1::after {
         left: calc(50% + 5px);
         opacity: 0;
     }
+
     .container .item .content {
         left: 5%;
 
@@ -898,6 +905,18 @@ main .sop .sop_titlebox>h1::after {
     /* SOP */
     .sop_box .step h4 {
         font-size: 14px;
+    }
+
+    /* 贊助 */
+    .sponsors>a h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .sponsors>a p {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
     }
 
 
@@ -968,10 +987,45 @@ main .sop .sop_titlebox>h1::after {
     }
 
     /* SOP */
+    .sop .sop_box .step:first-child h4{
+        /* background-color: aqua; */
+        padding: 5% 23%;
+
+    }
     .sop .sop_box .step p {
-        font-size: 12px;
+        width: 70%;
+        font-size: 10px;
     }
 
+    /* Story */
+    .story {
+        flex-wrap: wrap;
+        min-width: var(--mini-width);
+    }
+
+    .story_box {
+        order: 2;
+    }
+
+    .story_text {
+        order: 1;
+        height: 45%;
+    }
+
+    .story_text h6 {
+        margin-bottom: 10px;
+    }
+
+    /* 贊助 */
+    .sponsor {
+        margin-top: 100px;
+    }
+
+    .sponsors>a p {
+        font-size: 12px;
+
+        /* width: 65%; */
+    }
 
 
 }
@@ -1001,6 +1055,11 @@ main .sop .sop_titlebox>h1::after {
 
     main .news .news_container {
         height: 300px;
+    }
+
+    .sponsors>a p {
+        font-size: 10px;
+        background-color: #dbdbdb;
     }
 }
 
