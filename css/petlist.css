@@ -10,19 +10,24 @@ nav {
 
 main .main_top {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* background-color: #E27D60; */
 }
 
 main .main_top>h1 {
     /* display: block; */
     margin-bottom: 10px;
+    align-self: flex-start;
+    color: var(--black-color);
 }
 
 main .main_top .petbox::after {
     content: "";
     display: block;
-    width: var(--main-width);
-    min-width: 900px;
+    width: 100%;
+    min-width: var(--main-width);
     height: 18px;
     background-color: #FCF8EC;
     border-bottom: 2px solid #ccc;
@@ -38,7 +43,8 @@ main .main_top .petbox::after {
 }
 
 .footer_box footer {
-    min-width: 900px;
+    min-width: var(--mini-width);
+    /* min-width: 900px; */
 }
 
 .footer_box .page_box {
@@ -50,9 +56,11 @@ main .main_top .petbox::after {
 
 /* ==========動物選單========= */
 .petbox {
+    width: 100%;
     background-color: #FCF8EC;
     box-sizing: border-box;
-    min-width: 630px;
+    /* min-width: 630px; */
+    min-width: var(--mini-width);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +73,8 @@ main .main_top .petbox::after {
 .petbox .none_top {
     /* background-color: #fff; */
     height: 30px;
-    min-width: 630px;
+    /* min-width: 630px; */
+    min-width: var(--mini-width);
 }
 
 .choosebox_bg {
@@ -237,12 +246,19 @@ main .main_top .petbox::after {
     /* background-color: #fff; */
     margin: 0 auto;
     display: flex;
-    /* justify-content: space-between; */
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-width: 630px;
     border-radius: 0 0 20px 20px;
+}
+
+.choose_select .go {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    flex-wrap: nowrap;
+    padding: 0 10px;
 }
 
 .select_item {
@@ -293,19 +309,17 @@ main .main_top .petbox::after {
 }
 
 
-
-
-
-
-
-/* ==========右邊內容========= */
+/* ==========內容========= */
 .pet_content {
     /* background-color: aqua; */
+    margin-top: 20px;
     box-sizing: border-box;
-    min-width: 600px;
-    margin: 0 auto;
+    min-width: var(--mini-width);
+    /* margin: 20px auto; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 
 }
@@ -313,9 +327,8 @@ main .main_top .petbox::after {
 .pet_card {
     box-sizing: border-box;
     width: 30%;
-    min-width: 280px;
     background-color: #fff;
-    padding: 3% 3%;
+    padding: 3%;
     margin: 1% 0;
     border-radius: 10px;
 }
@@ -328,25 +341,30 @@ main .main_top .petbox::after {
 .pet_block .pic {
     box-sizing: border-box;
     width: 100%;
+    height: 60%;
     overflow: hidden;
-    height: 181px;
 }
 
 .pet_block .pic img {
     display: block;
-    height: 100%;
+    /* height: 100%; */
+    width: 100%;
     object-fit: cover;
     object-position: center center;
 }
 
 .pet_block .pet_text {
+    box-sizing: border-box;
+    height: 40%;
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
     /* align-content: space-between; */
 
 }
 
 .pet_text .theup {
+    /* margin: 10px 0; */
     display: flex;
     /* justify-items:flex-start; */
     justify-content: space-between;
@@ -354,6 +372,7 @@ main .main_top .petbox::after {
 }
 
 .theup h3 {
+    /* margin: 5px 0; */
     font-weight: 500;
     color: var(--secodary-color);
 }
@@ -389,23 +408,174 @@ main .main_top .petbox::after {
     letter-spacing: .1em;
 }
 
+.page_box {
+    /* position: relative; */
+    height: 20vh;
+}
 
 .cute_pet {
     /* background-color: #fff; */
+    box-sizing: border-box;
     position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    /* width: 15vw; */
+    justify-content: space-between;
     transform: translateY(-180px);
+    padding: 0 30px;
 }
 
-.cute_pet .leftdog {
-    display: block;
-    width: 180px;
-}
-
+.cute_pet .leftdog,
 .cute_pet .rightcat {
     display: block;
-    width: 180px;
+    width: 12vw;
+}
+
+
+
+/* ===============RWD======================= */
+@media screen and (max-width: 1200px) {
+    .theup h3 {
+        font-size: 26px;
+    }
+
+    .pet_text .thedown p {
+        font-size: 16px;
+    }
+
+    .pet_card .date p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    /* 選定物種狀態 */
+    .choosebox_bg .class-item.-on a .peticon {
+        transform: translateY(-38px);
+        border: none;
+    }
+
+    .choosebox_bg .class-item.-on a .text {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    /* 物種選擇示意 */
+    .choosebox_bg .class-item:nth-child(1).-on~.indicator {
+        display: block;
+        left: 18%;
+    }
+
+    .choosebox_bg .class-item:nth-child(2).-on~.indicator {
+        display: block;
+        left: 34%;
+    }
+
+    .choosebox_bg .class-item:nth-child(3).-on~.indicator {
+        display: block;
+        left: 50%;
+    }
+
+    .choosebox_bg .class-item:nth-child(4).-on~.indicator {
+        display: block;
+        left: 66%;
+    }
+
+    .choosebox_bg .class-item:nth-child(5).-on~.indicator {
+        display: block;
+        left: 82%;
+    }
+
+    .choose_select .custom_select {
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .cute_pet .leftdog,
+    .cute_pet .rightcat {
+        width: 12vw;
+    }
+
+
+    .theup h3 {
+        font-size: 24px;
+    }
+
+    .pet_text .thedown p {
+        font-size: 14px;
+    }
+
+    .pet_card .date p {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .choose_select .go {
+        width: 40%;
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .pet_card {
+        width: 47%;
+    }
+
+    .cute_pet {
+        bottom: -90px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .t16 {
+        font-size: 14px;
+    }
+
+    .t20 {
+        font-size: 16px;
+    }
+
+    .select_item {
+        margin: 5px;
+    }
+
+    .choose_select .custom_select {
+        width: 90px;
+    }
+
+    .cute_pet .leftdog,
+    .cute_pet .rightcat {
+        width: 70px;
+    }
+
+    .pet_card {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .choose_select {
+        justify-content: center;
+    }
+
+    .choose_select .go {
+        min-width: 165px;
+    }
+
+    .pet_card {
+        padding: 5%;
+    }
+
+    .pet_card {
+        width: 70%;
+    }
+
+    .cute_pet {
+        bottom: -77px;
+    }
 }

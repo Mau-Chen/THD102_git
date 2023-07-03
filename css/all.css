@@ -245,8 +245,11 @@ main {
     /* background-color: chartreuse; */
     width: var(--main-width);
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     min-width: var(--mini-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ==========內文頁首========= */
@@ -373,6 +376,7 @@ footer {
     border-radius: 80px 80px 0 0;
     min-width: var(--mini-width);
     padding: 50px 0 20px;
+    margin: 0 auto;
     /* position: absolute; */
     /* bottom: 0; */
 }
@@ -473,6 +477,7 @@ footer>p {
     border-radius: 20%;
     opacity: .5;
     box-shadow: 0px 0px 10px gray;
+    z-index: 99;
 }
 
 .top_button img {
@@ -492,6 +497,7 @@ footer>p {
     /* 內文頁首 */
     main {
         width: 100%;
+        overflow: hidden;
     }
 
     .main_top {
@@ -506,6 +512,7 @@ footer>p {
     }
     footer .footerbox{
         width: 80%;
+        gap: 0px 5px;
     }
 
     footer .text_a>li a {
@@ -524,6 +531,9 @@ footer>p {
     }
     p{
         font-size: 12px;
+    }
+    .t20{
+        font-size: 16px;
     }
 
     /* 選單 */

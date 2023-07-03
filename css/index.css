@@ -6,12 +6,7 @@
 .container #slide .item:first-child {}
 
 main {
-    background-color: pink;
-    /* overflow: hidden; */
-    /* height: 100%; */
-    /* height: 4000px; */
-    /* position: relative; */
-    /* min-width: var(--mini-width); */
+    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,9 +261,11 @@ main .news .news_container {
 
 /* ==========領養流程區=========== */
 main .sop {
-    /* box-sizing: border-box; */
     /* background-color: aqua; */
     min-width: var(--mini-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* 標題 */
@@ -313,6 +310,10 @@ main .sop .sop_titlebox>h1::after {
     justify-content: center;
     align-content: space-between;
     /* z-index: 1; */
+}
+
+.sop_box .sopline.sometime {
+    display: none;
 }
 
 .sop_box .sopline {
@@ -676,18 +677,23 @@ main .sop .sop_titlebox>h1::after {
 
 /*---------- 螢幕小於 900 時 ----------*/
 @media screen and (max-width: 900px) {
-    .sop_color {
-        top: 1220px;
-        height: 570px;
+    .sop {
+        background-color: var(--primary-color);
+        border-radius: 20px 0 0 0;
     }
 
-    .cat01 {
-        top: 103%;
-        transform: translateY(-60%);
+    .sop_color {
+        display: none;
     }
+
     .sponsor_color {
-        height: 300px;
-        top: 2150px;
+        display: none;
+    }
+    .sponsor {
+        margin-top: 100px;
+        height: auto;
+        background-color: var(--primary-color);
+        border-radius: 20px 0 0 20px;
     }
 
     /* 輪播 */
@@ -740,6 +746,7 @@ main .sop .sop_titlebox>h1::after {
         top: 1100px;
         height: 530px;
     }
+
     .sponsor_color {
         height: 260px;
         top: 2040px;
@@ -816,14 +823,6 @@ main .sop .sop_titlebox>h1::after {
 /*---------- 螢幕小於 750 時 ----------*/
 @media screen and (max-width: 750px) {
 
-    .sop_color {
-        top: 1020px;
-        height: 520px;
-    }
-    .sponsor_color {
-        top: 1960px;
-    }
-
     /* 輪播 */
     .container {
         height: 45vh;
@@ -875,15 +874,6 @@ main .sop .sop_titlebox>h1::after {
 
 /*---------- 螢幕小於 600 時 ----------*/
 @media screen and (max-width: 600px) {
-    .sop_color {
-        top: 1120px;
-        height: 530px;
-    }
-
-    .sponsor_color {
-        top: 2170px;
-        height: 200px;
-    }
 
     .cat01 {
         top: 103%;
@@ -898,9 +888,11 @@ main .sop .sop_titlebox>h1::after {
     .container .item .content {
         left: 10px;
     }
+
     .item .content .name {
         font-size: 30px;
     }
+
     .item .content .des {
         font-size: 14px;
     }
@@ -910,6 +902,7 @@ main .sop .sop_titlebox>h1::after {
         left: calc(50% + 2px);
         opacity: 0;
     }
+
     .container .buttons {
         width: 90px;
     }
@@ -956,6 +949,25 @@ main .sop .sop_titlebox>h1::after {
     }
 
     /* SOP */
+    .sop_box {
+        grid-template-columns: 30% 5% 30%;
+        grid-template-rows: repeat(3, 30%);
+        margin-bottom: 20px;
+    }
+
+    .sop_box .sopline.sometime {
+        display: block;
+        height: 110%;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sop_box .sopline:nth-child(4n) {
+        display: none;
+    }
+
     .sop .sop_box .step:first-child h4 {
         /* background-color: aqua; */
         padding: 5% 23%;
@@ -988,10 +1000,7 @@ main .sop .sop_titlebox>h1::after {
     }
 
     /* 贊助 */
-    .sponsor {
-        margin-top: 100px;
-        height: auto;
-    }
+
 
     .sponsor .sponsor_container .sponsor_box {
         flex-direction: column;
