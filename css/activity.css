@@ -5,8 +5,9 @@
 nav {
     background-color: #FCF8EC;
 }
+
 /* ==========小標題========= */
-#activity_topkey .main_top >ul li:nth-child(2)>a{
+#activity_topkey .main_top>ul li:nth-child(2)>a {
     background-color: var(--primary-color);
     font-weight: bold;
 }
@@ -16,11 +17,12 @@ nav {
     margin: 0 auto;
     /* height: 30vh; */
 }
-.footer_box footer{
+
+.footer_box footer {
     position: static;
 }
 
-.footer_box .page_box{
+.footer_box .page_box {
     /* background-color: aquamarine; */
     height: 25vh;
     margin-top: 1%;
@@ -31,6 +33,7 @@ nav {
 
 .footer_box .activityfox {
     /* background-color: darkblue; */
+    width: 16vw;
     position: absolute;
     left: 75%;
     bottom: -5%;
@@ -43,11 +46,9 @@ nav {
     /* background-color: aqua; */
     box-sizing: border-box;
     width: var(--main-width);
-    min-width: 600px;
+    min-width: var(mini-width);
     margin: 0 auto;
-    /* padding: 0 5%; */
 
-    /* overflow: hidden; */
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
@@ -59,8 +60,8 @@ nav {
 .partycard_box .party_card {
     margin: 3% 0;
     box-sizing: border-box;
-    width: 45%;
-    height: 35vh;
+    width: 47%;
+    /* height: 35vh; */
     background-color: #fff;
     /* padding: 2%; */
 
@@ -70,8 +71,6 @@ nav {
 .partycard_box .party_card .party_block {
     /* background-color: aquamarine; */
     padding: 5%;
-
-    /* margin: 0 auto; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -88,8 +87,6 @@ nav {
     /* background-color: pink; */
     box-sizing: border-box;
     width: 100%;
-    flex-basis: 60%;
-    flex-grow: 0;
     overflow: hidden;
     position: relative;
     z-index: 3;
@@ -97,19 +94,19 @@ nav {
 
 .party_block .pic img {
     display: block;
-    /* width: 100%; */
-    height: 100%;
-    object-fit: contain;
-    object-position: 50% 50%;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
     z-index: 3;
 }
 
 .party_block .pic .date {
     background-color: #fff;
-    height: 20vh;
+    box-sizing: border-box;
+    padding: 1.5% 1%;
     position: absolute;
     right: 0;
-    top: 80%;
+    bottom: 0;
     border-radius: 20px 0 0;
     z-index: 3;
 
@@ -148,4 +145,52 @@ nav {
     font-weight: 600;
     font-family: 'Noto Sans TC';
     color: var(--black-color);
+}
+
+/* ===============RWD======================= */
+@media screen and (max-width: 1200px) {
+    .partycard_box {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .party_block .date p {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 750px) {
+    .party_block .pic .date {
+        height: 20px;
+    }
+
+    .footer_box .page_box {
+        height: 20vh;
+    }
+
+    .footer_box .activityfox {
+        width: 80px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer_box .page_box {
+        height: 15vh;
+    }
+
+    .party_text p {
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+        overflow:hidden;
+    }
 }

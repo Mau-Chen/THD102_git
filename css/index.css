@@ -690,14 +690,6 @@ main .sop .sop_titlebox>h1::after {
         top: 2150px;
     }
 
-    /* 選單 */
-    .nav_text .box .box-item>a {
-        /* color: cadetblue; */
-        font-size: 16px;
-        letter-spacing: .2;
-        line-height: 1;
-    }
-
     /* 輪播 */
     .container {
         width: 80vw;
@@ -753,12 +745,6 @@ main .sop .sop_titlebox>h1::after {
         top: 2040px;
     }
 
-
-    /* 選單 */
-    .nav_text .box .box-item>a {
-        font-size: 14px;
-    }
-
     /* 輪播 */
     .container {
         height: 50vh;
@@ -778,7 +764,6 @@ main .sop .sop_titlebox>h1::after {
         height: 35px;
         margin-bottom: 10px;
     }
-
 
     .t32 {
         font-size: 24px;
@@ -825,69 +810,11 @@ main .sop .sop_titlebox>h1::after {
     .sponsors>a p {
         font-size: 14px;
     }
-
-
-
 }
 
 
 /*---------- 螢幕小於 750 時 ----------*/
 @media screen and (max-width: 750px) {
-    nav {
-        display: block;
-        background-color: var(--bg-color);
-
-    }
-
-    nav .nav_logo {
-        float: left;
-    }
-
-    nav .fa-bars {
-        display: block;
-        float: right;
-        margin-top: 30px;
-        margin-right: 10%;
-        color: var(--black-color);
-        font-size: 30px;
-    }
-
-    nav .nav_text {
-        display: none;
-    }
-
-    nav .fa-bars:hover~.nav_text {
-        display: block;
-    }
-
-    nav .nav_text .box {
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav .nav_text .box li {
-        background-color: var(--primary-color);
-        display: block;
-        clear: both;
-        border-bottom: 1px solid #a6937c;
-        /* height: 30px; */
-        /* font-size: 40px; */
-    }
-
-    nav .nav_text .box li:nth-last-child(-n + 2) {
-        /* background-color: red; */
-        display: none;
-    }
-
-    nav .nav_text .box .t20 a {
-        /* font-size: 30px; */
-        height: 45px;
-        line-height: 45px;
-        letter-spacing: 1.1em;
-        color: var(--title-color);
-        /* text-align: center; */
-        font-size: 20px;
-    }
 
     .sop_color {
         top: 1020px;
@@ -971,12 +898,9 @@ main .sop .sop_titlebox>h1::after {
     .container .item .content {
         left: 10px;
     }
-
-
     .item .content .name {
         font-size: 30px;
     }
-
     .item .content .des {
         font-size: 14px;
     }
@@ -986,17 +910,10 @@ main .sop .sop_titlebox>h1::after {
         left: calc(50% + 2px);
         opacity: 0;
     }
-
     .container .buttons {
         width: 90px;
     }
 
-
-    .nav_text .box .box-item>a {
-        font-size: 12px;
-        line-height: 1;
-        letter-spacing: .2;
-    }
 
     @keyframes show-text {
         0% {

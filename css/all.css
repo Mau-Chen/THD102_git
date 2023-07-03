@@ -80,10 +80,6 @@ h1 {
     letter-spacing: .2em;
     color: var(--black-color);
     font-weight: 600;
-    /* line-height: 150%; */
-    /* letter-spacing: .1em; */
-    /* color: #994E55; */
-    /* font-weight: 700; */
 }
 
 h2 {
@@ -243,43 +239,27 @@ nav .nav_text .box {
     background-color: var(--primary-color);
 }
 
-/* --選單文字結束-- */
 
 /* ==========主區塊規格========== */
 main {
+    /* background-color: chartreuse; */
     width: var(--main-width);
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 400px;
-    /* padding-top: 80px; */
-    /* height: 3000px; */
-    /* background-color: chartreuse; */
-    /* min-width: 850px; */
-    /* min-width: var(--min-width); */
+    min-width: var(--mini-width);
 }
 
 /* ==========內文頁首========= */
 .main_top {
     /* background-color: chartreuse; */
-    width: var(--main-width);
-    /* height: 248px; */
-    /* height: 1000px; */
     box-sizing: border-box;
-    /* padding: 100px 5%; */
-    /* margin: 100px 5%; */
-    /* min-width: 900px; */
-    min-width: var(--min-width);
-    /* z-index: 80; */
-    /* margin-top: 100px; */
     padding-top: 100px;
 }
 
 /* 內文頁首標題 */
 .main_top>h1 {
     margin-bottom: 40px;
-    /* padding: 0 6%; */
     /* background-color: #304D62; */
-    /* z-index: 80; */
 }
 
 /* 內文頁首分頁選單 */
@@ -294,20 +274,17 @@ main {
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
-    /* padding: 0 5%; */
     z-index: 80;
 }
 
 .main_top>ul::after {
     content: "";
     display: block;
-    /* width: 95%; */
     width: 100%;
     height: 18px;
     background-color: #FCF8EC;
     border-bottom: 2px solid #ccc;
     position: absolute;
-    /* bottom: -24px; */
     bottom: -20px;
 }
 
@@ -353,10 +330,8 @@ main {
 .page_box #pagination i {
     /* box-sizing: border-box; */
     display: inline-block;
-    /* min-width: 32px; */
     width: 35px;
     height: 35px;
-    /* border: 1px solid red; */
     text-align: center;
     line-height: 35px;
     border-radius: 4px;
@@ -364,14 +339,10 @@ main {
 }
 
 #pagination a {
-    /* border: 1px solid #333; */
     /* background-color: #333; */
     background-color: var(--black-color);
     color: #eee;
     font-size: 12px;
-    /* line-height: 13; */
-    /* text-align: center; */
-    /* margin: 0 auto; */
 }
 
 #pagination a:hover {
@@ -409,7 +380,6 @@ footer {
 /* 選單 */
 footer .footerbox {
     /* background-color: #fff; */
-    /* width: 100%; */
     width: 70%;
     margin: 0 auto;
     display: grid;
@@ -485,6 +455,7 @@ footer .footerbox .phone .icon>img {
 footer>p {
     color: var(--black-color);
     padding: 0 5%;
+    font-size: 14px;
 }
 
 
@@ -517,9 +488,24 @@ footer>p {
 
 /* ===============RWD======================= */
 @media screen and (max-width: 1200px) {
-    footer {
-        /* width: 100vw; */
+
+    /* 內文頁首 */
+    main {
+        width: 100%;
+    }
+
+    .main_top {
+        width: 80%;
         margin: 0 auto;
+    }
+
+    /* 頁尾 */
+    footer {
+        margin: 0 auto;
+        width: 100%;
+    }
+    footer .footerbox{
+        width: 80%;
     }
 
     footer .text_a>li a {
@@ -529,9 +515,45 @@ footer>p {
 }
 
 @media screen and (max-width: 900px) {
-    footer {
-        width: 100%;
+    h2 {
+        font-size: 16px;
     }
+
+    h3 {
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+
+    /* 選單 */
+    .nav_text .box .box-item>a {
+        /* color: cadetblue; */
+        font-size: 16px;
+        letter-spacing: .2;
+        line-height: 1;
+    }
+
+    /* 內文頁首 */
+    .main_top>h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .main_top>ul::after {
+        height: 7px;
+        bottom: -9px;
+    }
+
+    .main_top>ul li a {
+        font-size: 20px;
+    }
+
+    /* 頁尾 */
+    footer .footerbox{
+        width: 90%;
+    }
+
 
     .top_button {
         width: 50px;
@@ -541,6 +563,13 @@ footer>p {
 }
 
 @media screen and (max-width: 800px) {
+
+    /* 選單 */
+    .nav_text .box .box-item>a {
+        font-size: 14px;
+    }
+
+    /* 頁尾 */
     footer .footerbox {
         grid-template-columns: repeat(4, 19%) 12%;
         gap: 10px 5px;
@@ -556,10 +585,93 @@ footer>p {
 }
 
 @media screen and (max-width: 750px) {
+    nav {
+        display: block;
+        background-color: var(--bg-color);
+
+    }
+
+    nav .nav_logo {
+        float: left;
+    }
+
+    nav .fa-bars {
+        display: block;
+        float: right;
+        margin-top: 30px;
+        margin-right: 10%;
+        color: var(--black-color);
+        font-size: 30px;
+    }
+
+    nav .nav_text {
+        display: none;
+    }
+
+    nav .fa-bars:hover~.nav_text {
+        display: block;
+    }
+
+    nav .nav_text .box {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav .nav_text .box li {
+        background-color: var(--primary-color);
+        display: block;
+        clear: both;
+        border-bottom: 1px solid #a6937c;
+    }
+
+    nav .nav_text .box li:nth-last-child(-n + 2) {
+        /* background-color: red; */
+        display: none;
+    }
+
+    nav .nav_text .box .t20 a {
+        height: 45px;
+        line-height: 45px;
+        letter-spacing: 1.1em;
+        color: var(--title-color);
+        font-size: 20px;
+    }
+
+    /* 頁尾 */
     footer .footerbox {
         display: none;
     }
 }
 
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+
+    /* 選單 */
+    .nav_text .box .box-item>a {
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: .2;
+    }
+
+    /* 內文頁首分頁選單 */
+    .main_top>ul {
+        gap: 5px;
+    }
+    .main_top>ul li a{
+        white-space: nowrap;
+    }
+
+    /* 頁碼 */
+    .page_box #pagination a,
+    .page_box #pagination i {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    #pagination a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 429px) {}
