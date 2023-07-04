@@ -754,6 +754,7 @@ main .sop .sop_titlebox>h1::after {
 
     /* 輪播 */
     .container {
+        width: auto;
         height: 50vh;
     }
 

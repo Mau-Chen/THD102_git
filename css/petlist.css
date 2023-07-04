@@ -23,6 +23,10 @@ main .main_top>h1 {
     color: var(--black-color);
 }
 
+main .main_top>h1::after {
+    content: "\2764";
+}
+
 main .main_top .petbox::after {
     content: "";
     display: block;
@@ -563,8 +567,23 @@ main .main_top .petbox::after {
         justify-content: center;
     }
 
+    .select_item {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .choose_select label {
+        width: 80px;
+        text-align: end;
+    }
+
+    .choose_select .custom_select {
+        width: 120px;
+    }
+
     .choose_select .go {
-        min-width: 165px;
+        width: 60%;
     }
 
     .pet_card {

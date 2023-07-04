@@ -69,7 +69,7 @@ function play() {
     timer2 = setInterval(function () {
         selected();
         index++;
-        big_box.style.backgroundImage = 'url(../imges/index/news_p' + index + '.jpg)';
+        big_box.style.backgroundImage = 'url(./imges/index/news_p' + index + '.jpg)';
         if (index == 5) {
             index = 0;
         }
@@ -82,7 +82,7 @@ for (let i = 0; i < pics.length; i++) {
     //滑鼠觸發
     pics[i].onmousemove = function () {
         //左圖變當前小圖
-        big_box.style.backgroundImage = 'url(../imges/index/news_p' + (i + 1) + '.jpg)';
+        big_box.style.backgroundImage = 'url(./imges/index/news_p' + (i + 1) + '.jpg)';
         //重置函數&關定時器
         reset();
         clearInterval(timer2);

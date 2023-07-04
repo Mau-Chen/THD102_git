@@ -17,7 +17,7 @@ body {
 
     background-color: #FCF8EC;
     /* min-width: 350px; */
-    min-width: var(--mini-width);
+    /* min-width: var(--mini-width); */
 
     font-family: Arial, 'Noto Sans TC', sans-serif;
     position: relative;
@@ -147,8 +147,9 @@ a:active {
 
 /* =========上方選單========== */
 nav {
-    /* background-color: #FCF8EC; */
-    background-image: linear-gradient(#FCF8EC, transparent);
+    background-color: #FCF8EC;
+    /* background-image: linear-gradient(#FCF8EC, transparent); */
+    /* background-image: linear-gradient(180deg, #FCF8EC 0%, #FCF8EC 80%, transparent 80%, transparent 100%); */
     /* background-image: linear-gradient(#FFF, transparent); */
     width: 100%;
     display: flex;
@@ -203,6 +204,12 @@ nav .nav_text .box {
 
 }
 
+.nav_text .box .box-item>a>img {
+    display: block;
+    width: 25px;
+    padding: 12px 0;
+}
+
 
 .box-item-content {
     /* background-color: #304D62; */
@@ -244,12 +251,14 @@ nav .nav_text .box {
 main {
     /* background-color: chartreuse; */
     width: var(--main-width);
+    min-width: var(--mini-width);
+    max-width: 1200px;
     box-sizing: border-box;
     margin: auto;
-    min-width: var(--mini-width);
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 /* ==========內文頁首========= */
@@ -510,7 +519,8 @@ footer>p {
         margin: 0 auto;
         width: 100%;
     }
-    footer .footerbox{
+
+    footer .footerbox {
         width: 80%;
         gap: 0px 5px;
     }
@@ -529,10 +539,12 @@ footer>p {
     h3 {
         font-size: 16px;
     }
-    p{
+
+    p {
         font-size: 12px;
     }
-    .t20{
+
+    .t20 {
         font-size: 16px;
     }
 
@@ -560,7 +572,7 @@ footer>p {
     }
 
     /* 頁尾 */
-    footer .footerbox{
+    footer .footerbox {
         width: 90%;
     }
 
@@ -667,7 +679,8 @@ footer>p {
     .main_top>ul {
         gap: 5px;
     }
-    .main_top>ul li a{
+
+    .main_top>ul li a {
         white-space: nowrap;
     }
 
