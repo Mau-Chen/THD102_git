@@ -5,11 +5,52 @@ window.FontAwesomeKitConfig = { "asyncLoading": { "enabled": false }, "autoA11y"
 
 
 //top key
-let btn_up_el = document.getElementById("btn_up");
-btn_up_el.addEventListener("click", function () {
-    let html_el = document.getElementsByTagName("html")[0];
-    html_el.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+// let btn_up_el = document.getElementById("btn_up");
+// btn_up_el.addEventListener("click", function () {
+//     // console.log('aaa');
+//     let html_el = document.getElementsByTagName("html")[0];
+//     html_el.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// });
+
+
+// 小導覽列
+// var menuButton = document.querySelector('.menu-button');
+//     var openMenu = function () {
+//       swiper.slidePrev();
+//     };
+//     var swiper = new Swiper('.swiper', {
+//       slidesPerView: 'auto',
+//       initialSlide: 1,
+//       resistanceRatio: 0,
+//       slideToClickedSlide: true,
+//       on: {
+//         slideChangeTransitionStart: function () {
+//           var slider = this;
+//           if (slider.activeIndex === 0) {
+//             menuButton.classList.add('cross');
+//             // required because of slideToClickedSlide
+//             menuButton.removeEventListener('click', openMenu, true);
+//           } else {
+//             menuButton.classList.remove('cross');
+//           }
+//         },
+//         slideChangeTransitionEnd: function () {
+//           var slider = this;
+//           if (slider.activeIndex === 1) {
+//             menuButton.addEventListener('click', openMenu, true);
+//           }
+//         },
+//       },
+//     });
+
+
+document.getElementById("menu").addEventListener("click", (eve) => {
+  let element = document.getElementById("menu");
+  let nav = document.getElementById("nav");
+  element.classList.toggle("open");
+  nav.classList.toggle("mobile-nav");
+  eve.preventDefault();
 });

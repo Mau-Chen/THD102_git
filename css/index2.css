@@ -1,0 +1,568 @@
+@import url("reset.css");
+@import url("all.css");
+
+/* =====主頁面===== */
+
+.container #slide .item:first-child {}
+
+main {
+    /* padding-top: 100px; */
+    /* margin-top: 80px; */
+}
+
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    /* background: #eee; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    height: 750px;
+    /* position: relative; */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 輪播按鈕 */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding: 0 15px;
+    transition: 0.4s;
+    opacity: .6;
+    font-size: 8px;
+    /* position: absolute; */
+    /* z-index: 5; */
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    /* background-color: #f75857; */
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.swiper-button-next {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: showLeft 1s;
+    transform: translateX(15%);
+    /* right: 0; */
+}
+
+.swiper-button-prev {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation: rightBtnShow 1s;
+    transform: translateX(-15%);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--title-color);
+}
+
+
+
+
+
+
+/* 消息區 */
+main .news {
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 63px; */
+    padding: 0 0 25px;
+    margin: 20px 0;
+}
+
+
+
+main .news>h1::after {
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    width: 42px;
+    height: 4px;
+    margin: 10px auto;
+}
+
+main .news .news_container {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    /* flex-grow: 1; */
+}
+
+.news .news_container .news_boxs {
+    width: 28%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+}
+
+.news .news_container .news_boxb {
+    width: 70%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    transition: .4s;
+}
+
+
+.news_container .news_boxs .pics {
+    /* outline: 1px solid blue; */
+    /* position: relative; */
+    width: 100%;
+    height: 19.5%;
+    /* right: 0; */
+    transition: .5s;
+}
+
+.news_boxs .pics img {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.news_boxs .active {
+    opacity: 0;
+    /* right: 250px; */
+    left: 250px;
+}
+
+.news_boxs .pics:hover img {
+    opacity: 0;
+    /* right: 250px; */
+    left: 250px;
+}
+
+
+/* ==========領養流程區=========== */
+main .sop {
+    /* background-color: aqua; */
+    min-width: var(--mini-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 4% 0; */
+    position: relative;
+    padding: 0 0 25px;
+    margin: 20px 0;
+}
+
+main .sop::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 99vw;
+    /* right: 0; */
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-top-right-radius: 20px;
+    z-index: -1;
+
+}
+
+/* 標題 */
+
+.sop .titlebox>.soptitle {
+    text-shadow: 0px 4px 1px var(--secodary-color);
+}
+
+.sop .titlebox>.soptitle::after {
+    background-color: var(--secodary-color);
+}
+
+/* 步驟內文 */
+.sop_box {
+    /* background-color: chartreuse; */
+    margin: 20px auto 20px;
+    max-width: 900px;
+    min-width: var(--mini-width);
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 30% 5% 30% 5% 30%;
+    gap: 10px 0px;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.sop_box .sopline.sometime {
+    display: none;
+}
+
+.sop_box .sopline {
+    /* background-color: antiquewhite; */
+    height: 110%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sop_box .sopline img {
+    display: block;
+    height: 40px;
+    transform: translateY(-100%);
+
+}
+
+.sop_box .step {
+    /* background-color: darkblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* align-items: center; */
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+.sop_box .step h4 {
+    background-image: url("../imges/index/step.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    /* background-color: chocolate; */
+    display: block;
+    font-size: 20px;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    flex-basis: 60%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+}
+
+.sop_box .step h4 a {
+    display: block;
+    background-color: var(--secodary-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    margin: 3px;
+}
+
+.sop .sop_box .step p {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* background-color: aqua; */
+    flex-basis: 100px;
+    /* white-space: nowrap; */
+    /* padding: 5px; */
+    flex-grow: 0;
+    padding: 10px 5px 0;
+    line-height: 1.2;
+    /* flex-wrap:nowrap; */
+}
+
+.sop_box .sop1 a:hover {
+    color: var(--secodary-color);
+    font-weight: 600;
+}
+
+/* 第四段Story */
+.story {
+    /* background-color: #a6937c; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--main-width);
+    position: relative;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.story_box {
+    /* background-color: #65BBB1; */
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.story_box a {
+    width: 24.8%;
+    height: 33.333%;
+}
+
+.story_box img {
+    display: block;
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+.story_box img:hover {
+    opacity: 1;
+    transform: scale(.9);
+    z-index: 3;
+    transition: .5s;
+}
+
+.story .story_text {
+
+    /* background-color: blueviolet; */
+    box-sizing: border-box;
+    width: 30%;
+    /* padding: 0 2%; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+/* 標題 */
+.story .story_text>.titlebox {
+    /* background-color: #f75857; */
+    padding: 25px 0;
+}
+
+.story_text h6 {
+    color: var(--black-color);
+    display: block;
+    margin: 40px auto 0;
+    line-height: 1.2;
+    width: 75%;
+
+}
+
+/* 第五段Sponsor */
+.sponsor {
+    width: 100%;
+    min-width: var(--mini-width);
+    position: relative;
+    /* background-color: purple; */
+    margin: 0 auto 50px;
+    margin: 20px 0 60px;
+    padding-bottom: 40px;
+}
+
+.sponsor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 98vw;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 20px;
+    z-index: -1;
+}
+
+
+
+.sponsor .sponsor_container {
+    /* background-color: #555; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* 標題 */
+
+.sponsor .sponsor_container .titlebox {
+    margin-bottom: 40px;
+}
+
+
+.sponsor .sponsor_container .titlebox h1 {
+    text-shadow: 0px 4px 1px var(--secodary-color);
+}
+
+.sponsor .sponsor_container .titlebox h1::after {
+    background-color: var(--secodary-color);
+
+}
+
+/* 內容 */
+.sponsor .sponsor_container .sponsor_box {
+    /* background-color: #40688E; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sponsor .sponsor_container .sponsor_box .sponsors {
+    /* background-color: aqua; */
+    width: 32%;
+}
+
+.sponsor .sponsor_container .sponsor_box .sponsors a {
+    /* background-color: chartreuse; */
+    width: 100%;
+
+}
+
+.sponsor_container .sponsor_box .sponsors .pic {
+    background-color: #fff;
+    border-radius: 20%;
+    margin-bottom: 20px;
+
+}
+
+
+.sponsor .sponsors img {
+    display: block;
+    width: 100%;
+}
+
+.sponsors>a h3 {
+    color: var(--title-color);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.sponsors>a p {
+    color: var(--title-color);
+    line-height: 1.2;
+}
+
+
+
+/* 貓 */
+.cat01 {
+    position: absolute;
+    display: block;
+    width: 15%;
+    right: 6vw;
+    top: 108.5%;
+    transform: translateY(-60%);
+    z-index: 3;
+}
+
+
+/* 貓 */
+.cat02 {
+    position: absolute;
+    display: block;
+    width: 15%;
+    left: 0;
+    top: 0;
+    transform: translateY(-35%);
+}
+
+
+/* =================RWD================================ */
+@media all and (max-width: 1200px) {}
+
+@media all and (max-width: 767px) {
+    /* 輪播 */
+
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev {
+        display: none;
+    }
+
+    /* SOP */
+    .sop_box {
+        grid-template-columns: 40% 5% 40%;
+        grid-template-rows: repeat(3, 30%);
+        margin-bottom: 20px;
+    }
+
+    .sop_box .sopline.sometime {
+        display: block;
+        height: 110%;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sop_box .sopline:nth-child(4n) {
+        display: none;
+    }
+
+    .sop .sop_box .step:first-child h4 {
+        /* background-color: aqua; */
+        padding: 5% 23%;
+        line-height: 1;
+
+    }
+
+    .sop .sop_box .step p {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    /* Story */
+    .story {
+        flex-wrap: wrap;
+        /* min-width: var(--mini-width); */
+    }
+
+    .story_box {
+        order: 2;
+    }
+
+    .story_text {
+        order: 1;
+        height: 45%;
+    }
+
+    .story_text h6 {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media all and (max-width: 428px) {}

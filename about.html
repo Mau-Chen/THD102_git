@@ -12,56 +12,63 @@
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <title>毛遇-關於毛遇</title>
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/about.css">
+
 </head>
 
 <body>
-    <!-- =====側邊欄改上方選單===== -->
-    <nav>
-        <div class="nav_logo">
+    <header>
+        <div class="logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
-        <!-- ---文字選單--- -->
-        <div class="nav_text">
-            <ol class="box">
-                <li class="box-item t20"><a href="post.html">公告事項</a>
-                    <ul class="box-item-content">
-                        <li><a href="post.html">要事新聞</a></li>
-                        <li><a href="activity.html">相關活動</a></li>
-                        <li><a href="story.html">成功案例</a></li>
-                    </ul>
-                </li>
-                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
-                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
-                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
-                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
-                <li class="box-item t20"><a href="member.html"><i class="fa-solid fa-house-user"></i></a></li>
-                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
 
+        <ul id="nav" class="nav">
+            <li class="nav-item"><a href="#" class="t20">公告事項<i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-up"></i></i></a>
+                <!-- 子選單 -->
+                <ol>
+                    <li><a href="#" class="t16">要事新聞</a></li>
+                    <li><a href="#" class="t16">相關活動</a></li>
+                    <li><a href="#" class="t16">成功案例</a></li>
+                </ol>
+            </li>
+            <li class="nav-item"><a href="#" class="t20">領養流程</a></li>
+            <li class="nav-item"><a href="#" class="t20">毛怪列表</a></li>
+            <li class="nav-item"><a href="#" class="t20">關於毛遇</a></li>
+            <li class="nav-item"><a href="#" class="t20">贊助毛遇</a>
+            <li class="nav-item"><a href="favorites.html"><img src="imges/pawheart.png" alt=""></a></li>
+            <li class="nav-item"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
+        </ul>
+
+        <div id="menu" class="menu-toggle">
+            <div class="hamburger"></div>
         </div>
-        <!-- ---文字選單結束--- -->
-    </nav>
+    </header>
+
+
     <!-- =====主頁面===== -->
     <main id="about_topkey">
         <!-- =====右側表頭===== -->
         <div class="main_top">
-            <h1>關於毛遇</h1>
+            <h1 class="t32">關於毛遇</h1>
             <ul>
                 <li>
-                    <a href="#understand_topkey">
-                        <h2>了解毛遇</h2>
+                    <a href="#understand_topkey" class="subtitle -on">
+                        <h2 class="t20">了解毛遇</h2>
                     </a>
                 </li>
                 <li>
-                    <a href="#timeline_topkey">
-                        <h2>毛遇事件</h2>
+                    <a href="#timeline_topkey" class="subtitle">
+                        <h2 class="t20">毛遇事件</h2>
                     </a>
                 </li>
                 <li>
-                    <a href="#findus_topkey">
-                        <h2>找到毛遇</h2>
+                    <a href="#findus_topkey" class="subtitle">
+                        <h2 class="t20">找到毛遇</h2>
                     </a>
                 </li>
             </ul>
@@ -73,45 +80,47 @@
                         <p>歡迎來到「毛遇」，您尋找寵愛的完美起點！<br>我們是一個致力於連結有愛心的人和可愛毛怪的認養平台。</p>
                         <p>在「毛遇」，我們相信每個毛小孩都應該有一個溫暖的家，因此我們為您提供了一個方便、可靠的平台，幫助您尋找到合適的寵物夥伴。我們的目標是促進認養而非購買，減少流浪動物的數量，並提倡動物權益。
                         </p>
-                        <p id="understand_topkey">
-                            無論您是在尋找一隻狗狗、貓咪還是其他小動物，「毛遇」都有廣泛的寵物資料庫，滿足您的需求。您可以在我們的網站上瀏覽不同品種、年齡和性別的寵物檔案，並了解每隻毛怪的健康狀況和需求。</p>
+                        <p>無論您是在尋找一隻狗狗、貓咪還是其他小動物，「毛遇」都有廣泛的寵物資料庫，滿足您的需求。您可以在我們的網站上瀏覽不同品種、年齡和性別的寵物檔案，並了解每隻毛怪的健康狀況和需求。</p>
                     </div>
                 </div>
                 <!-- ==========介紹詞========= -->
                 <div class="understand">
-                    <!-- <div class="about_color"></div> -->
                     <div class="titlebox">
-                        <img src="imges/about/about_titleicon.png" alt="">
+                        <img src="imges/about/about_titleicon.png" alt="" class="title_colorpic">
                         <h1>了解毛遇</h1>
-                        <!-- <img src="imges/about/title_about.png" alt=""> -->
                     </div>
                     <div class="inner">
                         <div class="text">
-                            <P>我們重視動物福利，所有在「毛遇」上列出的寵物都經過嚴格的篩選和健康檢查，確保它們適合認養並能夠帶來無盡的愛和快樂。</P>
-                            <P>在「毛遇」，我們也建立了一個充滿愛心和支持的社群。您可以與其他寵物主人交流經驗、分享故事，並獲得專家建議和支持，讓您的寵物養育旅程更加愉快和無憂。</P>
-                            <P id="timeline_topkey">無論您是寵物新手還是有多年的養寵經驗，「毛遇」都是您尋找完美毛小孩的最佳選擇。加入我們，讓「毛遇」成為您與寵物邂逅的最美好起點！</P>
+                            <P class="t20">我們重視動物福利，所有在「毛遇」上列出的寵物都經過嚴格的篩選和健康檢查，確保它們適合認養並能夠帶來無盡的愛和快樂。</P>
+                            <P class="t20">在「毛遇」，我們也建立了一個充滿愛心和支持的社群。您可以與其他寵物主人交流經驗、分享故事，並獲得專家建議和支持，讓您的寵物養育旅程更加愉快和無憂。</P>
+                            <P class="t20">無論您是寵物新手還是有多年的養寵經驗，「毛遇」都是您尋找完美毛小孩的最佳選擇。加入我們，讓「毛遇」成為您與寵物邂逅的最美好起點！</P>
                         </div>
                         <img src="imges/about/about02.png" alt="">
                     </div>
                 </div>
                 <!-- ==========時間線=========  -->
                 <div class="timelinebox">
-                    <div class="titlebox2">
-                        <img src="imges/about/timeline_titleicon.png" alt="">
+                    <div class="titlebox">
+                        <img src="imges/about/timeline_titleicon.png" alt="" class="title_colorpic">
                         <h1>毛遇事件</h1>
                     </div>
                     <img src="imges/about/timeline.png" alt="" class="time_pic">
+                    <img src="imges/about/timeline_column.png" alt="" class="timecolumn_pic">
                 </div>
                 <!-- ==========地址電話交通資訊=========  -->
                 <div class="find_us" id="findus_topkey">
                     <div class="text">
                         <div class="text_a">
-                            <h3>找到毛遇</h3>
-                            <h6>地址：708 台南市安平區漁光路22號<br>電話：(06) 234-5678</h6>
+                            <h3 class="t24">找到毛遇</h3>
+                            <h6 class="t20">地址：708 台南市安平區漁光路22號</h6>
+                            <h6 class="t20">電話：(06) 234-5678</h6>
                         </div>
                         <div class="text_b">
-                            <h3>交通資訊</h3>
-                            <h6>國道1號往仁德系統下交流道<br>→台86往台南→台17線，朝安平<br>→健康路三段往安平區漁光路<br>→抵達漁光路22號！！</h6>
+                            <h3 class="t24">交通資訊</h3>
+                            <h6 class="t20">國道1號往仁德系統下交流道</h6>
+                            <h6 class="t20">→台86往台南→台17線，朝安平</h6>
+                            <h6 class="t20">→健康路三段往安平區漁光路</h6>
+                            <h6 class="t20">→抵達漁光路22號！！</h6>
                         </div>
                     </div>
                     <div class="map">
@@ -123,53 +132,45 @@
 
                 </div>
 
-                <footer>
-                    <ul class="text_a">
-                        <li><a href="post.html">公告事項</a></li>
-                        <li><a href="post.html">要事新聞</a></li>
-                        <li><a href="activity.html">相關活動</a></li>
-                        <li><a href="story.html">成功案例</a></li>
-                        <li><a href="#sopkey">領養流程</a></li>
-                        <li><a href="petlist.html">毛怪列表</a></li>
-                        <li><a href="about.html">關於毛遇</a></li>
-                        <li><a href="member.html">毛遇會員</a></li>
-                        <li> </li>
-                    </ul>
-                    <div class="text_b">
-                        <div class="phone">
-                            <img src="imges/footer_sprites.png" alt="">
-                        </div>
-                        <div class="add">
-                            <img src="imges/footer_sprites.png" alt="">
-                        </div>
-                    </div>
-                    <div class="text_c">
-                        <h5>(06) 234 - 5678</h5>
-                        <h5>708 台南市安平區漁光路22號</h5>
-                    </div>
-                </footer>
-
-
-
-
             </div>
-
-
-            <div class="top_button">
-                <a href="#about_topkey"><img src="imges/top_btn.png" alt=""></a>
-            </div>
-
-
-
-
-
         </div>
-
-
-
-
     </main>
-    <div class="about_color"></div>
+    <footer>
+        <ul class="footerbox">
+            <li><a href="post.html">公告事項</a></li>
+            <li><a href="post.html">要事新聞</a></li>
+            <li><a href="activity.html">相關活動</a></li>
+            <li><a href="story.html">成功案例</a></li>
+            <li><a href="" class="phone text_b">
+                    <div class="icon">
+                        <img src="imges/footer_sprites.png" alt="">
+                    </div>
+                    <h5>(06) 234 - 5678</h5>
+                </a></li>
+            <li><a href="#sopkey">領養流程</a></li>
+            <li><a href="petlist.html">毛怪列表</a></li>
+            <li><a href="about.html">關於毛遇</a></li>
+            <li><a href="member.html">毛遇會員</a></li>
+            <li><a href="" class="add text_b">
+                    <div class="icon">
+                        <img src="imges/footer_sprites.png" alt="">
+                    </div>
+                    <h5>708 台南市安平區漁光路22號</h5>
+                </a></li>
+        </ul>
+        <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+    </footer>
+
+    <div class="top_button">
+        <a href="#about_topkey"><img src="imges/top_btn.png" alt=""></a>
+    </div>
+
+
+
+
+
+
+
 
     <script src="js/all.js"></script>
 </body>

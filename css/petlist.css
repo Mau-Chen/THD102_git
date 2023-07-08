@@ -24,7 +24,7 @@ main .main_top>h1 {
 }
 
 main .main_top>h1::after {
-    content: "\2764";
+    /* content: "\2764"; */
 }
 
 main .main_top .petbox::after {

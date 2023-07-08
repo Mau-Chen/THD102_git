@@ -1,41 +1,11 @@
 @import url("reset.css");
 @import url("all.css");
 
-/* ==========總表頭========== */
-nav {
-    background-color: #FCF8EC;
-}
-
 /* ==========小標題========= */
-#about_topkey .main_top>ul li:nth-child(1)>a {
+#about_topkey .main_top>ul li .-on {
     background-color: var(--primary-color);
     font-weight: bold;
 }
-
-main .main_top {
-    position: relative;
-    /* background-color: #E27D60; */
-    /* width: 150%; */
-}
-
-.main_top>ul:before {
-    content: "";
-    display: block;
-    position: absolute;
-    margin: 0 auto;
-    width: 100vw;
-    height: 80px;
-    bottom: -18px;
-    /* left: 0; */
-    /* right: 0; */
-    /* transform: translateX(-19%); */
-    transform: translateX(-19.2%);
-    /* background-color: #E27D60; */
-    background-color: #FCF8EC;
-    z-index: -1;
-}
-
-
 
 /* ==========頁尾========= */
 footer {
@@ -43,16 +13,12 @@ footer {
 }
 
 
-
-
-
-
 /* ==========內容========= */
 .about_box {
     /* background-color: aqua; */
     box-sizing: border-box;
     width: 100%;
-    min-width: 600px;
+    min-width: var(--mini-width);
     margin: 0 auto;
 }
 
@@ -65,20 +31,19 @@ footer {
     justify-items: center;
     flex-wrap: wrap;
     margin-top: 30px;
+    padding-bottom: 80px;
 }
 
 .about_box .slogan img {
     display: block;
-    /* background-color: #fff; */
     width: 40%;
 }
 
 .about_box .slogan .text {
     /* background-color: burlywood; */
-    box-sizing: border-box;
     width: 60%;
     flex-grow: 1;
-    padding: 3% 0;
+    padding: 3%;
 }
 
 .slogan .text p {
@@ -87,73 +52,68 @@ footer {
     letter-spacing: .15em;
     line-height: 1.5;
     color: var(--black-color);
+    margin-bottom: 10px;
 }
 
 /* ==========介紹詞========= */
 
-/* 色塊 */
-.about_color {
-    width: 86vw;
-    /* height: 60vh; */
-    height: 20%;
-    background-color: var(--primary-color);
-    border-radius: 20px 0 0 0;
+.understand {
+    /* margin-top: 31vh; */
+    /* background-color: darkcyan; */
+    position: relative;
+    padding: 5%;
+
+
+}
+
+.understand::after {
+    content: "";
+    display: block;
+    width: 98vw;
     position: absolute;
-    top: 30%;
-    right: 0;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-top-left-radius: 20px;
     z-index: -1;
 }
 
-.understand {
-    margin-top: 31vh;
-    /* background-color: darkcyan; */
-}
+
 
 
 /* 了解標題 */
 main .understand .titlebox {
-    /* background-color: blueviolet; */
-    width: 190px;
+    display: inline-block;
+    margin: auto;
     position: absolute;
-    left: 0;
-    top: 30%;
-    transform: translateY(-60%);
+    top: 0;
+    transform: translateY(-62%);
 }
 
-main .understand .titlebox>img {
-    display: block;
-    margin: 0 auto;
-}
 
 main .understand .titlebox>h1 {
-    padding-top: 20px;
-    text-align: center;
     text-shadow: 0px 4px 1px var(--secodary-color);
-    white-space: nowrap;
 }
 
 main .understand .titlebox>h1::after {
-    content: "";
-    display: block;
     background-color: var(--secodary-color);
-    width: 42px;
-    height: 6px;
-    margin: 15px auto;
 }
 
 
 
 /* 了解內文 */
 .understand .inner {
-    /* background-color: bisque; */
+    /* background-color: aqua; */
+    margin-top: 20px;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-items: center;
 }
 
 .understand .inner>.text {
-    width: 50%;
+    width: 43%;
     box-sizing: border-box;
     /* padding: 20px; */
     /* flex-basis: 500px; */
@@ -162,44 +122,28 @@ main .understand .titlebox>h1::after {
 }
 
 .understand .inner p {
-    /* background-color: #fff; */
-    font-size: 20px;
-    text-align: left;
     color: var(--black-color);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     line-height: 1.5;
 }
 
 .understand .inner>img {
     /* background-color: aqua; */
-    box-sizing: border-box;
-    width: 50%;
+    width: 57%;
     padding: 2%;
-    /* flex-basis: 500px; */
-
 }
 
 /* ==========時間線========= */
 .timelinebox {
-    margin-top: 15%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 100%;
-    /* background-color: black; */
-    /* height: 500px; */
-    /* height: 800px; */
-}
-
-.timelinebox .titlebox2 {
-    /* background-color: darkkhaki; */
-
 }
 
 .timelinebox .titlebox2>img {
     /* background-color: #E27D60; */
-    /* display: inline-block; */
     display: block;
     margin: 0 auto;
 }
@@ -226,24 +170,23 @@ main .understand .titlebox>h1::after {
     display: block;
     width: 100%;
     /* background-color: #FDF7EC; */
-    /* border-radius: 40px; */
     object-position: center center;
-    /* padding: 30px; */
     padding: 40px 0;
+}
+
+.timelinebox .timecolumn_pic {
+    display: none;
 }
 
 /* ==========地址電話交通資訊=========  */
 .find_us {
     /* background-color: #fff; */
-    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-    /* margin: 50px 0 100px; */
     padding: 50px 0 100px;
 }
 
 .find_us .text {
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -259,14 +202,16 @@ main .understand .titlebox>h1::after {
 }
 
 .find_us .text h3 {
+    font-weight: bold;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--title-color);
 }
 
 .find_us .text h6 {
-    /* margin-bottom: 4px; */
-    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--black-color);
+    /* line-height: 1.5; */
 }
 
 
@@ -274,4 +219,107 @@ main .understand .titlebox>h1::after {
 .find_us .map {
     flex-basis: 300px;
     flex-grow: 0;
+}
+
+
+
+
+
+
+/* =================RWD================================ */
+@media all and (max-width: 767px) {
+    header .nav>li>a>i{
+        display: block;
+    }
+
+    /* ==========介紹詞========= */
+    .about_box .slogan {
+        flex-direction: column;
+    }
+
+    .about_box .slogan img {
+        width: 60%;
+    }
+
+    .about_box .slogan .text {
+        width: 85%;
+    }
+
+    /* 了解內文 */
+    main .understand .titlebox {
+        left: 50%;
+        transform: translate(-50%, -62%);
+    }
+
+    .understand .inner {
+        flex-direction: column;
+    }
+
+    .understand .inner>img {
+        order: 1;
+        width: 100%;
+    }
+
+    .understand .inner>.text {
+        order: 2;
+        width: 85%;
+    }
+
+    /* ==========時間線========= */
+    .timelinebox .time_pic {
+        display: none;
+    }
+
+    .timelinebox .timecolumn_pic {
+        padding: 40px 0;
+        display: block;
+        margin: 0 auto;
+        object-position: center center;
+        width: 80%;
+    }
+
+    /* ==========地址電話交通資訊=========  */
+    .find_us {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .find_us .text {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .find_us .text .text_a {
+        margin-bottom: 40px;
+    }
+
+    .find_us .map {
+        width: 80%;
+    }
+
+    .find_us .map iframe {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 428px) {
+
+    /* ==========介紹詞========= */
+    .about_box .slogan .text {
+        width: 100%;
+        height: 50%;
+    }
+
+    /* 了解內文 */
+    .understand .inner>img {
+        width: 100%;
+    }
+
+    .understand .inner>.text {
+        width: 100%;
+    }
+    .t20{
+        font-size: 16px;
+    }
 }

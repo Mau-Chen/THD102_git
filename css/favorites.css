@@ -1,0 +1,99 @@
+@import url("reset.css");
+@import url("all.css");
+
+
+
+.main_top {
+    width: var(--main-width);
+    /* background-color: antiquewhite; */
+    position: relative;
+}
+
+.main_top .title {
+    box-sizing: border-box;
+    position: sticky;
+    top: 80px;
+    /* background-color: pink; */
+    background-color: #FCF8EC;
+    height: 80px;
+}
+
+.main_top .title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    min-width: var(--main-width);
+    height: 18px;
+    background-color: #FCF8EC;
+    border-bottom: 2px solid #ccc;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.main_top .title>h1 {
+    float: left;
+    font-size: 40px;
+    line-height: 40px;
+    /* line-height: 30px; */
+}
+
+.main_top .title>img {
+    float: right;
+    z-index: 2;
+    transform: translateY(10px);
+}
+
+.containet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.pet_love {
+    background-color: white;
+    padding: 2%;
+    display: flex;
+    /* align-items: center; */
+    margin: 1%;
+
+
+}
+
+.pet_love .pic {
+    width: 50%;
+}
+
+.pet_love .pic img {
+    width: 100%;
+}
+
+.pet_love .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    justify-content: space-between;
+}
+
+.pet_love .text .list {
+    display: flex;
+    justify-content: flex-start;
+    line-height: 1.5em;
+}
+
+.pet_love .text .list.name {
+    justify-content: space-between;
+}
+
+.pet_love .text .list.time {
+    align-self: flex-end;
+}
+
+.pet_love .text .list.time p {
+    font-size: 12px;
+    color: #999;
+}

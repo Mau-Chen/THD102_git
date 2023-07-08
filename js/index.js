@@ -10,7 +10,7 @@ document.querySelectorAll('.s_button')[0].onclick = () => {
 } */
 
 
-let _direction = true;
+/* let _direction = true;
 let _move = () => {
     let lists = document.querySelectorAll('.item');
     if (_direction) {
@@ -39,12 +39,14 @@ document.querySelectorAll('.s_button')[1].onclick = () => {
 document.querySelectorAll('.s_button')[0].onclick = () => {
     _direction = false;
     _move();
-}
+} */
 
 
 
 
 
+
+// 第二段
 let big_box = document.querySelector('.news_boxb');
 console.log(big_box);
 let pics = document.getElementsByClassName("pics");
@@ -99,3 +101,75 @@ play();
 
 
 // ../imges/index/news_p1.jpg
+
+
+let current = 0;
+let items = document.querySelectorAll(".header__img");
+console.log(items);
+
+const handleRight = () => {
+  items[current].style.animation = "hideRight 1.5s forwards";
+  items[current >= items.length - 1 ? 0 : current + 1].style.animation =
+    "showRight 1.5s forwards";
+  if (current < items.length - 1) {
+    current++;
+  } else {
+    current = 0;
+  }
+};
+
+const handleLeft = () => {
+  items[current].style.animation = "hideLeft 1.5s forwards";
+  items[current > 0 ? current - 1 : 2].style.animation =
+    "showLeft 1.5s forwards";
+  if (current > 0) {
+    current--;
+  } else {
+    current = 2;
+  }
+};
+const getSliderHeight = () => {
+  document.querySelector(".wrapper").style.height =
+    document.querySelector(".header__img").clientHeight + "px";
+};
+window.onresize = getSliderHeight;
+getSliderHeight();
+    
+
+
+
+
+
+const header = document.querySelector(".wrapper");
+const headerBox = document.querySelector(".header__box");
+const headerImages = document.querySelectorAll(".header__img");
+
+//VARIABLES FOR CAROUSEL
+const carouselSpeed = 3000;
+let headerWidth = header.clientWidth;
+
+//FUNCTION THAT CHANGES IMAGES IN CAROUSEL
+const changeImage = () => {
+  headerBox.style.transform = `translateX(-${headerWidth}px)`;
+};
+
+//FUNCTION THAT HANDLES CAROUSEL
+const handleCarousel = () => {
+  changeImage();
+};
+
+//FUNCTION THAT APPENDS ELEMENT TO HEADER BOX AND MAKES CAROUSEL INFINITE
+const infiniteCarousel = () => {
+  headerBox.appendChild(headerBox.firstElementChild);
+
+  headerBox.style.transition = `none`;
+  headerBox.style.transform = `translateX(0)`;
+  setTimeout(function () {
+    headerBox.style.transition = `transform 0.5s`;
+  });
+};
+
+//FUNCTIONS CALLINGS
+changeImage();
+headerBox.addEventListener("transitionend", infiniteCarousel);
+setInterval(handleCarousel, carouselSpeed);
