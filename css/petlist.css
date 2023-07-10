@@ -4,17 +4,6 @@
 
 
 /* ==========總表頭========== */
-nav {
-    /* background-color: #FCF8EC; */
-}
-
-main .main_top {
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* background-color: #E27D60; */
-}
 
 .main_top>h1 {
     position: relative;
@@ -68,6 +57,7 @@ main .main_top {
     align-items: center;
     position: sticky;
     top: 35px;
+    z-index: 30;
 }
 
 
@@ -207,7 +197,6 @@ main .main_top {
 }
 
 .indicator {
-    box-sizing: border-box;
     position: absolute;
     width: 70px;
     height: 70px;
@@ -290,13 +279,25 @@ main .main_top {
     margin: 10px 0;
 }
 
+.choose_select .go a .select-box__icon {
+    display: inline-block;
+    width: 10px;
+    transition: 0.2s ease;
+}
+
+.choose_select .go a.-on .select-box__icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+
 .choose_select .select3 .select_item {
     /* background-color: #E27D60; */
     display: flex;
 }
 
 
-.choose_select .select3 .go a {
+.choose_select .select3 .go p {
     color: var(--title-color);
 }
 
@@ -310,7 +311,6 @@ main .main_top {
     border-radius: 5px;
     width: 110px;
     padding: 5px 10px;
-    cursor: pointer;
     font-size: 1rem;
 
     /* 箭頭 */
@@ -320,7 +320,8 @@ main .main_top {
     background-position: right 8px center;
 }
 
-.choose_select label {
+
+.choose_select .select3 label {
     display: inline-block;
     text-align: end;
     width: 88px;
@@ -344,6 +345,46 @@ main .main_top {
 
 }
 
+.choose_select .special {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.choose_select .special>div{
+    width: 30%;
+}
+
+.choose_select .special .custom_select {
+    /* 清除 select 預設外觀 */
+    appearance: none;
+    outline: none;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 90px;
+    padding: 5px;
+    font-size: 1rem;
+
+    /* 箭頭 */
+    background-image: url("../imges/petlist/down.svg");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: right 8px center;
+
+    /* margin-right: 2%; */
+}
+
+.choose_select .special label {
+    display: inline-block;
+    text-align: end;
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
 
 /* ==========動物列表========= */
 .pet_content {
@@ -359,15 +400,19 @@ main .main_top {
 }
 
 .pet_card {
+    position: relative;
     width: 30%;
     min-width: 200px;
     background-color: #fff;
     padding: 3% 3%;
     margin: 1% 1.66%;
     border-radius: 10px;
+    z-index: 0;
 }
 
 .pet_block {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -434,6 +479,75 @@ main .main_top {
     color: #ccc;
     white-space: nowrap;
 }
+
+/* ============愛心============= */
+.pet_card button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9em;
+    /* background-color: #59524f; */
+    background-color: var(--title-color);
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-radius: calc(3em / 2);
+    padding: 0.3em 0 0 0;
+    margin: 1em 1em 0;
+    cursor: pointer;
+}
+
+.pet_card button svg {
+    width: 1.3em;
+    height: 1.3em;
+    fill: #d9ccc1;
+    stroke: #d9ccc1;
+}
+
+.pet_card button.-on svg {
+    fill: rgb(243, 98, 98);
+}
+
+/* ===========介紹=============== */
+.card__info {
+    width: 100%;
+    /* height: 100%; */
+    /* background: black; */
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%,50%);
+    transition: all 0.3s;
+
+}
+.card__paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transtion: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 30px 0 20px;
+    /* transform: translateY(-20px); */
+    line-height: 1.5;
+}
+.show {
+    /* width: calc(100% + 24px); */
+    width: 100%;
+    /* height: calc(100% + 24px); */
+    height: 100%;
+    border-radius: 16px;
+}
+
+
+.show .card__paragraph {
+    opacity: 1;
+}
+
+
+
 
 /* 頁碼 */
 .page_box {

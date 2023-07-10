@@ -38,7 +38,8 @@
             <li class="nav-item"><a href="petlist.html" class="t20">毛怪列表</a></li>
             <li class="nav-item"><a href="about.html" class="t20">關於毛遇</a></li>
             <li class="nav-item"><a href="sponsor.html" class="t20">贊助毛遇</a>
-            <li class="nav-item"><a href="favorites.html"><img src="imges/pawheart.png" alt=""></a></li>
+            <li class="nav-item"><a href="favorites.html" class="header__menuItemIcon" id="favMenuItem"><img
+                        src="imges/pawheart.png" alt=""></a></li>
             <li class="nav-item"><a href="about.html#findus_key"> <i class="fa-solid fa-map-location-dot"></i></a></li>
         </ul>
 
@@ -136,19 +137,59 @@
                         </div>
                     </div>
                     <div class="go textlist">
-                        <a href="#">
-                            <p class="t16">進階搜尋 >></p>
+                        <a href="#" class="-on" id="specialLink">
+                            <!-- <p class="t16">進階搜尋 >></p> -->
+                            <p class="t16">進階搜尋
+                                <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
+                                    alt="Arrow Icon" aria-hidden="true" />
+                            </p>
                         </a>
                         <button type="submit" class="t16">搜尋</button>
+                    </div>
+                    <div class="special" id="Special">
+                        <div class="special01">
+                            <label for="" class="t16">花樣：</label>
+                            <select class="custom_select">
+                                <option value="none" selected disabled hidden>請選擇</option>
+                                <option>點</option>
+                                <option>條紋</option>
+                                <option>純色</option>
+                                <option>漸層</option>
+                                <option>塊狀</option>
+                                <option>低調紋</option>
+                            </select>
+                        </div>
+                        <div class="special02">
+                            <label for="" class="t16">毛長：</label>
+                            <select class="custom_select">
+                                <option value="none" selected disabled hidden>請選擇</option>
+                                <option>長</option>
+                                <option>短</option>
+                            </select>
+                        </div>
+                        <div class="special03">
+                            <label for="" class="t16">是否有肢體器官損傷：</label>
+                            <select class="custom_select">
+                                <option value="none" selected disabled hidden>請選擇</option>
+                                <option>有</option>
+                                <option>無</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- ==========內容========= -->
-            <div class="pet_content">
+            <div class="pet_content" id="cards">
                 <div class="pet_card">
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis1" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -165,12 +206,27 @@
                                 <p class="t16">17時20分</p>
                             </div>
                         </div>
+                        <div class="card__info">
+                            <p class="card__paragraph t18">
+                                結紮與否：是。<br>
+                                個性：膽小。<br>
+                                已知疾病：氣喘。<br>
+                                建議居住環境：大。<br>
+                                建議毛怪同伴：無。<br>
+                            </p>
+                        </div>
                     </a>
                 </div>
                 <div class="pet_card">
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis2" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -193,6 +249,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis3" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -215,6 +277,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis4" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -237,6 +305,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis5" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -259,6 +333,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis6" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -281,6 +361,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis7" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -303,6 +389,12 @@
                     <a href="#" class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
+                            <button id="likethis8" class="love">
+                                <svg viewBox="0 0 512 512" width="100" title="heart">
+                                    <path
+                                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                </svg>
+                            </button>
                         </div>
                         <div class="pet_text">
                             <div class="theup">
@@ -321,93 +413,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="pet_card">
-                    <a href="#" class="pet_block">
-                        <div class="pic">
-                            <img src="imges/petlist/pet01.jpg">
-                        </div>
-                        <div class="pet_text">
-                            <div class="theup">
-                                <h3 class="t32">大皮</h3>
-                                <i class="fa-solid fa-mars"></i>
-                                <!-- <i class="fa-solid fa-venus"></i> -->
-                            </div>
-                            <div class="thedown">
-                                <p class="t20">新北市</p>
-                                <p class="t20">15歲</p>
-                            </div>
-                            <div class="date">
-                                <p class="t16">刊登時間：</p>
-                                <p class="t16">17時20分</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="pet_card">
-                    <a href="#" class="pet_block">
-                        <div class="pic">
-                            <img src="imges/petlist/pet01.jpg">
-                        </div>
-                        <div class="pet_text">
-                            <div class="theup">
-                                <h3 class="t32">小皮</h3>
-                                <i class="fa-solid fa-mars"></i>
-                                <!-- <i class="fa-solid fa-venus"></i> -->
-                            </div>
-                            <div class="thedown">
-                                <p class="t20">新北市</p>
-                                <p class="t20">15歲</p>
-                            </div>
-                            <div class="date">
-                                <p class="t16">刊登時間：</p>
-                                <p class="t16">17時20分</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="pet_card">
-                    <a href="#" class="pet_block">
-                        <div class="pic">
-                            <img src="imges/petlist/pet01.jpg">
-                        </div>
-                        <div class="pet_text">
-                            <div class="theup">
-                                <h3 class="t32">奈奇</h3>
-                                <i class="fa-solid fa-mars"></i>
-                                <!-- <i class="fa-solid fa-venus"></i> -->
-                            </div>
-                            <div class="thedown">
-                                <p class="t20">新北市</p>
-                                <p class="t20">15歲</p>
-                            </div>
-                            <div class="date">
-                                <p class="t16">刊登時間：</p>
-                                <p class="t16">17時20分</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-<!--                 <div class="pet_card">
-                    <a href="#" class="pet_block">
-                        <div class="pic">
-                            <img src="https://picsum.photos/500/200">
-                        </div>
-                        <div class="pet_text">
-                            <div class="theup">
-                                <h3 class="t32">待新增</h3>
-                                <i class="fa-solid fa-mars"></i>
-                            </div>
-                            <div class="thedown">
-                                <p class="t20">某某市</p>
-                                <p class="t20">X歲</p>
-                            </div>
-                            <div class="date">
-                                <p>刊登時間：</p>
-                                <p>17時20分</p>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
             </div>
             <!-- ==========右邊頁碼========= -->
             <div class="page_box">
