@@ -5,53 +5,53 @@
 
 /* ==========總表頭========== */
 nav {
-    background-color: #FCF8EC;
+    /* background-color: #FCF8EC; */
 }
 
 main .main_top {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* position: relative; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
     /* background-color: #E27D60; */
 }
 
-main .main_top>h1 {
-    /* display: block; */
+.main_top>h1 {
+    position: relative;
+    display: block;
     margin-bottom: 10px;
     align-self: flex-start;
     color: var(--black-color);
+    z-index: 30;
 }
 
-main .main_top>h1::after {
-    /* content: "\2764"; */
+.main_top .petbox::before {
+    content: "";
+    display: block;
+    width: 98vw;
+    background-color: #FCF8EC;
+    height: calc(100% + 44px);
+    /* background-color: red; */
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
-main .main_top .petbox::after {
+.main_top .petbox::after {
     content: "";
     display: block;
     width: 100%;
-    min-width: var(--main-width);
-    height: 18px;
+    height: 12px;
     background-color: #FCF8EC;
     border-bottom: 2px solid #ccc;
     position: absolute;
-    left: 0;
-    bottom: -20px;
+    bottom: -14px;
+    z-index: -1;
 }
 
-/* ==========右邊頁尾========= */
-.footer_box {
-    position: relative;
-    height: 350px;
-}
-
-.footer_box footer {
-    min-width: var(--mini-width);
-    /* min-width: 900px; */
-}
-
-.footer_box .page_box {
+.page_box {
     margin-top: 1%;
     align-items: flex-start;
 }
@@ -62,24 +62,14 @@ main .main_top .petbox::after {
 .petbox {
     width: 100%;
     background-color: #FCF8EC;
-    box-sizing: border-box;
-    /* min-width: 630px; */
     min-width: var(--mini-width);
     display: flex;
     flex-direction: column;
     align-items: center;
     position: sticky;
-    top: 80px;
-    z-index: 30;
+    top: 35px;
 }
 
-
-.petbox .none_top {
-    /* background-color: #fff; */
-    height: 30px;
-    /* min-width: 630px; */
-    min-width: var(--mini-width);
-}
 
 .choosebox_bg {
     width: 100%;
@@ -116,7 +106,6 @@ main .main_top .petbox::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 75px; */
     height: 75px;
     border: none;
 }
@@ -134,7 +123,8 @@ main .main_top .petbox::after {
 
 }
 
-.choosebox_bg .class-item:hover a .peticon {
+.choosebox_bg .class-item:hover a .peticon,
+.choosebox_bg .class-item.-on a .peticon {
     transform: translateY(-38px);
     border: none;
 }
@@ -145,46 +135,73 @@ main .main_top .petbox::after {
     height: 40px;
 }
 
-.choosebox_bg .class-item:nth-child(1):hover~.indicator {
+/* .choosebox_bg .class-item:nth-child(1):hover~.indicator,
+.choosebox_bg .class-item:nth-child(1).-on~.indicator {
     display: block;
-    /* left: 17.25%; */
     left: 18%;
 }
 
-.choosebox_bg .class-item:nth-child(2):hover~.indicator {
+.choosebox_bg .class-item:nth-child(2):hover~.indicator,
+.choosebox_bg .class-item:nth-child(2).-on~.indicator {
     display: block;
-    /* left: 33.5%; */
     left: 34%;
 }
 
-.choosebox_bg .class-item:nth-child(3):hover~.indicator {
+.choosebox_bg .class-item:nth-child(3):hover~.indicator,
+.choosebox_bg .class-item:nth-child(3).-on~.indicator {
     display: block;
     left: 50%;
 }
 
-.choosebox_bg .class-item:nth-child(4):hover~.indicator {
+.choosebox_bg .class-item:nth-child(4):hover~.indicator,
+.choosebox_bg .class-item:nth-child(4).-on~.indicator {
     display: block;
-    /* left: 66.5%; */
+    left: 66%;
+} */
+
+.choosebox_bg .class-item:nth-child(1).-on~.indicator {
+    display: block;
+    left: 18%;
+}
+
+.choosebox_bg .class-item:nth-child(2).-on~.indicator {
+    display: block;
+    left: 34%;
+}
+
+.choosebox_bg .class-item:nth-child(3).-on~.indicator {
+    display: block;
+    left: 50%;
+}
+
+.choosebox_bg .class-item:nth-child(4).-on~.indicator {
+    display: block;
     left: 66%;
 }
 
-.choosebox_bg .class-item:nth-child(5):hover~.indicator {
+/* .choosebox_bg .class-item:nth-child(5):hover~.indicator,
+.choosebox_bg .class-item:nth-child(5).-on~.indicator {
     display: block;
-    /* left: 83%; */
+    left: 82%;
+} */
+.choosebox_bg .class-item:nth-child(5).-on~.indicator {
+    display: block;
     left: 82%;
 }
 
 .choosebox_bg .class-item a .text {
     position: absolute;
     color: white;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     transform: translateY(20px);
     transition: .7s;
     top: 34.5px;
     opacity: 0;
+    font-weight: normal;
 }
 
-.choosebox_bg .class-item:hover a .text {
+.choosebox_bg .class-item:hover a .text,
+.choosebox_bg .class-item.-on a .text {
     transform: translateY(10px);
     opacity: 1;
 }
@@ -201,10 +218,8 @@ main .main_top .petbox::after {
     /* border: 6px solid gray; */
     top: -50%;
     display: none;
-    /* opacity: 0; */
     left: 0;
     transform: translateX(-50%);
-    /* transition: opacity .2s ,left .5s; */
     transition: .5s;
 }
 
@@ -241,40 +256,52 @@ main .main_top .petbox::after {
     border-radius: 0 0 47px 47px;
 }
 
-/* ==========文字選單========= */
+/* ==========搜尋文字列========= */
 .choose_select {
-    box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 0 5%;
     width: 100%;
+    border-radius: 0 0 20px 20px;
     background-color: var(--secodary-color);
-    /* background-color: #fff; */
+    /* background-color: red; */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    border-radius: 0 0 20px 20px;
+}
+
+.choose_select .select3 {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    flex-basis: 600px;
+    margin: 10px 0;
+
 }
 
 .choose_select .go {
+    width: 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
     flex-wrap: nowrap;
     padding: 0 10px;
+    flex-basis: 200px;
+    margin: 10px 0;
 }
 
-.select_item {
+.choose_select .select3 .select_item {
     /* background-color: #E27D60; */
-    margin: 10px;
+    display: flex;
 }
 
-.choose_select a {
+
+.choose_select .select3 .go a {
     color: var(--title-color);
 }
 
-.choose_select .custom_select {
+.choose_select .select3 .custom_select {
+
     /* 清除 select 預設外觀 */
     appearance: none;
     outline: none;
@@ -294,8 +321,13 @@ main .main_top .petbox::after {
 }
 
 .choose_select label {
+    display: inline-block;
+    text-align: end;
+    width: 88px;
     font-weight: 500;
     letter-spacing: .1em;
+    line-height: 32px;
+    white-space: nowrap;
 }
 
 .choose_select button {
@@ -313,27 +345,25 @@ main .main_top .petbox::after {
 }
 
 
-/* ==========內容========= */
+/* ==========動物列表========= */
 .pet_content {
     /* background-color: aqua; */
     margin-top: 20px;
-    box-sizing: border-box;
     min-width: var(--mini-width);
-    /* margin: 20px auto; */
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: flex-start;
     align-items: center;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
 
 }
 
 .pet_card {
-    box-sizing: border-box;
     width: 30%;
+    min-width: 200px;
     background-color: #fff;
-    padding: 3%;
-    margin: 1% 0;
+    padding: 3% 3%;
+    margin: 1% 1.66%;
     border-radius: 10px;
 }
 
@@ -343,41 +373,35 @@ main .main_top .petbox::after {
 }
 
 .pet_block .pic {
-    box-sizing: border-box;
-    width: 100%;
-    height: 60%;
+    /* width: 100%; */
+    /* height: 60%; */
     overflow: hidden;
 }
 
 .pet_block .pic img {
     display: block;
-    /* height: 100%; */
     width: 100%;
     object-fit: cover;
     object-position: center center;
 }
 
 .pet_block .pet_text {
-    box-sizing: border-box;
-    height: 40%;
+    /* height: 40%; */
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
     padding-top: 10px;
-    /* align-content: space-between; */
 
 }
 
 .pet_text .theup {
-    /* margin: 10px 0; */
     display: flex;
-    /* justify-items:flex-start; */
     justify-content: space-between;
 
 }
 
 .theup h3 {
-    /* margin: 5px 0; */
-    font-weight: 500;
+    font-weight: bold;
     color: var(--secodary-color);
 }
 
@@ -388,213 +412,112 @@ main .main_top .petbox::after {
 
 .pet_text .thedown {
     display: flex;
-    margin: 2% 0;
-    /* justify-content: left; */
+    /* margin: 2% 0; */
+    justify-content: space-between;
 
 }
 
-.pet_text .thedown .t20 {
-    margin-right: 28px;
+.pet_text .thedown p {
+    /* margin-right: 28px; */
     color: #999;
+    white-space: nowrap;
 }
 
 .pet_card .date {
-    /* background-color: pink; */
     display: flex;
+    justify-content: space-between;
     margin: 2% 0;
 }
 
 .pet_card .date p {
-    /* background-color: #E27D60; */
     text-align: start;
-    padding-right: 10px;
     color: #ccc;
-    letter-spacing: .1em;
+    white-space: nowrap;
 }
 
+/* 頁碼 */
 .page_box {
-    /* position: relative; */
-    height: 20vh;
+    /* background-color: #E27D60; */
+    position: relative;
+    /* height: 20vh; */
+    padding: 10px 0 140px;
 }
 
 .cute_pet {
     /* background-color: #fff; */
-    box-sizing: border-box;
     position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
-    /* width: 15vw; */
-    justify-content: space-between;
-    transform: translateY(-180px);
-    padding: 0 30px;
+    justify-content: space-around;
+    transform: translateY(15px);
 }
 
 .cute_pet .leftdog,
 .cute_pet .rightcat {
     display: block;
     width: 12vw;
+    min-width: 130px;
 }
 
-
-
-/* ===============RWD======================= */
+/* =================RWD================================ */
 @media screen and (max-width: 1200px) {
-    .theup h3 {
-        font-size: 26px;
-    }
-
-    .pet_text .thedown p {
-        font-size: 16px;
-    }
-
-    .pet_card .date p {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    /* 選定物種狀態 */
-    .choosebox_bg .class-item.-on a .peticon {
-        transform: translateY(-38px);
-        border: none;
-    }
-
-    .choosebox_bg .class-item.-on a .text {
-        transform: translateY(10px);
-        opacity: 1;
-    }
-
-    /* 物種選擇示意 */
-    .choosebox_bg .class-item:nth-child(1).-on~.indicator {
-        display: block;
-        left: 18%;
-    }
-
-    .choosebox_bg .class-item:nth-child(2).-on~.indicator {
-        display: block;
-        left: 34%;
-    }
-
-    .choosebox_bg .class-item:nth-child(3).-on~.indicator {
-        display: block;
-        left: 50%;
-    }
-
-    .choosebox_bg .class-item:nth-child(4).-on~.indicator {
-        display: block;
-        left: 66%;
-    }
-
-    .choosebox_bg .class-item:nth-child(5).-on~.indicator {
-        display: block;
-        left: 82%;
-    }
-
-    .choose_select .custom_select {
-        font-size: 14px;
-        width: 100px;
-    }
-
-    .cute_pet .leftdog,
-    .cute_pet .rightcat {
-        width: 12vw;
-    }
-
-
-    .theup h3 {
-        font-size: 24px;
-    }
-
-    .pet_text .thedown p {
-        font-size: 14px;
-    }
-
-    .pet_card .date p {
-        font-size: 12px;
-    }
-
-}
-
-@media screen and (max-width: 800px) {
-    .choose_select .go {
-        width: 40%;
-        min-width: 150px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .pet_card {
-        width: 47%;
-    }
-
-    .cute_pet {
-        bottom: -90px;
-    }
-}
-
-
-@media screen and (max-width: 600px) {
-    .t16 {
-        font-size: 14px;
-    }
-
-    .t20 {
-        font-size: 16px;
-    }
-
-    .select_item {
-        margin: 5px;
-    }
-
-    .choose_select .custom_select {
-        width: 90px;
-    }
-
-    .cute_pet .leftdog,
-    .cute_pet .rightcat {
-        width: 70px;
+    .petbox {
+        margin-top: 35px;
     }
 
     .pet_card {
-        margin: 10px 0;
+        /* min-width: 276px; */
+        margin: 1% 1.6%;
     }
 }
 
-@media screen and (max-width: 429px) {
+@media all and (max-width: 767px) {
+
+    /* 選項 */
     .choose_select {
-        justify-content: center;
+        /* display: inline-flex; */
     }
 
-    .select_item {
-        display: flex;
-        justify-content: center;
-        width: 80%;
+    .choose_select .select3 {
+        flex-basis: auto;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
-    .choose_select label {
-        width: 80px;
-        text-align: end;
+    .choose_select {
+        display: none;
     }
 
-    .choose_select .custom_select {
-        width: 120px;
+    .choose_select .select3 .select_item {
+        width: 50%;
     }
 
     .choose_select .go {
-        width: 60%;
+        width: 50%;
     }
 
+    /* 動物列表 */
     .pet_card {
-        padding: 5%;
+        width: 40%;
+        margin: 1% 5%;
+
     }
 
+
+}
+
+@media all and (max-width: 428px) {
+    .pet_content {
+        justify-content: center;
+    }
+
+    /* 動物列表 */
     .pet_card {
-        width: 70%;
+        width: 85%;
+        margin-bottom: 10px;
+        padding: 20px;
     }
 
-    .cute_pet {
-        bottom: -77px;
-    }
 }

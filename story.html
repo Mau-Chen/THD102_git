@@ -17,134 +17,133 @@
 
 <body>
     <!-- =====側邊欄改上方選單===== -->
-    <nav>
-        <div class="nav_logo">
+    <header>
+        <div class="logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
-        <!-- ---文字選單--- -->
-        <i class="fa-sharp fa-solid fa-bars"></i>
-        <div class="nav_text">
-            <ol class="box">
-                <li class="box-item t20"><a href="post.html">公告事項</a>
-                    <ul class="box-item-content">
-                        <li><a href="post.html">要事新聞</a></li>
-                        <li><a href="activity.html">相關活動</a></li>
-                        <li><a href="story.html">成功案例</a></li>
-                    </ul>
-                </li>
-                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
-                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
-                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
-                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
-                <li class="box-item t20"><a href="member.html"><i class="fa-solid fa-house-user"></i></a></li>
-                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
+        <ul id="nav" class="nav">
+            <li class="nav-item"><a class="t20">公告事項<i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-up"></i></i></a>
+                <!-- 子選單 -->
+                <ol>
+                    <li><a href="post.html" class="t16">要事新聞</a></li>
+                    <li><a href="activity.html" class="t16">相關活動</a></li>
+                    <li><a href="story.html" class="t16">成功案例</a></li>
+                </ol>
+            </li>
+            <li class="nav-item"><a href="#" class="t20" id="Sop">領養流程</a></li>
+            <li class="nav-item"><a href="petlist.html" class="t20">毛怪列表</a></li>
+            <li class="nav-item"><a href="about.html" class="t20">關於毛遇</a></li>
+            <li class="nav-item"><a href="sponsor.html" class="t20">贊助毛遇</a>
+            <li class="nav-item"><a href="favorites.html"><img src="imges/pawheart.png" alt=""></a></li>
+            <li class="nav-item"><a href="about.html#findus_topkey"> <i class="fa-solid fa-map-location-dot"></i></a>
+            </li>
+        </ul>
+
+        <div id="menu" class="menu-toggle">
+            <div class="hamburger"></div>
         </div>
-    </nav>
+    </header>
     <!-- =====主頁面===== -->
-    <main id="story_topkey">
+    <main>
         <!-- =====右側表頭===== -->
         <div class="main_top">
-            <h1>公告事項</h1>
+            <h1 class="t32">公告事項</h1>
             <ul>
                 <li>
                     <a href="post.html">
-                        <h2>要事新聞</h2>
+                        <h2 class="t18">要事新聞</h2>
                     </a>
                 </li>
                 <li>
                     <a href="activity.html">
-                        <h2>相關活動</h2>
+                        <h2 class="t18">相關活動</h2>
                     </a>
                 </li>
                 <li>
                     <a href="story.html">
-                        <h2>成功案例</h2>
+                        <h2 class="t18">成功案例</h2>
                     </a>
                 </li>
                 <img src="imges/story/floatbird.png" alt="" class="floatbird">
             </ul>
+
             <!-- ==========右邊內容========= -->
             <div class="story_box">
                 <div class="story_item item01">
                     <img src="imges/story/story05.jpg" alt="">
                     <div class="story_text">
-                        <h3>從緊張到快樂：流浪兔找到了它的永久家</h3>
-                        <p>這篇文章描述了一隻流浪兔在被領養後如何逐漸克服緊張和害怕，並與新主人建立了深厚的情感聯繫，展示了兔子作為寵物的可愛和與人類的互動。</p>
-                        <a href="">更多 >></a>
+                        <h3 class="t24">從緊張到快樂：流浪兔找到了它的永久家</h3>
+                        <p class="t18">這篇文章描述了一隻流浪兔在被領養後如何逐漸克服緊張和害怕，並與新主人建立了深厚的情感聯繫，展示了兔子作為寵物的可愛和與人類的互動。</p>
+                        <a href="" class="t20">更多 >></a>
                     </div>
                 </div>
                 <div class="story_item item02">
                     <img src="imges/story/story02.jpg" alt="">
                     <div class="story_text">
-                        <h3>羽翼自由：從流浪到寵物鳥的轉變</h3>
-                        <p>關於一隻被棄養的寵物鳥再次再次被領養後，逐漸適應了新環境並建立了與主人的信任和親密關係，展示了鳥類作為寵物的愛與陪伴。</p>
-                        <a href="">更多 >></a>
+                        <h3 class="t24">羽翼自由：從流浪到寵物鳥的轉變</h3>
+                        <p class="t18">關於一隻被棄養的寵物鳥再次再次被領養後，逐漸適應了新環境並建立了與主人的信任和親密關係，展示了鳥類作為寵物的愛與陪伴。</p>
+                        <a href="" class="t20">更多 >></a>
                     </div>
                 </div>
                 <div class="story_item item03">
                     <img src="imges/story/story06.jpg" alt="">
                     <div class="story_text">
-                        <h3>破解迷思：流浪鼠成為快樂家庭的一員</h3>
-                        <p>有一隻被遺棄的花栗鼠被領養後，如何在溫暖的家庭中獲得安全感，並成為家庭成員之一，同時也揭示了鼠類作為寵物的可愛和擅長的特質。</p>
-                        <a href="">更多 >></a>
+                        <h3 class="t24">破解迷思：流浪鼠成為快樂家庭的一員</h3>
+                        <p class="t18">有一隻被遺棄的花栗鼠被領養後，如何在溫暖的家庭中獲得安全感，並成為家庭成員之一，同時也揭示了鼠類作為寵物的可愛和擅長的特質。</p>
+                        <a href="" class="t20">更多 >></a>
                     </div>
                 </div>
             </div>
-
-
-
-
-        </div>
-
-        <div class="footer_box">
             <!-- ==========右邊頁碼========= -->
             <div class="page_box">
                 <div id="pagination">
-                    <a href="">&#9668;</a>
+                    <a href="" class="t12">&#9668;</a>
                     <span>
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">...</a>
-                        <a href="">10</a>
+                        <a href="" class="t12">1</a>
+                        <a href="" class="t12">2</a>
+                        <a href="" class="t12">3</a>
+                        <a href="" class="t12">...</a>
+                        <a href="" class="t12">10</a>
                     </span>
-                    <a href="">&#9658;</a>
+                    <a href="" class="t12">&#9658;</a>
                 </div>
             </div>
-            <!-- ==========右邊頁尾========= -->
-            <footer>
-                <ul class="footerbox">
-                    <li><a href="post.html">公告事項</a></li>
-                    <li><a href="post.html">要事新聞</a></li>
-                    <li><a href="activity.html">相關活動</a></li>
-                    <li><a href="story.html">成功案例</a></li>
-                    <li><a href="" class="phone text_b">
-                            <div class="icon">
-                                <img src="imges/footer_sprites.png" alt="">
-                            </div>
-                            <h5>(06) 234 - 5678</h5>
-                        </a></li>
-                    <li><a href="#sopkey">領養流程</a></li>
-                    <li><a href="petlist.html">毛怪列表</a></li>
-                    <li><a href="about.html">關於毛遇</a></li>
-                    <li><a href="member.html">毛遇會員</a></li>
-                    <li><a href="" class="add text_b">
-                            <div class="icon">
-                                <img src="imges/footer_sprites.png" alt="">
-                            </div>
-                            <h5>708 台南市安平區漁光路22號</h5>
-                        </a></li>
-                </ul>
-                <p>本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
-            </footer>
-
         </div>
-        <div class="top_button">
-            <a href="#story_topkey"><img src="imges/top_btn.png" alt=""></a>
-        </div>
+        <!-- ==========頁尾========= -->
+        <footer>
+            <ul class="footerbox">
+                <li><a href="#sopkey" class="t16">領養流程</a></li>
+                <li><a href="post.html" class="t16">要事新聞</a></li>
+                <li><a href="activity.html" class="t16">相關活動</a></li>
+                <li><a href="story.html" class="t16">成功案例</a></li>
+                <li><a href="tel:+886-6-2345678" class="phone text_b">
+                        <div class="icon">
+                            <img src="imges/footer_sprites.png" alt="">
+                        </div>
+                        <h5 class="t16">(06) 234 - 5678</h5>
+                    </a></li>
+                <li><a href="petlist.html" class="t16">毛怪列表</a></li>
+                <li><a href="about.html" class="t16">關於毛遇</a></li>
+                <li><a href="favorites.html" class="t16">真愛毛怪</a></li>
+                <li><a href="index.html" class="t16">毛遇首頁</a></li>
+                <li><a href="https://www.google.com/maps/dir//708%E5%8F%B0%E5%8D%97%E5%B8%82%E5%AE%89%E5%B9%B3%E5%8D%80%E6%BC%81%E5%85%89%E8%B7%AF22%E8%99%9F"
+                        class="add text_b">
+                        <div class="icon">
+                            <img src="imges/footer_sprites.png" alt="">
+                        </div>
+                        <h5 class="t16">708 台南市安平區漁光路22號</h5>
+                    </a></li>
+            </ul>
+            <p class="t12">本網站為緯育TibaMe【第85期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+        </footer>
     </main>
+    <div class="top_button">
+        <a href="#story_topkey"><img src="imges/top_btn.png" alt=""></a>
+    </div>
 
 
     <script src="js/all.js"></script>

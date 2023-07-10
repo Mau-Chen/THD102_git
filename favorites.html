@@ -13,31 +13,37 @@
 
 <body>
     <!-- =====側邊欄改上方選單===== -->
-    <nav>
-        <div class="nav_logo">
+    <header>
+        <div class="logo">
             <a href="index.html">
                 <img src="./imges/logo.png" alt="">
             </a>
         </div>
-        <!-- ---文字選單--- -->
-        <i class="fa-sharp fa-solid fa-bars"></i>
-        <div class="nav_text">
-            <ol class="box">
-                <li class="box-item t20"><a href="post.html">公告事項</a>
-                    <ul class="box-item-content">
-                        <li><a href="post.html">要事新聞</a></li>
-                        <li><a href="activity.html">相關活動</a></li>
-                        <li><a href="story.html">成功案例</a></li>
-                    </ul>
-                </li>
-                <li class="box-item t20"><a href="#sopkey">領養流程</a></li>
-                <li class="box-item t20"><a href="petlist.html">毛怪列表</a></li>
-                <li class="box-item t20"><a href="about.html">關於毛遇</a></li>
-                <li class="box-item t20"><a href="sponsor.html">贊助毛遇</a></li>
-                <li class="box-item t20"><a href="member.html"><img src="imges/pawheart.png" alt=""></a></li>
-                <li class="box-item t20"><a href="member.html"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
+        <ul id="nav" class="nav">
+            <li class="nav-item"><a href="post.html" class="t20">公告事項<i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-up"></i></i></a>
+                <!-- 子選單 -->
+                <ol>
+                    <li><a href="post.html" class="t16">要事新聞</a></li>
+                    <li><a href="activity.html" class="t16">相關活動</a></li>
+                    <li><a href="story.html" class="t16">成功案例</a></li>
+                </ol>
+            </li>
+            <li class="nav-item"><a href="#" class="t20">領養流程</a></li>
+            <li class="nav-item"><a href="petlist.html" class="t20">毛怪列表</a></li>
+            <li class="nav-item"><a href="about.html" class="t20">關於毛遇</a></li>
+            <li class="nav-item"><a href="sponsor.html" class="t20">贊助毛遇</a>
+            <li class="nav-item"><a href="favorites.html"><img src="imges/pawheart.png" alt=""></a></li>
+            <li class="nav-item"><a href="#"> <i class="fa-solid fa-map-location-dot"></i></a></li>
+
+        </ul>
+
+        <div id="menu" class="menu-toggle">
+            <div class="hamburger"></div>
         </div>
-    </nav>
+    </header>
+
     <main>
         <!-- =====表頭===== -->
         <div class="main_top">

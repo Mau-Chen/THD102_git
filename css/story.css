@@ -7,7 +7,7 @@ nav {
 }
 
 /* ==========小標題========= */
-#story_topkey .main_top ul li:nth-child(3)>a {
+.main_top ul li:nth-child(3)>a {
     background-color: var(--primary-color);
     font-weight: bold;
 }
@@ -18,59 +18,24 @@ nav {
 
 .main_top .floatbird {
     background-color: #FCF8EC;
-    /* border-radius: 0 0 0 40%; */
     border-radius: 0 0 0 50px;
     position: absolute;
     left: 89%;
     top: 0;
-    width: 13vw;
-    z-index: 80;
+    max-width: 230px;
+    width: 12vw;
+    min-width: 140px;
+    z-index: 50;
 }
-
-.main_top>ul::after {
-    width: 90%;
-}
-
-/* ==========右邊頁尾========= */
-.footer_box {
-    margin: 0 auto;
-    /* height: 30vh; */
-}
-
-.footer_box footer {
-    position: static;
-}
-
-.footer_box .page_box {
-    /* background-color: aquamarine; */
-    /* height: 25vh; */
-    margin-top: 1%;
-    align-items: flex-start;
-    /* justify-content: flex-start; */
-    position: relative;
-}
-
-.footer_box .activityfox {
-    /* background-color: darkblue; */
-    position: absolute;
-    left: 75%;
-    bottom: -5%;
-}
-
-
-
-
 
 
 
 /* ==========右邊內容========= */
 .story_box {
     /* background-color: aqua; */
-    box-sizing: border-box;
-    width: var(--main-width);
-    min-width: var(--main-width);
-    box-sizing: border-box;
-    overflow: hidden;
+    width: 100%;
+    /* min-width: var(--mini-width); */
+    /* overflow: hidden; */
     margin-top: 40px;
 }
 
@@ -81,7 +46,6 @@ nav {
     display: flex;
     align-items: center;
     justify-items: center;
-    /* justify-content: space-between; */
 }
 
 .story_item:last-child {
@@ -147,12 +111,7 @@ nav {
         width: 100%;
     }
 }
-
-@media screen and (max-width: 900px) {}
-
-@media screen and (max-width: 800px) {}
-
-@media screen and (max-width: 750px) {
+@media all and (max-width: 768px){
     .main_top .floatbird {
         background: linear-gradient(180deg, transparent 0%, transparent 40%, #FCF8EC 40%, #FCF8EC 100%);
         border-radius: 0 0 0 30px;
@@ -161,6 +120,11 @@ nav {
         top: 20px;
         width: 110px;
     }
+
+}
+@media screen and (max-width: 428px){}
+
+@media screen and (max-width: 750px) {
 
     .story_item img {
         width: 55%;

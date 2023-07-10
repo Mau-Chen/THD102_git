@@ -7,16 +7,11 @@
     font-weight: bold;
 }
 
-/* ==========頁尾========= */
-footer {
-    position: static;
-}
 
 
 /* ==========內容========= */
 .about_box {
     /* background-color: aqua; */
-    box-sizing: border-box;
     width: 100%;
     min-width: var(--mini-width);
     margin: 0 auto;
@@ -31,7 +26,7 @@ footer {
     justify-items: center;
     flex-wrap: wrap;
     margin-top: 30px;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
 }
 
 .about_box .slogan img {
@@ -56,6 +51,16 @@ footer {
 }
 
 /* ==========介紹詞========= */
+#anchor1 {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 160px;
+}
+#anchor2{
+    /* background-color: aquamarine; */
+    height: 40px;
+    width: 1px;
+}
 
 .understand {
     /* margin-top: 31vh; */
@@ -228,7 +233,8 @@ main .understand .titlebox>h1::after {
 
 /* =================RWD================================ */
 @media all and (max-width: 767px) {
-    header .nav>li>a>i{
+
+    header .nav>li>a>i {
         display: block;
     }
 
@@ -319,7 +325,8 @@ main .understand .titlebox>h1::after {
     .understand .inner>.text {
         width: 100%;
     }
-    .t20{
+
+    .t20 {
         font-size: 16px;
     }
 }
