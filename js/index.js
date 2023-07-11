@@ -42,6 +42,23 @@ document.querySelectorAll('.s_button')[0].onclick = () => {
 } */
 
 
+// 第一段輪播
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+});
 
 
 
@@ -102,7 +119,7 @@ play();
 
 // ../imges/index/news_p1.jpg
 
-
+/* 
 let current = 0;
 let items = document.querySelectorAll(".header__img");
 console.log(items);
@@ -134,12 +151,12 @@ const getSliderHeight = () => {
 };
 window.onresize = getSliderHeight;
 getSliderHeight();
+ */
 
 
 
 
-
-
+/* 
 const header = document.querySelector(".wrapper");
 const headerBox = document.querySelector(".header__box");
 const headerImages = document.querySelectorAll(".header__img");
@@ -173,7 +190,7 @@ const infiniteCarousel = () => {
 changeImage();
 headerBox.addEventListener("transitionend", infiniteCarousel);
 setInterval(handleCarousel, carouselSpeed);
-
+ */
 
 
 //指定位置(領養))
