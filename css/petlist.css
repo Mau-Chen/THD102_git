@@ -11,7 +11,7 @@
     margin-bottom: 10px;
     align-self: flex-start;
     color: var(--black-color);
-    z-index: 30;
+    z-index: 32;
 }
 
 .main_top .petbox::before {
@@ -632,6 +632,22 @@
         width: 85%;
         margin-bottom: 10px;
         padding: 20px;
+    }
+    .choose_select .select3{
+        justify-content: space-between;
+    }
+    .choose_select .select3 .select_item{
+        width: 49%;
+        margin: 5px 0;
+    }
+    .choose_select .select3 label{
+        width: 85px;
+    }
+    .choose_select .special{
+        flex-wrap: wrap;
+    }
+    .choose_select .special>div{
+        width: 80%;
     }
 
 }

@@ -123,6 +123,13 @@
     .pet_love {
         width: 90%;
         margin-bottom: 20px;
+        flex-direction: column;
+    }
+    .pet_love .pic{
+        width: 80%;
+    }
+    .pet_love .text{
+        width: 80%;
     }
 
 
@@ -130,4 +137,5 @@
 }
 
 @media all and (max-width: 428px) {
+
 }
