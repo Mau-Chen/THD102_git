@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu_test.css">
+    <title>Open Menu</title>
+
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="container">
+            <div class="toggle"></div>
+        </div>
+        <ul class="menu-list">
+            <li class="hidden"><a href="#">Home</a></li>
+            <li class="hidden"><a href="#">About</a></li>
+            <li class="hidden"><a href="#">Product</a></li>
+            <li class="hidden"><a href="#">Store</a></li>
+        </ul>
+    </nav>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.toggle').click(function () {
+                // $('.menu').addClass('expanded');
+                $('.menu').toggleClass('expanded');
+                // $(this).parent().addClass('close');
+                $(this).parent().toggleClass('close');
+                // $('.menu-list li').removeClass('hidden');
+                $('.menu-list li').toggleClass('hidden');
+            });
+
+
+
+        });//End document
+
+    </script>
+
+
+</body>
+
+</html>

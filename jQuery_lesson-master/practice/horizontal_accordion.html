@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橫式手風琴</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS','微軟正黑體';
+        }
+
+        .container {
+            margin: 10% auto;
+            width: 900px;
+            text-align: center;
+        }
+
+        .item {
+            color: #2a68ad;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 24px;
+            writing-mode: vertical-lr;
+            width: 10%;
+            float: left;
+            background-color: rgb(64, 184, 240);
+            border: 5px solid rgba(78, 96, 175, 0.726);
+            height: 200px;
+            line-height: 80px;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+
+        .active {
+            background-color: #59ddc7;
+            color: #ecf0f1
+        }
+
+        .info {
+            width: 0;
+            float: left;
+            background-color: pink;
+            border-radius: 0 5px 5px 0;
+            height: 200px;
+            display: none;
+        }
+
+        .info>p {
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 16px;
+            color: rgb(74, 74, 177);
+            padding: 20px;
+            text-align: start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            第一篇
+        </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem corrupti sed possimus, rem
+                beatae repudiandae quae unde neque non omnis sint mollitia ut earum at totam aperiam iure? Provident!
+            </p>
+        </div>
+        <div class="item">
+            第二篇
+        </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem corrupti sed possimus, rem
+                beatae repudiandae quae unde neque non omnis sint mollitia ut earum at totam aperiam iure? Provident!
+            </p>
+        </div>
+        <div class="item">
+            第三篇
+        </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem corrupti sed possimus, rem
+                beatae repudiandae quae unde neque non omnis sint mollitia ut earum at totam aperiam iure? Provident!
+            </p>
+        </div>
+        <div class="item">
+            第四篇
+        </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem corrupti sed possimus, rem
+                beatae repudiandae quae unde neque non omnis sint mollitia ut earum at totam aperiam iure? Provident!
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.item').click(function () {
+                //測試增加class是否成功
+                // $(this).addClass('active');
+
+                //加class的同時確保其他兄弟沒有class
+                $(this).addClass('active').siblings('.item').removeClass('active');
+
+
+                //測試修改css是否成功
+                // $('.info').css({ "display": "block", "width": "50%" });
+
+                //確保被點選的下一項修改css且其他兄弟維持原設定
+                // $(this).next().css({ "display": "block", "width": "50%" }).siblings('.info').css({ "display": "none", "width": "0" });
+
+                //改動畫增加美觀，但display不作用，故改用show來顯示
+                // $(this).next().show().animate({ width: "50%" }).siblings('.info').animate({ width: 0 });
+                //最後總會凸出來，試著用函式隱藏
+                $(this).next().show().animate({ width: "50%" }).siblings('.info').animate({ width: 0 }, function () {
+                    $(this).hide();
+                });
+            });
+
+            // 預設第一個被點開
+            $('.item').first().click();
+
+        });//End document
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -91,10 +91,12 @@ footer {
     .newsrabbit {
         right: 5%;
     }
+
     .news_list .news a img {
         width: 40%;
     }
-    .news_list .news .text_block{
+
+    .news_list .news .text_block {
         width: 60%;
     }
 
@@ -105,8 +107,9 @@ footer {
         right: -5px;
         top: 250px;
     }
-    .main_top .news_list{
-        width: 80%;
+
+    .main_top .news_list {
+        width: 100%;
     }
 
     .main_top .news_list .news {
@@ -138,5 +141,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 428px) {}
-
+@media screen and (max-width: 428px) {
+    .newsrabbit {
+        display: none;
+    }
+}

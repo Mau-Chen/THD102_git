@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .box:nth-child(3) {
+            background-color: cadetblue;
+        }
+
+        .box:nth-child(4) {
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('h1').css("color", "green");
+
+            /*             $('.box').click(function () {
+                            $('.box').animate({ "width": "300px", "left": "100px", "opacity": .3 }, 2000,
+                                function () {
+                                    $('h1').css("color", "red")
+                                });//值是純數字無單位時可不加引號
+            
+                        }); */
+
+            $('.box').click(function () {
+                $(".box").eq(0).animate({ "width": "300px", "left": "100px", "opacity": .3 }, 2000,
+                    function () {
+                        $('.box').eq(1).animate({ "width": "300px", "left": "100px", "opacity": .3 }, 1000,
+                            function () {
+                                $('.box').eq(2).animate({ "width": "300px", "left": "100px", "opacity": .3 }, 1000);
+                            }
+                        )
+                    });
+            });
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

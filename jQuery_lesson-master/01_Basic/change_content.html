@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習使用hide&show</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p>今天天氣很好</p>
+    <div class="box">
+        <h2>這是Potato</h2>
+        <h2>這是Potato2</h2>
+        <h3>這個Potato很可愛</h3>
+        <div class="box"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            //將p的文字改為「jQuery超有趣」
+            $('p').html("<h1>jQuery超有趣</h1>");//""內有標籤會判讀成標籤
+            // $('p').text("jQuery超有趣");""內不論有無標籤都視同文字
+            // 在box裡面加入img中的圖片
+            // $('.box').html('<img src="imgs/potato.jpeg">');//會完整取代原本內容
+            // $('.box').append('<img src="imgs/potato.jpeg">'); //加在指定元素內的尾部
+            // $('.box').append("<img src='imgs/potato.jpeg'/>"); //同上，改符號
+            // $('.box').eq(1).css({ "width": "100px", "height": "100px", "background": "lightblue" });//指定子元素索引寫法
+            $('.box').find('.box').css({ "width": "100px", "height": "100px", "background": "lightgreen" });//find()是指在子元素搜尋
+            $('.box').find('h3').css({ "width": "150%", "height": "100px", "background": "red" });
+            $('.box').find('h2').eq(1).css({"font-size": "30px","color":"purple"});
+        });
+    </script>
+</body>
+
+</html>

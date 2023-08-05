@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習選擇元素</title>
+</head>
+
+<body>
+    <h1>歡迎來上好玩的jQuery課程</h1>
+    <p>今天天氣很好</p>
+    <p>jQuery超好玩</p>
+    <ul id="Menu">
+        <li>蛋糕</li>
+        <li>麵包</li>
+        <li>義大利麵</li>
+        <li>甜點</li>
+        <li>牛排</li>
+    </ul>
+
+    <input type="text" value="我是輸入框">
+    <input name="Phone" type="text" value="0988123456">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // 選取h1並使用console.log顯示元素
+            // console.log($('h1').text());
+            console.log($('h1').html());
+            // $('h1').css("color", "red");
+            $('h1').css({ "color": "gray", "font-size": "50px" });
+
+            // 選取Menu並使用console.log顯示元素
+            console.log($('#Menu').html());
+
+            // 選取Menu li 並使用console.log顯示元素
+            console.log($('#Menu li').eq(3).html());//eq等同索引值，起始0
+
+            // 選取p並使用console.log顯示元素(nth-child是依照body的第幾個孩子算)
+            // console.log($('p:nth-child(3)').html());
+            $('p:nth-child(3)').css({ "color": "tomato", "font-size": "30px", "background-color": "lightblue" });
+
+            // 選取input並使用console.log顯示元素
+            console.log($('input[type="text"]').eq(1).val());
+        });
+    </script>
+</body>
+
+</html>

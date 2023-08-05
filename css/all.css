@@ -150,7 +150,7 @@ header .nav {
     align-items: center;
     list-style-type: none;
     justify-content: flex-end;
-    margin-right: 5%;
+    /* margin-right: 5%; */
 }
 
 header .nav li {
@@ -529,6 +529,7 @@ footer>p {
 
 
 /* ==========右下大白熊狗TOP========== */
+
 .top_button {
     position: fixed;
     right: 30px;
@@ -542,6 +543,7 @@ footer>p {
     opacity: .5;
     box-shadow: 0px 0px 10px gray;
     z-index: 30;
+    transition: 0.3s ease; /* 添加透明度變化的動畫效果 */
 }
 
 .top_button img {
@@ -554,6 +556,27 @@ footer>p {
 .top_button:hover {
     opacity: 1;
 }
+
+/* 定義透明度變化的動畫效果 */
+@keyframes fadeAnimation {
+    0% { opacity: .5; }
+    50% { opacity: 1; }
+    100% { opacity: .5; }
+}
+
+/* 當畫面不在網頁最頂端時，套用透明度變化的動畫 */
+.top_button.scroll-animation {
+    animation: fadeAnimation 2s infinite;
+}
+
+
+
+
+
+
+
+
+
 
 
 

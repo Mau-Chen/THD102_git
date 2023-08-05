@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燈箱效果</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery a {
+            margin-right: 10px;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .lightbox-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .7);
+            top: 0;
+            left: 0;
+            display: none;
+            /* transition: .6S; */
+        }
+
+        .lightbox-content {
+            width: 35%;
+            /* max-height: 50%; */
+            /* max-width: 50%; */
+            margin: auto;
+            position: relative;
+            margin-top: 50px;
+            /* transition: 10s; */
+
+        }
+
+        .lightbox-imag {
+            max-width: 100%;
+            min-height: 80%;
+
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,.5);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .lightbox-content p{
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            padding: 20px 10px;
+            margin-bottom: 0;
+            background-color: rgba(255,255,255,.5);
+            font-size: 18px;
+            color: white;
+            box-sizing: border-box;
+            /* padding-bottom: 3px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="gallery">
+            <a href="imgs/japan2.jpg">
+                <img src="imgs/thumbs/japan2.jpg" alt="Image1">
+            </a>
+            <a href="imgs/japan3.jpg">
+                <img src="imgs/thumbs/japan3.jpg" alt="Image2">
+            </a>
+            <a href="imgs/japan1.jpg">
+                <img src="imgs/thumbs/japan1.jpg" alt="Image3">
+            </a>
+            <a href="imgs/photo2.jpg">
+                <img src="imgs/thumbs/photo2.jpg" alt="Image4">
+            </a>
+            <a href="imgs/photo1.jpg">
+                <img src="imgs/thumbs/photo1.jpg" alt="Image5">
+            </a>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay">
+        <div class="lightbox-content">
+            <img src="imgs/japan1.jpg" alt="" class="lightbox-imag">
+            <p>文字描述</p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.gallery a').hover(
+                function () {
+                    //滑入放大
+                    $(this).find('img').animate({ "width": "220px", "height": "220px", "margin-top": "-10px", "margin-left": "-10xp", "opacity": .5 }, 500);
+                },
+                function () {
+                    $(this).find('img').animate({ "width": "200px", "height": "200px", "margin-top": "0px", "margin-left": "0xp", "opacity": 1 }, 500);
+
+                }
+            );
+            $('.gallery a').click(function (e) {
+                e.preventDefault()
+                let img_url = $(this).attr('href');
+                // console.log(img_url);
+                let desc = $(this).find('img').attr("alt");
+
+                $('.lightbox-imag').attr('src', img_url);
+                $('lightbox-content p').html(desc);
+                // $('.lightbox-overlay').css({ "display": "block" });
+                $('.lightbox-overlay').fadeIn(500);
+            });
+            $('.close').click(function () {
+                // $('.lightbox-overlay').css({ "display": "none" });
+                $('.lightbox-overlay').fadeOut(500);
+            });
+
+
+
+
+
+
+
+
+
+
+        });//End document ready
+
+
+    </script>
+
+</body>
+
+</html>

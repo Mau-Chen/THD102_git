@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Box</title>
+    <style>
+        .bigbox {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .button-group {
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .button-33 {
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin: 0 10px;
+        }
+
+        .button-33:hover {
+            box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="container">
+            <div class="box"></div>
+        </div>
+        <br>
+        <div class="button-group">
+            <button id="Add" class="button-33" role="button">新增</button>
+            <button id="Remove" class="button-33" role="button">移除</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            /*             let color_arry = ['tomato', 'lightblue', '#3483eb', '#eb9534', '#eb34c3'];
+                        let color_i = 0; //陣列顏色索引
+                        $('#Add').click(function () {
+                            let box_new = $('.box').length;
+                            $(".container").append("<div class='box'></div>");
+                            $('.box').eq(box_new - 1).css({ 'background-color': color_arry[color_i] });
+                            color_i++;
+                            if (color_i > 4) {//判斷顏色索引超過範圍就回到第一個
+                                color_i = 0;
+                            }
+                            // $('.box').eq(box_new).css("background-color", "pink");
+                        }); */
+
+
+            $('#Add').click(function () {
+                let box_new = $('.box').length;
+                let color_r = Number.parseInt(Math.random() * 256);
+                let color_g = Number.parseInt(Math.random() * 256);
+                let color_b = Number.parseInt(Math.random() * 256);
+                let a = Math.random() //生成0~1的小數
+                let color_a = a.toFixed(1); //將該值四捨五入取到小數第一位
+                // console.log(color_a); //測試是否有0.0 與 1.0
+
+                let rgba = `rgba(${color_r},${color_g},${color_b},${color_a} )`;
+
+                $(".container").append("<div class='box'></div>");
+                $('.box').eq(box_new - 1).css({ 'background-color': rgba });
+            });
+
+
+
+
+            $('#Remove').click(function () {
+                let box_len = $('.box').length;
+                // console.log(box_len);
+                $('.box').eq(box_len - 1).remove();
+            });
+
+
+
+
+
+
+
+        });//End document
+
+
+    </script>
+</body>
+
+</html>

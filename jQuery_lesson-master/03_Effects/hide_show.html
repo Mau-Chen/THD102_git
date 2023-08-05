@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習使用hide&show</title>
+</head>
+
+<body>
+    <p class="word">今天天氣很好</p>
+    <p class="word">jQuery超好玩</p>
+    <button id="Hide">隱藏</button>
+    <button id="Show">顯示</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+
+            // 顯示所有段落元素 
+            $('#Show').click(function () {
+                // $('p').show();
+                // $('p').fadeIn('fast');
+                // $('p').fadeIn(3000); //3000毫秒=3秒
+                $('p').fadeToggle(1000);
+            });
+
+            // 隱藏所有段落元素 
+            /*             $('#Hide').click(function () {
+                            // $('p').hide();
+                            // $('p').fadeOut('slow');
+                            $('p').fadeOut(1000);
+                        }); */
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

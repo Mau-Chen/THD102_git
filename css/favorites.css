@@ -21,7 +21,7 @@
     display: block;
     width: 98vw;
     background-color: #FCF8EC;
-    height: calc(100% + 44px);
+    /* height: calc(100% + 44px); */
     /* background-color: red; */
     position: absolute;
     top: -36px;
@@ -126,11 +126,20 @@
         flex-direction: column;
     }
     .pet_love .pic{
-        width: 80%;
+        width: 100%;
+        padding: 5%;
     }
     .pet_love .text{
-        width: 80%;
+        width: 100%;
+        padding: 0 5% 5%;
     }
+    .t18{
+        line-height: 1.5;
+    }
+    .t16{
+        line-height: 2;
+    }
+
 
 }
 

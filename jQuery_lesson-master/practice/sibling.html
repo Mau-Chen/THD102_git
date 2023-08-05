@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+        }
+        .word{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="main">我是box
+            <a href="">Home</a>
+        </div>
+        <p class="word">我是box的兄弟</p>
+        <p>我是box的兄弟</p>
+        <p>我是box的兄弟</p>
+        <p>我是box的兄弟</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        //parent , sibling的使用
+        $(function () {
+            $('.main').click(function () {
+                // 指定變動父層
+                $(this).parent().css("background-color", "lightblue");
+                // 指定變動兄弟
+                // $(this).siblings().css({ "color": "brown", 'font-weight': "bold" });
+                // 指定變動子孫
+                $(this).find('a').css("color", "red");
+
+                console.log($(this).siblings().hasClass('word'));
+
+                if($(this).siblings().hasClass('word')){
+                    $(this).siblings().removeClass('word');
+                }else{
+                    $(this).siblings().addClass('word');
+                }
+            });
+
+        });//End document
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .input-area {
+            margin-top: 100px;
+            padding: 20px;
+            border: 1px solid brown;
+        }
+
+        input {
+            height: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid #666;
+        }
+
+        .error {
+            border: 2px solid #f00;
+        }
+
+        .right {
+            border: 2px solid greenyellow;
+        }
+
+        .wrong {
+            font-weight: bold;
+            color: darkred;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>歡慶端午節</h1>
+    <div class="box">
+        <h2>這是box</h2>
+        <p>這是一個測試用的box區塊</p>
+    </div>
+    <div class="input-area">
+        <form action="">
+            <label for="Name">姓名</label>
+            <input id="Name" type="text" placeholder=" 請輸入姓名">
+            <p class="wrong">請輸入姓名</p>
+            <button id="Submit" type="button">送出</button>
+        </form>
+        您的名字是:<span class="show">XXX</span>
+    </div>
+    <!-- <h2>這是BOX2</h2> -->
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('h1').click(function () {
+                // $('h1').css({"color":"red"});//指定標籤
+                $(this).css({ "color": "blue" })//用this代替指定標籤(自己)
+            })
+
+            let is_open = 0;
+            let viewport = $(window).width();
+            if (viewport < 1024) {
+                $('.box').click(function () {
+                    // $(this).find('h2').css("color","green");//用find選取子元素
+                    // $(".box h2").css("color","yellow"); //要用CSS選取器寫法記得不要用this
+                    // $(this).css({ "width": "200px", "height": "150px", "background-color": "tomato" });
+                    // $(this).css({ "width": "200px", "margin-left": "150px", "background-color": "tomato" });
+                    if (is_open == 0) {
+                        $(this).css({ "width": "200px", "transform": "translateX(350px)", "background-color": "tomato" });
+                        is_open = 1;
+                    } else {
+                        $(this).css({ "width": "100px", "transform": "translateX(0px)", "background-color": "blueviolet" });
+                        is_open = 0;
+                    };
+                });//end click
+            } else {
+                $('.box').hover(
+                    function () {
+                        //hover in
+                        $(this).css({ "width": "200px", "height": "150px", "background-color": "tomato" });
+                    },
+                    function () {
+                        //hover out
+                        $(this).css({ "width": "100px", "height": "100px", "background-color": "blueviolet" });
+                    }
+                )//end box hover
+            }
+
+            // $('#Name').on("click",function(){
+            // });
+
+            /*             $('#Name').keydown(function () {
+                            console.log("鍵盤被按下");
+                        }); */
+
+            /*             $('#Name').keyup(function () {
+                            console.log("按鈕被放開");
+                        }); */
+
+
+            $('#Name').focus(function () {
+                $(this).attr("placeholder", "");
+                // $(this).attr("value","text");
+            })
+            $('#Name').blur(function () {
+                $(this).attr("placeholder", "請輸入姓名");
+            })
+
+            $('#Name').keyup(function () {
+                $('.show').html($(this).val());
+                $('.wrong').hide();
+            });
+
+
+            // $('h1').css("color", "red");
+
+            //驗證
+            $('#Submit').click(function () {
+                let name = $('#Name').val(); //先設變數減輕等下重複打的繁瑣
+                if (name == "") {//若輸入框的值等於空
+                    $('#Name').addClass('error');
+                    $('.wrong').show();
+                } else {
+                    $('#Name').addClass('right');
+                    $('#Name').removeClass('error');
+                }
+            });
+
+
+
+
+        })//End document
+
+
+
+    </script>
+
+</body>
+
+</html>

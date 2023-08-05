@@ -11,7 +11,7 @@
     margin-bottom: 10px;
     align-self: flex-start;
     color: var(--black-color);
-    z-index: 32;
+    z-index: 31;
 }
 
 .main_top .petbox::before {
@@ -261,9 +261,8 @@
 
 .choose_select .select3 {
     display: flex;
-    width: 75%;
+    width: 100%;
     justify-content: space-around;
-    flex-basis: 600px;
     margin: 10px 0;
 
 }
@@ -278,6 +277,11 @@
     flex-basis: 200px;
     margin: 10px 0;
 }
+.choose_select .go a {
+    text-decoration: none;
+    color: var(--title-color);
+    transition: 0.2s ease;
+}
 
 .choose_select .go a .select-box__icon {
     display: inline-block;
@@ -288,12 +292,32 @@
 .choose_select .go a.-on .select-box__icon {
     transform: translateY(-50%) rotate(180deg);
 }
+.choose_select .go button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.choose_select .go button:active {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
 
 
 
 .choose_select .select3 .select_item {
+    box-sizing: border-box;
     /* background-color: #E27D60; */
     display: flex;
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px 0;
+    width: 30%;
+    /* flex-basis: 30%; */
 }
 
 
@@ -345,44 +369,9 @@
 
 }
 
-.choose_select .special {
-    margin: 10px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-.choose_select .special>div{
-    width: 30%;
-}
 
-.choose_select .special .custom_select {
-    /* 清除 select 預設外觀 */
-    appearance: none;
-    outline: none;
-
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 90px;
-    padding: 5px;
-    font-size: 1rem;
-
-    /* 箭頭 */
-    background-image: url("../imges/petlist/down.svg");
-    background-repeat: no-repeat;
-    background-size: 12px;
-    background-position: right 8px center;
-
-    /* margin-right: 2%; */
-}
-
-.choose_select .special label {
-    display: inline-block;
-    text-align: end;
-    font-weight: 500;
-    letter-spacing: .1em;
-    line-height: 24px;
-    white-space: nowrap;
+#Special{
+    display: none;
 }
 
 
@@ -589,19 +578,13 @@
 @media all and (max-width: 767px) {
 
     /* 選項 */
-    .choose_select {
-        /* display: inline-flex; */
-    }
+
 
     .choose_select .select3 {
         flex-basis: auto;
         width: 100%;
         flex-wrap: wrap;
         justify-content: flex-start;
-    }
-
-    .choose_select {
-        display: none;
     }
 
     .choose_select .select3 .select_item {
@@ -632,22 +615,6 @@
         width: 85%;
         margin-bottom: 10px;
         padding: 20px;
-    }
-    .choose_select .select3{
-        justify-content: space-between;
-    }
-    .choose_select .select3 .select_item{
-        width: 49%;
-        margin: 5px 0;
-    }
-    .choose_select .select3 label{
-        width: 85px;
-    }
-    .choose_select .special{
-        flex-wrap: wrap;
-    }
-    .choose_select .special>div{
-        width: 80%;
     }
 
 }

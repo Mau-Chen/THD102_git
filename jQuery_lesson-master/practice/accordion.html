@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/accordion.css">
+    <title>Accordion 手風琴特效</title>
+</head>
+
+<body>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <h3 class="accordion-header">新品上市</h3>
+            <div class="accordion-content">
+                <p>我們推出了全新的火鍋套餐，適合與三五好友一起品嚐。還有多種口味的香辣鍋底和新鮮的食材可供選擇。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header">母親節特惠</h3>
+            <div class="accordion-content">
+                <p>本月消費滿千元即可獲得 $100 抵用券，下次光臨時使用即可。還有週末特別優惠，單筆消費滿 $500 即可獲得免費的小吃拼盤一份。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header">店休公告</h3>
+            <div class="accordion-content">
+                <p>員工旅遊，7/1~7/10店休</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.accordion-item').click(function () {
+
+                $('.accordion-item').removeClass('active');
+                $('.accordion-content').slideUp();
+                // console.log($(this).next().is(':visible'));
+                if (!$(this).find('.accordion-content').is(':visible')) {
+                    $(this).addClass('active');
+                    $(this).find('.accordion-content').slideDown();
+
+                }
+                // $().find('.accordion-header').addClass('active');
+                // $('.accordion-content').slideUp();
+
+
+                // 先移除所有折疊面板標題的 active class，隱藏所有折疊面板內容
+                // $('.accordion-header').removeClass('active');
+                /*                 $('.accordion-item').removeClass('active');
+                                $('.accordion-content').slideUp();
+                                if (!$('.accordion-item').find('.accordion-content').is(':visible')) {
+                                    $('.accordion-item').addClass('active');
+                                    // $('.accordion-item').find('.accordion-content').slideDown();
+                                } */
+
+
+            });
+
+            //預設第一個是被點擊的狀態
+            $('.accordion-item').first().click();
+            // if (!$(this).next()is(':visible'){
+
+        });//End document
+
+
+
+
+    </script>
+
+</body>
+
+</html>

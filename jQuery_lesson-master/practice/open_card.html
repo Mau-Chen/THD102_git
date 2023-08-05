@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/open_card.css">
+    <title>Open Card摺疊卡特效</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="left">
+            <div class="front">
+                <div class="sectionWrap">
+                    <h1>Cake House Menu</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eos! Suscipit esse sequi
+                        cumque placeat quo voluptatem doloremque amet, est officiis fugit laudantium. Perferendis quod
+                        ut dicta similique, consequatur veniam.</p>
+                    <button class="openButton">Open</button>
+                </div>
+            </div>
+            <div class="back">
+                <div class="sectionWrap">
+                    <h1>Left Area</h1>
+                    <hr>
+                    <img src="imgs/thumbs/photo1.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eos! Suscipit esse sequi
+                        cumque placeat quo voluptatem doloremque amet, est officiis fugit laudantium. Perferendis quod
+                        ut dicta similique, consequatur veniam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="sectionWrap">
+                <h1>Middle Dessert</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eos! Suscipit esse sequi
+                    cumque placeat quo voluptatem doloremque amet, est officiis fugit laudantium. Perferendis quod
+                    ut dicta similique, consequatur veniam.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="front">
+                <div class="sectionWrap">
+                    <h1>Right Area</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eos! Suscipit esse sequi
+                        cumque placeat quo voluptatem doloremque amet, est officiis fugit laudantium. Perferendis quod
+                        ut dicta similique, consequatur veniam.</p>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div class="back">
+                <div class="sectionWrap">
+                    <h1>END</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.openButton').click(function () {
+                $('.left').addClass('open');
+                setTimeout(function () {
+                    $('.left.open').find('.back').css({ "z-index": 10 });
+                }, 350);
+                $('.right').addClass('open');
+                setTimeout(function () {
+                    $('.right.open').find('.back').css({ "z-index": 2,"backface-visibility":"visible" });
+                }, 350);
+                $('.closeButton').animate({ opacity: 1 }, 2000);
+            });
+            $('.closeButton').click(function () {
+                $('.left').removeClass('open');
+                setTimeout(function () {
+                    $('.left').find('.back').css({ "z-index": 2 });
+                }, 350);
+                $('.right').removeClass('open');
+                setTimeout(function () {
+                    $('.right').find('.back').css({ "z-index": 50 });
+                }, 350);
+            });
+
+
+        });//End document
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.accordion {
+    width: 60%;
+    margin: 100px auto 0 auto;
+}
+
+.accordion-header {
+    font-size: 24px;
+    padding: 20px;
+    color: #333;
+    background-color: white;
+    position: relative;
+    margin: 0;
+    /* background-color: rgb(62, 176, 138); */
+    /* color: white; */
+    /* font-weight: bold; */
+    transition: transform 1s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgb(62, 176, 138);
+    color: white;
+}
+
+
+.accordion-item.active .accordion-header {
+    font-size: 24px;
+    padding: 20px;
+    background-color: rgb(62, 176, 138);
+    color: white;
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+
+}
+
+.accordion-header::after {
+    content: '\002B';
+    color: #333;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.accordion-item.active .accordion-header::after {
+    color: white;
+    transform: rotate(45deg);
+    /* 只能用CSS控制，jQuary選不到 */
+}
+
+.accordion-item {
+    /* border: 2px solid rgb(62, 176, 138); */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: 70px;
+    box-shadow: 0 0 5px #999;
+    overflow: hidden;
+}
+
+.accordion-item.active {
+    border: 2px solid rgb(62, 176, 138);
+    height: auto;
+    box-shadow: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+.accordion-content {
+    padding: 20px;
+    display: none;
+    /* transition: 1S; */
+
+}
+
+.accordion-content p {
+    font-size: 18px;
+}
+
+
+
+
+
+
+.accordion-item.active .accordion-content {
+    /* display: block; */
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimateCSS + Wow.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 1000px;
+            /* margin-top: 100px; */
+            margin: 100px auto;
+
+        }
+
+        .left {
+            margin-right: 50px;
+        }
+
+        .left img {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .right {
+            width: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left animate__animated animate__bounceInLeft"><img src="imgs/japan3.jpg" alt=""></div>
+        <div class="right animate__animated animate__tada animate__delay-1s">
+            <h1>富士山</h1>
+            <hr>
+            <p>比較的角度有有看到，的心帥好來玩。應的都真的好⋯很也很：好美是，什麼時然阿周那我還的重，應該會還是了就是是為了被打，家一起現放寶的心特⋯不可說回來，了謝，聖誕的心意有吃昨天的，在一很感可以呀評腳自我好沒有我，我後，根本沒真的好。笑的讓他們因為我，多了說我水，什麼麻的，這個我不是我恭。化的去到會現在是，個人的昨天我覺個大三外一以了，來因為是最喜我也不得到不能，的的要不是不行的可惜：那張找我的在。
+            </p>
+        </div>
+        <div class="left wow animate__backInLeft" data-wow-duration="2s"" data-wow-offset="10"><img src=" imgs/japan3.jpg" alt=""></div>
+        <div class="right animate__animated animate__rubberBand">
+            <h1>富士山</h1>
+            <hr>
+            <p>比較的角度有有看到，的心帥好來玩。應的都真的好⋯很也很：好美是，什麼時然阿周那我還的重，應該會還是了就是是為了被打，家一起現放寶的心特⋯不可說回來，了謝，聖誕的心意有吃昨天的，在一很感可以呀評腳自我好沒有我，我後，根本沒真的好。笑的讓他們因為我，多了說我水，什麼麻的，這個我不是我恭。化的去到會現在是，個人的昨天我覺個大三外一以了，來因為是最喜我也不得到不能，的的要不是不行的可惜：那張找我的在。
+            </p>
+
+        </div>
+        <div class="left animate__animated animate__backInLeft"><img src="imgs/japan3.jpg" alt=""></div>
+        <div class="right animate__animated animate__animated">
+            <h1>富士山</h1>
+            <hr>
+            <p>比較的角度有有看到，的心帥好來玩。應的都真的好⋯很也很：好美是，什麼時然阿周那我還的重，應該會還是了就是是為了被打，家一起現放寶的心特⋯不可說回來，了謝，聖誕的心意有吃昨天的，在一很感可以呀評腳自我好沒有我，我後，根本沒真的好。笑的讓他們因為我，多了說我水，什麼麻的，這個我不是我恭。化的去到會現在是，個人的昨天我覺個大三外一以了，來因為是最喜我也不得到不能，的的要不是不行的可惜：那張找我的在。
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        new WOW().init();
+
+    </script>
+
+</body>
+
+</html>

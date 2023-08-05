@@ -1,0 +1,20 @@
+.word, .word2{
+    border: 1px solid #999;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#tabs{
+    margin-top: 50px;
+}
+
+#Banner{
+    width: 80px;
+    margin: 50px auto;
+    height: 700px;
+    overflow: hidden;
+}
+.item img{
+    max-width: 100%;
+}

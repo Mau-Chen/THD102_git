@@ -76,11 +76,30 @@ btn5.addEventListener("click", function () {
 });
 
 // 選單隱藏/出現
+// function position() {
+//     return (
+//         document.documentElement.scrollTop
+//     );
+// };
+
+// window.addEventListener("scroll", function (e) {
+//     console.log("scrollY: " + window.scrollY);
+//     if (window.scrollY === 0) {
+//         document.getElementById("SelectText").style.cssText = `display: flex;`;
+//     } else {
+//         document.getElementById("SelectText").style.cssText = `display: none;`;
+//     };
+// });
 function position() {
     return (
         document.documentElement.scrollTop
     );
 };
+
+// 在載入畫面時預設顯示 "SelectText" 元素
+document.addEventListener("DOMContentLoaded", function (e) {
+    document.getElementById("SelectText").style.cssText = `display: flex;`;
+});
 
 window.addEventListener("scroll", function (e) {
     console.log("scrollY: " + window.scrollY);
@@ -92,8 +111,11 @@ window.addEventListener("scroll", function (e) {
 });
 
 
+
+
+
 // 收藏
-let L1 = document.getElementById("likethis1");
+/* let L1 = document.getElementById("likethis1");
 let L2 = document.getElementById("likethis2");
 let L3 = document.getElementById("likethis3");
 
@@ -121,108 +143,7 @@ L3.addEventListener("click", function () {
         L3.classList.add("-on"); // 加上 -on
     };
 });
-/* const cards = document.querySelectorAll(".pet_card");
-const cardsContainer = document.querySelector("#cards");
-const favoriteIcon = document.getElementById("favMenuItem");
 
-function getCard(element) {
-    if (element.classList.contains("card")) {
-        return element;
-    } else if (element !== document.documentElement) {
-        return getCard(element.parentElement);
-    }
-}
-
-function getButton(element) {
-    if (element.tagName === "BUTTON") {
-        return element;
-    } else if (element !== document.documentElement)
-        return getButton(element.parentElement);
-}
-
-function getImg(card) {
-    if (!(card instanceof Element && card.classList.contains("card"))) return;
-    return card.querySelector("img");
-}
-
-function appear(card) {
-    const id = Math.floor(Math.random() * unsplashIds.length);
-    const cardImg = getImg(card);
-    const src = `https://source.unsplash.com/${unsplashIds[id]}/240x180`;
-    card.classList.remove("card_hidden");
-    cardImg.setAttribute("src", src);
-}
-
-function reset(card) {
-    const cardImg = getImg(card);
-    cardImg.setAttribute("src", "");
-    cardImg.parentElement.classList.remove("card__image_loaded");
-    card.classList.add("card_hidden");
-    card.classList.remove("card_favorited");
-    setTimeout(() => {
-        appear(card);
-    }, 400);
-}
-
-function like(card) {
-    const animationDuration = 1000;
-    const distance = getDistance(card, favoriteIcon);
-    card.classList.add("card_favorited");
-    favoriteIcon.animate([{ transform: "translateZ(700px)", offset: 0.5 }], {
-        duration: animationDuration,
-        easing: "ease-in-out"
-    });
-    const animation = card.animate(
-        [
-            {
-                transform: `translate(${distance.x}px, ${distance.y}px) scale(0.2) rotate(-40deg)`
-            }
-        ],
-        { duration: animationDuration / 2, easing: "ease-in" }
-    );
-
-    animation.onfinish = () => {
-        reset(card);
-    };
-}
-
-
-function buttonHandler(event) {
-    const card = getCard(event.target);
-    const button = getButton(event.target);
-
-    if (!card || !button || !button.dataset) return;
-    if (button.dataset.action === "like") like(card);
-    if (button.dataset.action === "dislike") dislike(card);
-}
-
-function getDistance(elt1, elt2) {
-    if (!(elt1 instanceof Element && elt2 instanceof Element))
-        throw Error("Illegal use of the function");
-
-    const elt1Bbox = elt1.getBoundingClientRect();
-    const elt2Bbox = elt2.getBoundingClientRect();
-
-    return { x: elt2Bbox.x - elt1Bbox.x, y: elt2Bbox.y - elt1Bbox.y };
-}
-
-function init() {
-    cardsContainer.addEventListener("click", buttonHandler);
-
-    [...cards].forEach((card, index) => {w
-        const cardImg = getImg(card);
-        cardImg.addEventListener("load", () => {
-            cardImg.parentElement.classList.add("card__image_loaded");
-        });
-
-        setTimeout(() => {
-            appear(card);
-        }, 200 + index * 50);
-    });
-}
-
-window.addEventListener("DOMContentLoaded", init);
- */
 
 
 let S1 = document.getElementById("specialLink");
@@ -253,3 +174,75 @@ cardP.addEventListener('click', function () {
         cardP.classList.add("show"); // 加上 -on
     };
 });
+ */
+
+
+/*
+let L1 = document.getElementById("likethis1");
+let petBlock = document.querySelector('.pet_block');
+
+L1.addEventListener("click", function (e) {
+    e.stopPropagation(); // 停止冒泡
+    e.preventDefault(); // 阻止默認的點擊行為
+    if (L1.classList.contains("-on")) {
+        L1.classList.remove("-on");
+    } else {
+        L1.classList.add("-on");
+    }
+});
+
+let S1 = document.getElementById("specialLink");
+let specialElement = document.getElementById("Special");
+
+S1.addEventListener("click", function (e) {
+    e.stopPropagation(); // 停止冒泡
+    e.preventDefault(); // 阻止默認的點擊行為
+    if (S1.classList.contains("-on")) {
+        S1.classList.remove("-on");
+        specialElement.style.display = "flex";
+    } else {
+        S1.classList.add("-on");
+        specialElement.style.display = "none";
+    }
+});
+
+const cardP = document.querySelector('.pet_block');
+
+cardP.addEventListener('click', function (e) {
+    cardP.classList.toggle("show");
+});
+*/
+
+
+// 定義共用的點擊事件函式
+function toggleButton(button) {
+    button.addEventListener("click", function (e) {
+        e.stopPropagation(); // 停止冒泡
+        e.preventDefault(); // 阻止默認的點擊行為
+        button.classList.toggle("-on");
+    });
+}
+
+// 取得所有符合條件的按鈕元素並綁定點擊事件
+const likeButtons = document.querySelectorAll("[id^='likethis']");
+
+likeButtons.forEach(function (button) {
+    toggleButton(button);
+});
+
+// 綁定特殊連結的點擊事件
+const specialLink = document.getElementById("specialLink");
+const specialElement = document.getElementById("Special");
+
+toggleButton(specialLink); // 使用共用的點擊事件函式
+specialLink.addEventListener("click", function (e) {
+    specialElement.style.display = specialLink.classList.contains("-on") ? "flex" : "none";
+});
+
+// 綁定 pet_block 區塊的點擊事件
+const petBlock = document.querySelector(".pet_block");
+petBlock.addEventListener("click", function (e) {
+    petBlock.classList.toggle("show");
+});
+
+

@@ -101,87 +101,84 @@
                         <div class="indicator"></div>
                     </ul>
                 </div>
-                <!-- 搜尋文字列 -->
-                <div class="choose_select" id="SelectText">
-                    <div class="select3">
-                        <div class="select_item textlist">
-                            <label for="" class="t20">所在地：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>概略地區</option>
-                                <option>北北基宜</option>
-                                <option>桃竹苗</option>
-                                <option>中彰投</option>
-                                <option>雲嘉南</option>
-                                <option>高屏</option>
-                                <option>花東</option>
-                                <option>澎金馬</option>
-                            </select>
-                        </div>
-                        <div class="select_item textlist">
-                            <label for="" class="t20">性別：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>生理性別</option>
-                                <option>公</option>
-                                <option>母</option>
-                            </select>
-                        </div>
-                        <div class="select_item textlist">
-                            <label for="" class="t20">年齡：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>年齡範圍</option>
-                                <option>未滿一歲</option>
-                                <option>一~三歲</option>
-                                <option>三歲~六歲</option>
-                                <option>六歲以上</option>
-                            </select>
-                        </div>
+            <div class="choose_select" id="SelectText">
+                <div class="select3">
+                    <div class="select_item textlist">
+                        <label for="location" class="t20">所在地：</label>
+                        <select id="location" class="custom_select">
+                            <option value="none" selected disabled hidden>概略地區</option>
+                            <option>北北基宜</option>
+                            <option>桃竹苗</option>
+                            <option>中彰投</option>
+                            <option>雲嘉南</option>
+                            <option>高屏</option>
+                            <option>花東</option>
+                            <option>澎金馬</option>
+                        </select>
                     </div>
-                    <div class="go textlist">
-                        <a href="#" class="-on" id="specialLink">
-                            <!-- <p class="t16">進階搜尋 >></p> -->
-                            <p class="t16">進階搜尋
-                                <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
-                                    alt="Arrow Icon" aria-hidden="true" />
-                            </p>
-                        </a>
-                        <button type="submit" class="t16">搜尋</button>
+                    <div class="select_item textlist">
+                        <label for="gender" class="t20">性別：</label>
+                        <select id="gender" class="custom_select">
+                            <option value="none" selected disabled hidden>生理性別</option>
+                            <option>公</option>
+                            <option>母</option>
+                        </select>
                     </div>
-                    <div class="special" id="Special">
-                        <div class="special01">
-                            <label for="" class="t16">花樣：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>請選擇</option>
-                                <option>點</option>
-                                <option>條紋</option>
-                                <option>純色</option>
-                                <option>漸層</option>
-                                <option>塊狀</option>
-                                <option>低調紋</option>
-                            </select>
-                        </div>
-                        <div class="special02">
-                            <label for="" class="t16">毛長：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>請選擇</option>
-                                <option>長</option>
-                                <option>短</option>
-                            </select>
-                        </div>
-                        <div class="special03">
-                            <label for="" class="t16">是否有肢體器官損傷：</label>
-                            <select class="custom_select">
-                                <option value="none" selected disabled hidden>請選擇</option>
-                                <option>有</option>
-                                <option>無</option>
-                            </select>
-                        </div>
+                    <div class="select_item textlist">
+                        <label for="age" class="t20">年齡：</label>
+                        <select id="age" class="custom_select">
+                            <option value="none" selected disabled hidden>年齡範圍</option>
+                            <option>未滿一歲</option>
+                            <option>一~三歲</option>
+                            <option>三歲~六歲</option>
+                            <option>六歲以上</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="go textlist">
+                    <a href="#" class="-on" id="specialLink">
+                        <p class="t16">進階搜尋
+                            <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
+                                alt="Arrow Icon" aria-hidden="true" />
+                        </p>
+                    </a>
+                    <button type="submit" class="t16">搜尋</button>
+                </div>
+                <div class="select3" id="Special">
+                    <div class="select_item textlist">
+                        <label for="pattern" class="t20">花樣：</label>
+                        <select id="pattern" class="custom_select">
+                            <option value="none" selected disabled hidden>請選擇</option>
+                            <option>點</option>
+                            <option>條紋</option>
+                            <option>純色</option>
+                            <option>漸層</option>
+                            <option>塊狀</option>
+                            <option>低調紋</option>
+                        </select>
+                    </div>
+                    <div class="select_item textlist">
+                        <label for="pattern" class="t20">毛長：</label>
+                        <select id="pattern" class="custom_select">
+                            <option value="none" selected disabled hidden>請選擇</option>
+                            <option>長</option>
+                            <option>短</option>
+                        </select>
+                    </div>
+                    <div class="select_item textlist">
+                        <label for="pattern" class="t20">殘障：</label>
+                        <select id="pattern" class="custom_select">
+                            <option value="none" selected disabled hidden>請選擇</option>
+                            <option>有</option>
+                            <option>無</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <!-- ==========內容========= -->
             <div class="pet_content" id="cards">
                 <div class="pet_card">
-                    <a href="#" class="pet_block">
+                    <div class="pet_block">
                         <div class="pic">
                             <img src="imges/petlist/pet01.jpg">
                             <button id="likethis1" class="love">
@@ -215,7 +212,7 @@
                                 建議毛怪同伴：無。<br>
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="pet_card">
                     <a href="#" class="pet_block">

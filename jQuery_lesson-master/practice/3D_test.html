@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face cursor</title>
+
+    <style>
+        .container {
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        .container img {
+            /* min-width: 100%; */
+            width: 100%;
+            box-shadow: 5px 5px 10px #696969;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="imgs/japan2.jpg" alt="">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/jQuery-face-cursor.js"></script>
+
+    <script>
+        $(function () {
+            $("img").faceCursor();
+        });//End document
+    </script>
+
+</body>
+
+</html>

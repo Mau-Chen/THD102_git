@@ -15,6 +15,27 @@ btn_up_el.addEventListener("click", function () {
     });
 });
 
+// Menu
+document.getElementById("menu").addEventListener("click", (eve) => {
+  let element = document.getElementById("menu");
+  let nav = document.getElementById("nav");
+  element.classList.toggle("open");
+  nav.classList.toggle("mobile-nav");
+  eve.preventDefault();
+});
+
+// 當畫面滾動時觸發的事件
+window.addEventListener("scroll", function () {
+  let btnUp = document.querySelector(".top_button");
+  if (window.scrollY > 0) {
+      // 當畫面不在網頁最頂端時，加上 scroll-animation 類別來套用透明度變化的動畫
+      btnUp.classList.add("scroll-animation");
+  } else {
+      // 畫面在網頁最頂端時，移除 scroll-animation 類別
+      btnUp.classList.remove("scroll-animation");
+  }
+});
+
 // top key
 
 
@@ -25,41 +46,4 @@ btn_up_el.addEventListener("click", function () {
 
 
 
-// 小導覽列
-// var menuButton = document.querySelector('.menu-button');
-//     var openMenu = function () {
-//       swiper.slidePrev();
-//     };
-//     var swiper = new Swiper('.swiper', {
-//       slidesPerView: 'auto',
-//       initialSlide: 1,
-//       resistanceRatio: 0,
-//       slideToClickedSlide: true,
-//       on: {
-//         slideChangeTransitionStart: function () {
-//           var slider = this;
-//           if (slider.activeIndex === 0) {
-//             menuButton.classList.add('cross');
-//             // required because of slideToClickedSlide
-//             menuButton.removeEventListener('click', openMenu, true);
-//           } else {
-//             menuButton.classList.remove('cross');
-//           }
-//         },
-//         slideChangeTransitionEnd: function () {
-//           var slider = this;
-//           if (slider.activeIndex === 1) {
-//             menuButton.addEventListener('click', openMenu, true);
-//           }
-//         },
-//       },
-//     });
 
-
-document.getElementById("menu").addEventListener("click", (eve) => {
-  let element = document.getElementById("menu");
-  let nav = document.getElementById("nav");
-  element.classList.toggle("open");
-  nav.classList.toggle("mobile-nav");
-  eve.preventDefault();
-});
