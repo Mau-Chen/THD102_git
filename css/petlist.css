@@ -29,7 +29,7 @@
 }
 
 .main_top .petbox::after {
-    content: "";
+    /* content: "";
     display: block;
     width: 100%;
     height: 12px;
@@ -37,7 +37,7 @@
     border-bottom: 2px solid #ccc;
     position: absolute;
     bottom: -14px;
-    z-index: -1;
+    z-index: -1; */
 }
 
 .page_box {
@@ -547,12 +547,12 @@
 }
 
 .cute_pet {
-    /* background-color: #fff; */
+    background-color: transparent;
     position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     transform: translateY(15px);
 }
 

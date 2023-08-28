@@ -17,7 +17,7 @@ nav {
 /* ==========右邊頁首========= */
 
 .main_top .floatbird {
-    background-color: #FCF8EC;
+    /* background-color: #FCF8EC; */
     border-radius: 0 0 0 50px;
     position: absolute;
     left: 89%;
@@ -113,7 +113,7 @@ nav {
 }
 @media all and (max-width: 768px){
     .main_top .floatbird {
-        background: linear-gradient(180deg, transparent 0%, transparent 40%, #FCF8EC 40%, #FCF8EC 100%);
+        /* background: linear-gradient(180deg, transparent 0%, transparent 40%, #FCF8EC 40%, #FCF8EC 100%); */
         border-radius: 0 0 0 30px;
         left: auto;
         right: 0;
@@ -138,7 +138,7 @@ nav {
 
 @media screen and (max-width: 600px) {
     .main_top .floatbird {
-        background: linear-gradient(180deg, transparent 0%, transparent 15%, #FCF8EC 15%, #FCF8EC 100%);
+        /* background: linear-gradient(180deg, transparent 0%, transparent 15%, #FCF8EC 15%, #FCF8EC 100%); */
         top: 40px;
     }
     .story_item {
