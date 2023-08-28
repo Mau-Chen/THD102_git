@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緯育台北訓練中心</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+
+        a {
+            color: rgb(223, 73, 73);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+
+
+    <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script> -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy5_SjUbRXayyiYVb9QaQSlRUW6CSM5Io&callback=initMap"></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const cityhall = { lat: 25.052169426994425, lng: 121.54324611587383 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 18,
+                center: cityhall,
+            });
+            const contentStr = "<h1>緯育台北訓練中心</h1><p>知識的深度決定了你的高度，找回自己的職涯主控權。讓TibaMe成為你的職涯教練，從自我成長、職涯規劃、職場技能到產業趨勢洞察，給你一輩子帶的走的職場能力，學習不設限，讓改變看得見！</p><a href='https://www.tibame.com/'>官方網站</a>"
+            // The marker, positioned at Uluru
+
+            const infowindow = new google.maps.InfoWindow({
+                content: contentStr,
+                //顯示在HTML上，給螢幕閱讀器用（無障礙）
+                ariaLabel: "緯育台北",
+
+            });
+            const marker = new google.maps.Marker({
+                position: cityhall,
+                map: map,
+                title: "緯育台北訓練中心"
+            });
+            // marker.addListener("click", () => {
+            //     infowindow.open({
+            //         anchor: marker,
+            //         map,
+            //     });
+            // });
+
+            // const contentString = "<h3>台北市政府</h3><p style='padding:10;'>資訊說明</p>";
+            // const infowindow = new google.maps.InfoWindow({
+            //     content: contentString,
+            //     ariaLabel: "Uluru",
+            // });
+            marker.addListener("click", () => {
+                infowindow.open({
+                    anchor: marker,
+                    map,
+                });
+            });
+            // marker.addListener("click", () => {
+            //     infoWindow.setContent(label);
+            //     infoWindow.open(map, marker);
+            // });
+            // return marker;
+
+        }
+
+        window.initMap = initMap;
+
+    </script>
+</body>
+
+</html>
